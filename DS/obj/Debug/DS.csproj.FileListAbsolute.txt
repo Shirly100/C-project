@@ -1,0 +1,4 @@
+C:\Users\Chany\Downloads\Project\NannyForYou\DS\obj\Debug\DS.csprojResolveAssemblyReference.cache
+C:\Users\מרים\Documents\שירלי\c#\project 3\Project\NannyForYou\DS\obj\Debug\DS.csprojResolveAssemblyReference.cache
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DS\obj\Debug\DS.csprojResolveAssemblyReference.cache
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DS\obj\Debug\DS.csproj.CoreCompileInputs.cache

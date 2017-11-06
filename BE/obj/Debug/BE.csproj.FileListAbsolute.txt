@@ -1,0 +1,19 @@
+C:\Users\מרים\Documents\שירלי\c#\Project\NannyForYou\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
+C:\Users\מרים\Documents\שירלי\c#\Project\NannyForYou\BE\bin\Debug\BE.dll
+C:\Users\מרים\Documents\שירלי\c#\Project\NannyForYou\BE\bin\Debug\BE.pdb
+C:\Users\מרים\Documents\שירלי\c#\Project\NannyForYou\BE\obj\Debug\BE.dll
+C:\Users\מרים\Documents\שירלי\c#\Project\NannyForYou\BE\obj\Debug\BE.pdb
+C:\Users\Chany\Downloads\Project\NannyForYou\BE\bin\Debug\BE.dll
+C:\Users\Chany\Downloads\Project\NannyForYou\BE\bin\Debug\BE.pdb
+C:\Users\Chany\Downloads\Project\NannyForYou\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
+C:\Users\Chany\Downloads\Project\NannyForYou\BE\obj\Debug\BE.pdb
+C:\Users\מרים\Documents\שירלי\c#\project 3\Project\NannyForYou\BE\bin\Debug\BE.dll
+C:\Users\מרים\Documents\שירלי\c#\project 3\Project\NannyForYou\BE\bin\Debug\BE.pdb
+C:\Users\מרים\Documents\שירלי\c#\project 3\Project\NannyForYou\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
+C:\Users\מרים\Documents\שירלי\c#\project 3\Project\NannyForYou\BE\obj\Debug\BE.pdb
+C:\Users\מרים\Documents\שירלי\c#\project 3\Project\NannyForYou\BE\obj\Debug\BE.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\obj\Debug\BE.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\obj\Debug\BE.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\bin\Debug\BE.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\bin\Debug\BE.pdb
