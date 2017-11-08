@@ -104,17 +104,56 @@ namespace DAL
         {
             return DataSource.Mothers;
         }
+
+        public void addChildren(Child c)
+        {
+            bool flag = false;
+            foreach (var item in DS.DataSource.Mothers)
+            {
+                if (item.ID == c.ID_Mother)
+                {
+                    item.myChildren.Add(c);
+                    flag = true;
+                    break;
+                }
+
+
+            }
+            if (!flag)
+            {
+                throw new Exception("You are  to add a child that is mother doesn't exist\n");
+            }
+        }
         #endregion
         #region Child functions
         public void addChild(Child c)
         {
+            bool flag = false;
             foreach (var item in DS.DataSource.Children)
+            {
                 if (item.ID_child == c.ID_child)
                     throw new Exception("You are trying to add already-existing child");
-                else
-                    DataSource.Children.Add(c.ChildDeepClone());
-                    
+
+            }
+                
+           foreach (var item1 in DS.DataSource.Mothers)
+                   {
+                        if (item1.ID == c.ID_Mother)
+                          {
+                            item1.myChildren.Add(c);
+                            flag = true;
+                            break;
+
+                            }
+
+                    }
+            if (flag == true)
+            {
+                DS.DataSource.Children.Add(c);
+            }
         }
+
+
         public void removeChild(Child c)
         {
             int index = DataSource.Children.FindIndex(t => t.ID_child == c.ID_child);
@@ -124,7 +163,7 @@ namespace DAL
         }
         public void updateChild(Child c)
         {
-            int index = DataSource.Children.FindIndex(t => t.ID_child == m.ID_child);
+            int index = DataSource.Children.FindIndex(t => t.ID_child == c.ID_child);
             if (index == -1)
                 throw new Exception("You are trying to update non-existing child");
             DataSource.Children[index] = c;
@@ -164,7 +203,15 @@ namespace DAL
                 if (item.ContractID== c.ContractID)
                     throw new Exception("You are trying to add already-existing contract");
                 else
+                {
                     DataSource.contracts.Add(c.ContractDeepClone());
+
+                    if (getChild(c.ID_child).Age < getNanny(c.ID_nanny).minAge)
+                        getNanny(c.ID_nanny).minAge = getChild(c.ID_child).Age;
+
+                }
+                    
+
                     
             
         }

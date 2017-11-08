@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Nanny:PersonDetails
+    public class Nanny : PersonDetails
     {
+        public int minAge = int.MaxValue;
+        public int numOfChildren { get; set; }
         public DateTime BirthDate { get; set; } 
         public bool Elevator { get; set; }
         public float ExperienceYears { get; set; }
@@ -16,8 +18,8 @@ namespace BE
         public float MaxAgeOfChild { get; set; }
         public float HourlyRate { get; set; }
         public float MonthlyRate { get; set; }
-        public Dictionary<Days, string> WorkDays = new Dictionary<Days, string>();//example: "Sun: 8:00-14:00"
-        public bool Ministry_Of_Education_Vactions { get; set; }
+        public Dictionary<Days, KeyValuePair<int, int>> WorkDays = new Dictionary<Days, KeyValuePair<int, int>>();//example: "Sun: 8:00-14:00"
+        public bool Ministry_Of_Economy_and_Industry_Vactions { get; set; }
         public StringBuilder Recommendations { get; set; }
         public BankAccount BankAccount { get; set; }
 

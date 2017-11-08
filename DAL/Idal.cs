@@ -20,6 +20,7 @@ namespace DAL
         void updateMother(Mother m);
         Mother getMother(long id);
         List<Mother> getMotherList();
+        void addChildren(Child c);
         #endregion
 
         #region Child functions

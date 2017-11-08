@@ -61,9 +61,10 @@ namespace BL
         List<Nanny> Nanny_For_Mother(Mother m);//DONE
         List<Nanny> Nanny_In_Range(Mother m);//how we know if the nanny is in the right range of the goal adress of the mother?? TO DO
         List<Child> Children_without_Nanny(List<Child> c);//DONE
+        void salary(Contract c);
         List<Nanny> Vactions_by_Ministry_of_Economy_and_Industry(List<Nanny> n);//DONE
-        IEnumerable<Contract> all_contract_by_condition(Func<Contract, bool> function = null);//TO DO
-        int num_of_contract_by_condition(Func<Contract, bool> function = null);//TO DO
+        IEnumerable<Contract> all_contract_by_condition(Func<Contract, bool> function = null);//DONE
+        int num_of_contract_by_condition(Func<Contract, bool> function = null);//DONE
         IEnumerable<IGrouping<string, Nanny>> Nannies_by_Children_Ages(bool b = false);//TO DO
         IEnumerable<IGrouping<string, Nanny>> Nannies_by_address(bool b = false);//TO DO
         IEnumerable<IGrouping<string, Nanny>> Ages_of_Children_with_Nanny(bool b = false);//TO DO

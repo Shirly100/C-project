@@ -104,10 +104,34 @@ namespace BL
         }
         #endregion
         #region Contract functions
+        public void salary(Contract c)
+        {
+            float hourly = getNanny(c.ID_nanny).HourlyRate;
+            float monthly = getNanny(c.ID_nanny).MonthlyRate;
+            int numOfChildren = getMother(c.ID_mother).myChildren.Count();
+            c.Wages_per_hours = (hourly / 100) * (100 - numOfChildren*2);
+            c.Wages_per_months = (monthly / 100) * (100 - numOfChildren * 2);
+        }
         public void addContract(Contract c, List<Mother> m)
         {
-            check_mother_and_nanny(c);
-            checked_child_age(c,m);
+            try
+            {
+                check_mother_and_nanny(c);
+                checked_child_age(c, m);
+                if (getNanny(c.ID_nanny).numOfChildren >= getNanny(c.ID_nanny).MaxNumOfChildren)
+                    throw new Exception("Nanny have reached the maximum number of children alowed");
+                getNanny(c.ID_nanny).numOfChildren += 1;
+                salary(c);
+                mydal.addContract(c);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+
+            }
+
+
+            
             
         }
 
@@ -151,34 +175,28 @@ namespace BL
         List<Nanny> Nanny_For_Mother(Mother m)
         {
             List<Nanny> n = new List<Nanny>();
-            char delimiter = '-';
-            foreach (var item1 in m.WorkDays)
-                foreach (var item2 in DS.DataSource.Nannies)
-                    foreach (var item3 in item2.WorkDays)
-                        if (item1.Key == item3.Key)
+            foreach (var item1 in DS.DataSource.Nannies)
+            {
+                bool flag = true;
+                foreach (var d in m.WorkDays)
+                {
+                    if (item1.WorkDays.ContainsKey(d.Key))
+                    {
+                        if (!((d.Value.Key >= item1.WorkDays[d.Key].Key) && (d.Value.Value <= item1.WorkDays[d.Key].Value)))
                         {
-                            TimeSpan[] time = new TimeSpan[4];
-                            int i = 0;
-                            String[] motherTime = item1.Value.Split(delimiter);
-                            String[] nannyTime = item3.Value.Split(delimiter);
-                            foreach (var substring in motherTime)
-                            {
-                                time[i] = TimeSpan.Parse(substring);
-                                i++;
-                            }
-                            foreach (var substring in nannyTime)
-                            {
-                                time[i] = TimeSpan.Parse(substring);
-                                i++;
-                            }
-                            if (time[1] >= time[3] && time[2] <= time[4])
-                                if(Age(item2.BirthDate)>18)
-                                {
-                                    n.Add(item2);
-                                }
-
-
+                            flag = false;
+                            break;
                         }
+                    }
+                    else
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag)
+                    n.Add(item1);
+            }
             return n;
 
         }
@@ -203,10 +221,50 @@ namespace BL
                     vactions.Add(item);
             return vactions;
         }
-        /*public IEnumerable<Contract> all_contract_by_condition(Func<Contract, bool> function = null)??
+        public IEnumerable<Contract> all_contract_by_condition(Func<Contract, bool> function = null)
         {
-            IEnumerable<Contract> a = dal.getContractList().Where(t => (function(t)));
+            IEnumerable<Contract> a = mydal.getContractList().Where(t => (function(t)));
             return a;
-        }*/
+        }
+
+
+        
+        public int num_of_contract_by_condition(Func<Contract, bool> function = null)
+        {
+            IEnumerable<Contract> a = mydal.getContractList().Where(t => (function(t)));
+            return a.Count();
+        }
+
+
+        IEnumerable<IGrouping<string, Nanny>> Nannies_by_Children_Ages(bool b = false)
+        {
+            var temp = mydal.getNannyList().GroupBy(a => a.minAge);
+            if(b)
+            {
+                temp.OrderBy(c => c.Key);
+            }
+            return temp; 
+
+
+        }
+        IEnumerable<IGrouping<string, Nanny>> Nannies_by_address(bool b = false)
+        {
+
+        }
+        IEnumerable<IGrouping<string, Nanny>> Ages_of_Children_with_Nanny(bool b = false)
+        {
+            var temp = mydal.getNannyList().GroupBy(a => a.MinAgeOfChild);
+            if (b)
+            {
+                temp.OrderBy(c => c.Key);
+            }
+            return temp;
+
+        }
+        IEnumerable<IGrouping<string, Contract>> Distance_Nanny_and_Child(bool b = false)
+        {
+        }
+
+
     }
 }

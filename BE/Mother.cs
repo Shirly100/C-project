@@ -8,8 +8,10 @@ namespace BE
 {
     public class Mother : PersonDetails
     {
+        public List<Child> myChildren= new List<Child>();
+       
         public Address GoalAddress { get; set; }
-        public Dictionary<Days, string> WorkDays = new Dictionary<Days, string>();//example: "Sun: 8:00-14:00"
+        public Dictionary<Days, KeyValuePair<int, int>> WorkDays = new Dictionary<Days, KeyValuePair<int, int>>();//example: "Sun: 8:00-14:00"
         public override string ToString()
         {
             string Result=base.ToString();
