@@ -17,3 +17,15 @@ C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\Supe
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\obj\Debug\DAL.dll
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\obj\Debug\DAL.pdb
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DAL.dll
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DAL.pdb
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DAL.dll.CodeAnalysisLog.xml
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DAL.dll.lastcodeanalysissucceeded
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\BE.dll
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DS.dll
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DS.pdb
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\BE.pdb
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\obj\Debug\DAL.dll
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\obj\Debug\DAL.pdb

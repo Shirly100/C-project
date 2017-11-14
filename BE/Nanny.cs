@@ -44,7 +44,7 @@ namespace BE
                 result += "Day: " + item.Key + "   \t";
                 result += "Hours " + item.Value + '\n';
             }
-            if (Ministry_Of_Education_Vactions == true)
+            if (Ministry_Of_Economy_and_Industry_Vactions)
                 result += "Ministry Of Education vactions: YES\n";
             else
                 result += "Ministry Of Education vactions: No\n";

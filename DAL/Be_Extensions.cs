@@ -64,7 +64,7 @@ namespace DAL
                 HourlyRate = n.HourlyRate,
                 MonthlyRate = n.MonthlyRate,
                 WorkDays = n.WorkDays,
-                Ministry_Of_Education_Vactions = n.Ministry_Of_Education_Vactions,
+                Ministry_Of_Economy_and_Industry_Vactions = n.Ministry_Of_Economy_and_Industry_Vactions,
                 Recommendations = n.Recommendations,
                 BankAccount = n.BankAccount
 

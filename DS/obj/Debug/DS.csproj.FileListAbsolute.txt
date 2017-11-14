@@ -1,4 +1,10 @@
-C:\Users\Chany\Downloads\Project\NannyForYou\DS\obj\Debug\DS.csprojResolveAssemblyReference.cache
-C:\Users\מרים\Documents\שירלי\c#\project 3\Project\NannyForYou\DS\obj\Debug\DS.csprojResolveAssemblyReference.cache
-C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DS\obj\Debug\DS.csprojResolveAssemblyReference.cache
-C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DS\obj\Debug\DS.csproj.CoreCompileInputs.cache
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\bin\Debug\DS.dll
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\bin\Debug\DS.pdb
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\bin\Debug\DS.dll.CodeAnalysisLog.xml
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\bin\Debug\DS.dll.lastcodeanalysissucceeded
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\bin\Debug\BE.dll
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\bin\Debug\BE.pdb
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\obj\Debug\DS.csprojResolveAssemblyReference.cache
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\obj\Debug\DS.csproj.CoreCompileInputs.cache
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\obj\Debug\DS.dll
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\obj\Debug\DS.pdb

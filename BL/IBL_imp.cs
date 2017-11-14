@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 using BE;
 using DS;
 using DAL;
+using GoogleMapsApi.Entities.Directions.Request;
+using GoogleMapsApi.Entities.Directions.Response;
+using GoogleMapsApi;
 
 namespace BL
 {
-    class IBL_imp: IBL
+    class IBL_imp : IBL
     {
         Idal mydal = FactoryDal.getDal();
         #region Nanny functions
@@ -19,7 +22,7 @@ namespace BL
             {
                 throw new Exception("not aged enough");
             }
-            
+
             mydal.addNanny(n);
         }
         public void removeNanny(Nanny n)
@@ -44,7 +47,7 @@ namespace BL
         #region Mother functions
         public void addMother(Mother m)
         {
-           
+
             mydal.addMother(m);
         }
         public void removeMother(Mother m)
@@ -61,7 +64,7 @@ namespace BL
         {
             throw new NotImplementedException();
         }
-        List<Mother> getMotherList()
+        public List<Mother> getMotherList()
         {
             throw new NotImplementedException();
         }
@@ -96,9 +99,9 @@ namespace BL
         }
         public List<string> getBanksNameList(List<BankAccount> a)
         {
-             throw new NotImplementedException();
+            throw new NotImplementedException();
         }
-        List<int> getBanksBrancheList(List<BankAccount> a)
+        public List<int> getBanksBrancheList(List<BankAccount> a)
         {
             throw new NotImplementedException();
         }
@@ -109,42 +112,59 @@ namespace BL
             float hourly = getNanny(c.ID_nanny).HourlyRate;
             float monthly = getNanny(c.ID_nanny).MonthlyRate;
             int numOfChildren = getMother(c.ID_mother).myChildren.Count();
-            c.Wages_per_hours = (hourly / 100) * (100 - numOfChildren*2);
+            c.Wages_per_hours = (hourly / 100) * (100 - numOfChildren * 2);
             c.Wages_per_months = (monthly / 100) * (100 - numOfChildren * 2);
         }
-        public void addContract(Contract c, List<Mother> m)
+        public void addContract(Contract c)
+        {
+            addContract(c, mydal.getMother(c.ID_mother));
+        }
+
+        public void addContract(Contract c,Mother m)
         {
             try
             {
                 check_mother_and_nanny(c);
-                checked_child_age(c, m);
+                check_child_age(m);
                 if (getNanny(c.ID_nanny).numOfChildren >= getNanny(c.ID_nanny).MaxNumOfChildren)
                     throw new Exception("Nanny have reached the maximum number of children alowed");
                 getNanny(c.ID_nanny).numOfChildren += 1;
                 salary(c);
+                dist(c);
                 mydal.addContract(c);
             }
             catch(Exception e)
             {
                 Console.WriteLine(e);
-
             }
-
-
-            
-            
+        }
+        public void dist(Contract c)
+        {
+            string ad = mydal.getMother(c.ID_mother).Address.ToAddress();
+            string nan = mydal.getNanny(c.ID_nanny).Address.ToAddress();
+            var drivingDirectionRequest = new DirectionsRequest
+            {
+                TravelMode = TravelMode.Walking,
+                Origin = ad,
+                Destination = nan
+            };
+            DirectionsResponse drivingDirections = GoogleMaps.Directions.Query(drivingDirectionRequest);
+            Route route = drivingDirections.Routes.First();
+            Leg leg = route.Legs.First();
+            c.distance = leg.Distance.Value;
         }
 
-        public void checked_child_age(Contract c, List<Mother> m)
+        public void check_child_age(Mother m)
         {
-            var v = mydal.getChildList( m).Where(t => t.ID_child == c.ID_child);
+            var v = m.myChildren;
             if (v.Count() == 0)
                 throw new Exception("the children is not existing in the system");
-            float age = mydal.getChildList(m)[mydal.getChildList(m).FindIndex(t => t.ID_child == c.ID_child)].Age;
-            if (age < 3)
+            foreach (Child ch in v)
             {
-                throw new Exception("the child is too young");
-
+                if (ch.Age < 3)
+                {
+                    throw new Exception("the child is too young");
+                }
             }
         }
 
@@ -158,13 +178,35 @@ namespace BL
                 throw new Exception("the nanny id not existing in the system");
         }
 
-        void removeContract(Contract c);//to do
-        void updateContract(Contract c);//to do
-        List<Contract> getContractList();//to do
+        public void removeContract(Contract c)
+        { }
+        public void updateContract(Contract c)
+        { }
+        public List<Contract> getContractList() => DataSource.contracts;
         #endregion
 
+        public List<Nanny> Nanny_In_Range(Mother m)
+        {
+            List<Nanny> ans = new List<Nanny>();
+            string ad = m.Address.ToAddress();
+            foreach (Nanny n in DataSource.Nannies)
+            {
+                string nan = n.Address.ToAddress();
+                var drivingDirectionRequest = new DirectionsRequest
+                {
+                    TravelMode = TravelMode.Walking,
+                    Origin = ad,
+                    Destination = nan
+                };
+                DirectionsResponse drivingDirections = GoogleMaps.Directions.Query(drivingDirectionRequest);
+                Route route = drivingDirections.Routes.First();
+                Leg leg = route.Legs.First();
+                if (leg.Distance.Value <= m.Range) ans.Add(n);
+            }
+            return ans;
+        }
 
-        public static int Age( DateTime birthday)
+        public int Age( DateTime birthday)
         {
             DateTime now = DateTime.Today;
             int age = now.Year - birthday.Year;
@@ -172,7 +214,7 @@ namespace BL
 
             return age;
         }
-        List<Nanny> Nanny_For_Mother(Mother m)
+        public List<Nanny> Nanny_For_Mother(Mother m)
         {
             List<Nanny> n = new List<Nanny>();
             foreach (var item1 in DS.DataSource.Nannies)
@@ -202,7 +244,7 @@ namespace BL
         }
 
 
-        List<Child> Children_without_Nanny(List<Child> c)
+        public List<Child> Children_without_Nanny(List<Child> c)
         {
             List<Child> noNanny = new List<Child>();
             foreach (var item1 in c)
@@ -213,7 +255,7 @@ namespace BL
             return noNanny;
         }
 
-        List<Nanny> Vactions_by_Ministry_of_Economy_and_Industry(List<Nanny> n)
+        public List<Nanny> Vactions_by_Ministry_of_Economy_and_Industry(List<Nanny> n)
         {
             List<Nanny> vactions = new List<Nanny>();
             foreach (var item in n)
@@ -236,7 +278,7 @@ namespace BL
         }
 
 
-        IEnumerable<IGrouping<string, Nanny>> Nannies_by_Children_Ages(bool b = false)
+        public IEnumerable<IGrouping<int, Nanny>> Nannies_by_Children_Ages(bool b = false)
         {
             var temp = mydal.getNannyList().GroupBy(a => a.minAge);
             if(b)
@@ -244,14 +286,17 @@ namespace BL
                 temp.OrderBy(c => c.Key);
             }
             return temp; 
-
-
         }
-        IEnumerable<IGrouping<string, Nanny>> Nannies_by_address(bool b = false)
+        public IEnumerable<IGrouping<string, Nanny>> Nannies_by_address(bool b = false)
         {
-
+            var temp = mydal.getNannyList().GroupBy(a => a.Address.City);
+            if (b)
+            {
+                temp.OrderBy(c => c.Key);
+            }
+            return temp;
         }
-        IEnumerable<IGrouping<string, Nanny>> Ages_of_Children_with_Nanny(bool b = false)
+        public IEnumerable<IGrouping<float, Nanny>> Ages_of_Children_with_Nanny(bool b = false)
         {
             var temp = mydal.getNannyList().GroupBy(a => a.MinAgeOfChild);
             if (b)
@@ -259,12 +304,15 @@ namespace BL
                 temp.OrderBy(c => c.Key);
             }
             return temp;
-
         }
-        IEnumerable<IGrouping<string, Contract>> Distance_Nanny_and_Child(bool b = false)
+        public IEnumerable<IGrouping<int, Contract>> Distance_Nanny_and_Child(bool b = false)
         {
+            var temp = mydal.getContractList().GroupBy(a => a.distance);
+            if (b)
+            {
+                temp.OrderBy(c => c.Key);
+            }
+            return temp;
         }
-
-
     }
 }

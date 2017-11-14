@@ -26,7 +26,5 @@ namespace BE
             return Result;
 
         }
-
-
     }
 }

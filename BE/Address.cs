@@ -29,6 +29,11 @@ namespace BE
             return result;
 
         }
+        public string ToAddress()
+        {
+            string ad = Street + ", " + HouseNumber + ", " + City + ", " + Country;
+            return ad;
+        }
 
     }
 }

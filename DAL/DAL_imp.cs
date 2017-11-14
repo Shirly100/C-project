@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 using BE;
 using DS;
 
-
-
-
 namespace DAL
 {
    
@@ -25,11 +22,6 @@ namespace DAL
                     throw new Exception("You are trying to add already-existing nanny");
                 else
                     DataSource.Nannies.Add(n.NannyDeepClone());
-                    
-                        
-                        
-                        
-   
 
         }
 
@@ -129,25 +121,24 @@ namespace DAL
         public void addChild(Child c)
         {
             bool flag = false;
-            foreach (var item in DS.DataSource.Children)
+            foreach (Child item in DS.DataSource.Children)
             {
                 if (item.ID_child == c.ID_child)
                     throw new Exception("You are trying to add already-existing child");
 
             }
                 
-           foreach (var item1 in DS.DataSource.Mothers)
+           foreach (Mother item1 in DS.DataSource.Mothers)
                    {
                         if (item1.ID == c.ID_Mother)
                           {
                             item1.myChildren.Add(c);
                             flag = true;
                             break;
-
                             }
 
                     }
-            if (flag == true)
+            if (flag)
             {
                 DS.DataSource.Children.Add(c);
             }
@@ -207,13 +198,8 @@ namespace DAL
                     DataSource.contracts.Add(c.ContractDeepClone());
 
                     if (getChild(c.ID_child).Age < getNanny(c.ID_nanny).minAge)
-                        getNanny(c.ID_nanny).minAge = getChild(c.ID_child).Age;
-
+                        getNanny(c.ID_nanny).minAge = (int)getChild(c.ID_child).Age;
                 }
-                    
-
-                    
-            
         }
         public void removeContract(Contract c)
         {

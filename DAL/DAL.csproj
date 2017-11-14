@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DS\DS.csproj">
-      <Project>{36f38101-9784-4463-8b66-e12864b5db8b}</Project>
+      <Project>{4ec70d0c-9185-4632-86d9-819e59790c71}</Project>
       <Name>DS</Name>
     </ProjectReference>
   </ItemGroup>
