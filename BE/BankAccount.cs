@@ -8,13 +8,14 @@ namespace BE
 {
     public struct BankAccount
     {
+       
         public int BankNumber { get; set; }
         public string BankName { get; set; }
         public int BranchNumber { get; set; }
 
         public Address BranchAddress { get; set; }
         public int AccountNumber { get; set; }
-
+        public double Balance { get; set; }
         public override string ToString()
         {
             string Result = "Bank Accont details:\n";
@@ -26,7 +27,5 @@ namespace BE
             return Result;
 
         }
-
-
     }
 }

@@ -8,6 +8,7 @@ namespace BE
 {
     public class Contract
     {
+        public int distance;
         private static int ContractNumber = 10000000;
         private int contractID;
         public int ContractID

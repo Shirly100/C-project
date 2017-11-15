@@ -1,80 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BE;
 
 namespace BL
 {
     public interface IBL
     {
-        #region Nanny functions
-        void addNanny(Nanny n);
-        void removeNanny(Nanny n);
-        void updateNanny(Nanny n);
-        Nanny getNanny(long id);
-        List<Nanny> getNannyList();
-        #endregion
-
-        #region Mother functions
-        void addMother(Mother m);
-        void removeMother(Mother m);
-        void updateMother(Mother m);
-        Mother getMother(long id);
-        List<Mother> getMotherList();
-        #endregion
-
-        #region Child functions
         void addChild(Child c);
-        void removeChild(Child c);
-        void updateChild(Child c);
+        void addContract(Contract c);
+        void addContract(Contract c, Mother m);
+        void addMother(Mother m);
+        void addNanny(Nanny n);
+        int Age(DateTime birthday);
+        IEnumerable<IGrouping<float, Nanny>> Ages_of_Children_with_Nanny(bool b = false);
+        IEnumerable<Contract> all_contract_by_condition(Predicate<Contract> function = null);
+        void check_child_age(Mother m);
+        void check_mother_and_nanny(Contract c);
+        List<Child> Children_without_Nanny(List<Child> c);
+        void dist(Contract c);
+        IEnumerable<IGrouping<int, Contract>> Distance_Nanny_and_Child(bool b = false);
+        List<BankAccount> getBanksAccountList();
+        List<int> getBanksBrancheList(List<BankAccount> a);
+        List<string> getBanksNameList(List<BankAccount> a);
         Child getChild(long id);
         List<Child> getChildList(List<Mother> m);
-        #endregion
-
-        #region Contract functions
-        void addContract(Contract c);
-        void removeContract(Contract c);
-        void updateContract(Contract c);
         List<Contract> getContractList();
-        #endregion
-
-
-        #region BankAccount functions
-        List<BankAccount> getBanksAccountList();
-        List<string> getBanksNameList(List<BankAccount> a);
-        List<int> getBanksBrancheList(List<BankAccount> a);
-        #endregion
-
-
-        void check_mother_and_nanny(Contract c);
-        void checked_child_age(Contract c, List<Mother> m);
-
-
-
-
-
-
-
-
-        List<Nanny> Nanny_For_Mother(Mother m);//DONE
-        List<Nanny> Nanny_In_Range(Mother m);//how we know if the nanny is in the right range of the goal adress of the mother?? TO DO
-        List<Child> Children_without_Nanny(List<Child> c);//DONE
+        Mother getMother(long id);
+        List<Mother> getMotherList();
+        Nanny getNanny(long id);
+        List<Nanny> getNannyList();
+        IEnumerable<IGrouping<KeyValuePair<string, string>, Nanny>> Nannies_by_address(bool b = false);
+        IEnumerable<IGrouping<float, Nanny>> Nannies_by_Children_Ages(bool b = false);
+        List<Nanny> Nanny_For_Mother(Mother m);
+        List<Nanny> Nanny_In_Range(Mother m);
+        int num_of_contract_by_condition(Func<Contract, bool> function = null);
+        void removeChild(Child c);
+        void removeContract(Contract c);
+        void removeMother(Mother m);
+        void removeNanny(Nanny n);
         void salary(Contract c);
-        List<Nanny> Vactions_by_Ministry_of_Economy_and_Industry(List<Nanny> n);//DONE
-        IEnumerable<Contract> all_contract_by_condition(Func<Contract, bool> function = null);//DONE
-        int num_of_contract_by_condition(Func<Contract, bool> function = null);//DONE
-        IEnumerable<IGrouping<string, Nanny>> Nannies_by_Children_Ages(bool b = false);//TO DO
-        IEnumerable<IGrouping<string, Nanny>> Nannies_by_address(bool b = false);//TO DO
-        IEnumerable<IGrouping<string, Nanny>> Ages_of_Children_with_Nanny(bool b = false);//TO DO
-        IEnumerable<IGrouping<string, Contract>> Distance_Nanny_and_Child(bool b = false);//TO DO
-
-        int Age(DateTime birthday);//DONE
-
-        //ADD MORE FUNCTION ACCORDING TO THE INSTRUCTIONS
-
-
-
+        void updateChild(Child c);
+        void updateContract(Contract c);
+        void updateMother(Mother m);
+        void updateNanny(Nanny n);
+        List<Nanny> Vocations_by_Ministry_of_Economy_and_Industry(List<Nanny> n);
     }
 }

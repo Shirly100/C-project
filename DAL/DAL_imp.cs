@@ -6,109 +6,68 @@ using System.Threading.Tasks;
 using BE;
 using DS;
 
-
-
-
 namespace DAL
 {
-   
     public class DAL_imp : Idal
     {
-
-
-       
         #region Nanny functions
         public void addNanny(Nanny n)
         {
-            foreach (var item in DS.DataSource.Nannies)
-                if (item.ID == n.ID)
-                    throw new Exception("You are trying to add already-existing nanny");
-                else
-                    DataSource.Nannies.Add(n.NannyDeepClone());
-                    
-                        
-                        
-                        
-   
-
+            int index = DataSource.Nannies.FindIndex(t => t.ID == n.ID);
+            if (index != -1) throw new Exception("You are trying to add already-existing nanny");
+            DataSource.Nannies.Add(n.NannyDeepClone());
         }
-
         public void removeNanny(Nanny n)
         {
             int index = DataSource.Nannies.FindIndex(t => t.ID == n.ID);
-            if (index == -1)
-                throw new Exception("this nanny is not exist");
+            if (index == -1) throw new Exception("this nanny is not exist");
             DataSource.Nannies.Remove(n);
         }
         public void updateNanny(Nanny n)
         {
             int index = DataSource.Nannies.FindIndex(t => t.ID == n.ID);
-            if (index == -1)
-                throw new Exception("You are trying to update non-existing nanny");
+            if (index == -1) throw new Exception("You are trying to update non-existing nanny");
             DataSource.Nannies[index] = n;
-
         }
         public Nanny getNanny(long id)
         {
             int index = DataSource.Nannies.FindIndex(t => t.ID == id);
-            if (index == -1)
-                throw new Exception("this nanny is not exist");
-            else
-            {
-
-                return DataSource.Nannies[index];
-            }
+            if (index == -1) throw new Exception("this nanny is not exist");
+            return DataSource.Nannies[index];
         }
-        public List<Nanny> getNannyList()
-        {
-            return DataSource.Nannies;
-        }
+        public List<Nanny> getNannyList() => DataSource.Nannies;
         #endregion
         #region Mother functions
         public void addMother(Mother m)
         {
-            foreach (var item in DS.DataSource.Mothers)
-                if (item.ID == m.ID)
-                    throw new Exception("You are trying to add already-existing mother");
-                else
-                    DataSource.Mothers.Add(m.MotherDeepClone());
+            int index = DataSource.Mothers.FindIndex(t => t.ID == m.ID);
+            if (index != -1) throw new Exception("You are trying to add already-existing mother");
+            DataSource.Mothers.Add(m.MotherDeepClone());
         }
         public void removeMother(Mother m)
         {
             int index = DataSource.Mothers.FindIndex(t => t.ID == m.ID);
-            if (index == -1)
-                throw new Exception("this mother is not exist");
+            if (index == -1) throw new Exception("this mother is not exist");
             DataSource.Mothers.Remove(m);
         }
         public void updateMother(Mother m)
         {
             int index = DataSource.Nannies.FindIndex(t => t.ID == m.ID);
-            if (index == -1)
-                throw new Exception("You are trying to update non-existing mother");
+            if (index == -1) throw new Exception("You are trying to update non-existing mother");
             DataSource.Mothers[index] = m;
         }
-
         public Mother getMother(long id)
         {
             int index = DataSource.Mothers.FindIndex(t => t.ID == id);
-            if (index == -1)
-                throw new Exception("this mother is not exist");
-            else
-            {
-
-                return DataSource.Mothers[index];
-            }
-
+            if (index == -1) throw new Exception("this mother is not exist");
+            return DataSource.Mothers[index];
         }
-        public List<Mother> getMotherList()
-        {
-            return DataSource.Mothers;
-        }
+        public List<Mother> getMotherList() => DataSource.Mothers;
 
         public void addChildren(Child c)
         {
             bool flag = false;
-            foreach (var item in DS.DataSource.Mothers)
+            foreach (Mother item in DS.DataSource.Mothers)
             {
                 if (item.ID == c.ID_Mother)
                 {
@@ -116,125 +75,85 @@ namespace DAL
                     flag = true;
                     break;
                 }
-
-
             }
-            if (!flag)
-            {
-                throw new Exception("You are  to add a child that is mother doesn't exist\n");
-            }
+            if (!flag) throw new Exception("You are  to add a child that is mother doesn't exist\n");
         }
         #endregion
         #region Child functions
         public void addChild(Child c)
         {
             bool flag = false;
-            foreach (var item in DS.DataSource.Children)
+            foreach (Child item in DS.DataSource.Children)
             {
                 if (item.ID_child == c.ID_child)
+                {
                     throw new Exception("You are trying to add already-existing child");
-
+                }
             }
-                
-           foreach (var item1 in DS.DataSource.Mothers)
-                   {
-                        if (item1.ID == c.ID_Mother)
-                          {
-                            item1.myChildren.Add(c);
-                            flag = true;
-                            break;
-
-                            }
-
-                    }
-            if (flag == true)
+           foreach (Mother item1 in DS.DataSource.Mothers)
             {
-                DS.DataSource.Children.Add(c);
-            }
+                if (item1.ID == c.ID_Mother)
+                {
+                   item1.myChildren.Add(c);
+                   flag = true;
+                   break;
+                 }
+             }
+            if (flag) DS.DataSource.Children.Add(c);
         }
-
-
         public void removeChild(Child c)
         {
             int index = DataSource.Children.FindIndex(t => t.ID_child == c.ID_child);
-            if (index == -1)
-                throw new Exception("this child is not exist");
+            if (index == -1) throw new Exception("this child is not exist");
             DataSource.Children.Remove(c);
         }
         public void updateChild(Child c)
         {
             int index = DataSource.Children.FindIndex(t => t.ID_child == c.ID_child);
-            if (index == -1)
-                throw new Exception("You are trying to update non-existing child");
+            if (index == -1) throw new Exception("You are trying to update non-existing child");
             DataSource.Children[index] = c;
         }
         public Child getChild(long id)
         {
             int index = DataSource.Children.FindIndex(t => t.ID_child == id);
-            if (index == -1)
-                throw new Exception("this child is not exist");
-            else
-            {
-
-                return DataSource.Children[index];
-            }
+            if (index == -1) throw new Exception("this child is not exist");
+            else return DataSource.Children[index];
         }
         public List<Child> getChildList(List<Mother> m)
         {
             List<Child> result = new List<Child>();
-            foreach (var item1 in m)
-                foreach (var item2 in DS.DataSource.Children)
-                    if (item1.ID == item2.ID_Mother)
-                    {
-                        result.Add(item2);
-                        DataSource.Children.Remove(item2);
-
-                    }
+            foreach (Mother item1 in m)
+            {
+                foreach (Child i in item1.myChildren)
+                    result.Add(i);
+            }
             return result;
-
-
-
         }
         #endregion
         #region Contract functions
         public void addContract(Contract c)
         {
             foreach (var item in DS.DataSource.contracts)
-                if (item.ContractID== c.ContractID)
-                    throw new Exception("You are trying to add already-existing contract");
-                else
-                {
-                    DataSource.contracts.Add(c.ContractDeepClone());
-
-                    if (getChild(c.ID_child).Age < getNanny(c.ID_nanny).minAge)
-                        getNanny(c.ID_nanny).minAge = getChild(c.ID_child).Age;
-
-                }
-                    
-
-                    
-            
+            {
+                if (item.ContractID == c.ContractID) throw new Exception("You are trying to add already-existing contract");
+                DataSource.contracts.Add(c.ContractDeepClone());
+                if (getNanny(c.ID_nanny).myChildren.IndexOf(getChild(c.ID_child)) == -1)
+                    getNanny(c.ID_nanny).myChildren.Add(getChild(c.ID_child));
+            }
         }
         public void removeContract(Contract c)
         {
             int index = DataSource.contracts.FindIndex(t => t.ContractID  == c.ContractID );
-            if (index == -1)
-                throw new Exception("this contract is not exist");
+            if (index == -1) throw new Exception("this contract is not exist");
             DataSource.contracts.Remove(c);
-
         }
         public void updateContract(Contract c)
         {
             int index = DataSource.contracts.FindIndex(t => t.ContractID == c.ContractID );
-            if (index == -1)
-                throw new Exception("You are trying to update non-existing contract");
+            if (index == -1) throw new Exception("You are trying to update non-existing contract");
             DataSource.contracts[index] = c;
         }
-
-        public List<Contract> getContractList()
-        {
-            return DataSource.contracts;
-        }
+        public List<Contract> getContractList() => DataSource.contracts;
         #endregion
         #region bank functions
         public List<BankAccount> getBanksAccountList()
@@ -253,11 +172,9 @@ namespace DAL
                     City = "Maale Adumim",
                     ZipCode = "6111",
                     Country = "Israel"
-
-
                 },
-                AccountNumber=12345
-                
+                AccountNumber=12345,
+                Balance = 1000
             };
             accounts.Add(a);
             BankAccount b = new BankAccount
@@ -273,11 +190,9 @@ namespace DAL
                     City = "jerusalem",
                     ZipCode = "6565",
                     Country = "Israel"
-
-
                 },
-                AccountNumber = 145678
-
+                AccountNumber = 145678,
+                Balance = 1000             
             };
             accounts.Add(b);
             BankAccount c= new BankAccount
@@ -293,11 +208,9 @@ namespace DAL
                     City = "Haifa",
                     ZipCode = "5678",
                     Country = "Israel"
-
-
                 },
-                AccountNumber = 876789
-
+                AccountNumber = 876789,
+                Balance = 1000
             };
             accounts.Add(c);
             BankAccount d = new BankAccount
@@ -313,11 +226,9 @@ namespace DAL
                     City = "Haifa",
                     ZipCode = "5678",
                     Country = "Israel"
-
-
                 },
-                AccountNumber = 8787
-
+                AccountNumber = 8787,
+                Balance =1000
             };
             accounts.Add(d);
             BankAccount e = new BankAccount
@@ -333,37 +244,29 @@ namespace DAL
                     City = "Raanana",
                     ZipCode = "59878",
                     Country = "Israel"
-
-
                 },
-                AccountNumber = 4564321
-
+                AccountNumber = 4564321,
+                Balance = 1000
             };
             accounts.Add(e);
             return accounts;
         }
-    
-
-        
-
     public List<string> getBanksNameList(List<BankAccount> a)
         {
             List<string> bank_names = new List<string>();
             foreach (var item in a)
                 if (!bank_names.Contains(item.BankName))
                     bank_names.Add(item.BankName);
-
             return bank_names;
         }
         public List<int> getBanksBrancheList(List<BankAccount> a)
         {
             List<int> bank_branches = new List<int>();
-        foreach (var item in a)
-        {
-            if (!bank_branches.Contains(item.BranchNumber))
-                bank_branches.Add(item.BranchNumber);
-        }
-
+            foreach (var item in a)
+            {
+                if (!bank_branches.Contains(item.BranchNumber))
+                    bank_branches.Add(item.BranchNumber);
+            }
             return bank_branches;
         }
         #endregion

@@ -30,6 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GoogleMapsApi">
+      <HintPath>..\GoogleMapsApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="factoryBL.cs" />
     <Compile Include="IBL.cs" />
     <Compile Include="IBL_imp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,7 +62,7 @@
       <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DS\DS.csproj">
-      <Project>{36f38101-9784-4463-8b66-e12864b5db8b}</Project>
+      <Project>{4ec70d0c-9185-4632-86d9-819e59790c71}</Project>
       <Name>DS</Name>
     </ProjectReference>
   </ItemGroup>

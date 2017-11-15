@@ -18,7 +18,7 @@ namespace BE
         public override string ToString()
         {
 
-            string result = "Adress:'\n'";
+            string result = "Address:'\n'";
             result += "-------\n";
             result += Street + " ";
             result += HouseNumber + " "+",";
@@ -28,6 +28,11 @@ namespace BE
             result += Country+ '\n';
             return result;
 
+        }
+        public string ToAddress()
+        {
+            string ad = Street + ", " + HouseNumber + ", " + City + ", " + Country;
+            return ad;
         }
 
     }
