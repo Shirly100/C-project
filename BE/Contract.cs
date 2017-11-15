@@ -8,7 +8,7 @@ namespace BE
 {
     public class Contract
     {
-        public int distance;
+        public float distance { get; set; }
         private static int ContractNumber = 10000000;
         private int contractID;
         public int ContractID
@@ -70,13 +70,9 @@ namespace BE
             result += string.Format("Start date: {0}\n", StartDate);
             result += string.Format("End date: {0}\n", EndDate);
             result += string.Format("Hours of employment:: {0}\n", hours_Of_Employment);
-            
+            result += "distance" + distance;
             return result;
 
         }
-
-
-
-
     }
 }

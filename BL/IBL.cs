@@ -19,7 +19,7 @@ namespace BL
         void check_mother_and_nanny(Contract c);
         List<Child> Children_without_Nanny(List<Child> c);
         void dist(Contract c);
-        IEnumerable<IGrouping<int, Contract>> Distance_Nanny_and_Child(bool b = false);
+        IEnumerable<IGrouping<float, Contract>> Distance_Nanny_and_Child(bool b = false);
         List<BankAccount> getBanksAccountList();
         List<int> getBanksBrancheList(List<BankAccount> a);
         List<string> getBanksNameList(List<BankAccount> a);
