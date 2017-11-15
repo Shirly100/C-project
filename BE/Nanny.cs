@@ -8,7 +8,7 @@ namespace BE
 {
     public class Nanny : PersonDetails
     {
-        public int minAge = int.MaxValue;
+        public List<Child> myChildren = new List<Child>();
         public int numOfChildren { get; set; }
         public DateTime BirthDate { get; set; } 
         public bool Elevator { get; set; }
@@ -19,11 +19,8 @@ namespace BE
         public float HourlyRate { get; set; }
         public float MonthlyRate { get; set; }
         public Dictionary<Days, KeyValuePair<int, int>> WorkDays = new Dictionary<Days, KeyValuePair<int, int>>();//example: "Sun: 8:00-14:00"
-        public bool Ministry_Of_Economy_and_Industry_Vactions { get; set; }
+        public bool Ministry_Vocations { get; set; }
         public StringBuilder Recommendations { get; set; }
-        public BankAccount BankAccount { get; set; }
-
-
 
         public override string ToString()
         {
@@ -44,7 +41,7 @@ namespace BE
                 result += "Day: " + item.Key + "   \t";
                 result += "Hours " + item.Value + '\n';
             }
-            if (Ministry_Of_Economy_and_Industry_Vactions)
+            if (Ministry_Vocations)
                 result += "Ministry Of Education vactions: YES\n";
             else
                 result += "Ministry Of Education vactions: No\n";

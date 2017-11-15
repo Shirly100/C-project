@@ -21,8 +21,6 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\obj\Debug\DAL.csprojResolv
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DAL.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DAL.pdb
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DAL.dll.CodeAnalysisLog.xml
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DAL.dll.lastcodeanalysissucceeded
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\BE.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DS.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DS.pdb

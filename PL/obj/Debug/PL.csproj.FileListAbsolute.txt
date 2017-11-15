@@ -3,8 +3,6 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PL\obj\Debug\PL.csproj.CoreCom
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PL\bin\Debug\PL.exe.config
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PL\bin\Debug\PL.exe
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PL\bin\Debug\PL.pdb
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PL\bin\Debug\PL.exe.CodeAnalysisLog.xml
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PL\bin\Debug\PL.exe.lastcodeanalysissucceeded
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PL\bin\Debug\BE.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PL\bin\Debug\BL.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PL\bin\Debug\DAL.dll

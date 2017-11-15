@@ -10,13 +10,15 @@ namespace BE
 {
     public class PersonDetails
     {
+      
         public long ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Telephone { get; set; }
         public string Pelephone { get; set; }
         public  Address Address { get; set; }
-
+        public BankAccount BankAccount { get; set; }
+        public int Age { get; set; }
         public override string ToString()
         {
 

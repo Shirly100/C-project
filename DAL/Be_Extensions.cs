@@ -64,10 +64,9 @@ namespace DAL
                 HourlyRate = n.HourlyRate,
                 MonthlyRate = n.MonthlyRate,
                 WorkDays = n.WorkDays,
-                Ministry_Of_Economy_and_Industry_Vactions = n.Ministry_Of_Economy_and_Industry_Vactions,
+                Ministry_Vocations = n.Ministry_Vocations,
                 Recommendations = n.Recommendations,
                 BankAccount = n.BankAccount
-
             };
         }
         internal static Contract ContractDeepClone(this Contract c)

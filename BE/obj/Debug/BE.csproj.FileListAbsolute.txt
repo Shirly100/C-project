@@ -23,5 +23,4 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\bin\Debug\BE.pdb
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.pdb
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\bin\Debug\BE.dll.CodeAnalysisLog.xml
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\bin\Debug\BE.dll.lastcodeanalysissucceeded
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache

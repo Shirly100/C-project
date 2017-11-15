@@ -5,8 +5,6 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\obj\Debug\BL.csprojResolveA
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\bin\Debug\BL.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\bin\Debug\BL.pdb
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\bin\Debug\BL.dll.CodeAnalysisLog.xml
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\bin\Debug\BL.dll.lastcodeanalysissucceeded
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\bin\Debug\BE.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\bin\Debug\DAL.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\bin\Debug\DS.dll
