@@ -78,6 +78,7 @@ namespace BL
                 getNanny(c.ID_nanny).numOfChildren += 1;
                 salary(c);
                 dist(c);
+                setPayment(c);
                 mydal.addContract(c);
             }
             catch (Exception e)
@@ -244,6 +245,24 @@ namespace BL
                 temp.OrderBy(c => c.Key);
             }
             return temp;
+        }
+        public void setPayment(Contract c)
+        {
+            if (mydal.getMother(c.ID_mother).payment) c.payment = c.Wages_per_months;
+            else c.payment = c.Wages_per_hours * c.hours_Of_Employment;
+        }
+        public void monthlyPayment(Contract c)
+        {
+            if (c.payment == 0) setPayment(c);
+            try
+            {
+                mydal.getMother(c.ID_mother).BankAccount.add(-c.payment);
+                mydal.getNanny(c.ID_nanny).BankAccount.add(c.payment);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }

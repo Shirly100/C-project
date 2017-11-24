@@ -45,5 +45,7 @@ namespace BL
         void updateMother(Mother m);
         void updateNanny(Nanny n);
         List<Nanny> Vocations_by_Ministry_of_Economy_and_Industry(List<Nanny> n);
+        void monthlyPayment(Contract c);
+        void setPayment(Contract c);
     }
 }

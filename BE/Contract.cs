@@ -27,6 +27,7 @@ namespace BE
         public bool signed_contract { get; set; }
         public float Wages_per_hours { get; set; }
         public float Wages_per_months { get; set; }
+        public float payment { get; set; } 
         public bool siblings { get; set; }
         public int NumOfSiblings { get; set; }//if there are siblings,how many
         public Dictionary<Days, string> WorkDays = new Dictionary<Days, string>();//example: "Sun: 8:00-14:00"
