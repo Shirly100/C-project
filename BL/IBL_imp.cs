@@ -75,15 +75,17 @@ namespace BL
                 check_child_age(m);
                 if (getNanny(c.ID_nanny).numOfChildren >= getNanny(c.ID_nanny).MaxNumOfChildren)
                     throw new Exception("Nanny have reached the maximum number of children alowed");
+                getNanny(c.ID_nanny).numOfChildren += 1;
+                salary(c);
+                dist(c);
+                setPayment(c);
+                mydal.addContract(c);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
             }
-            getNanny(c.ID_nanny).numOfChildren += 1;
-            salary(c);
-            dist(c);
-            mydal.addContract(c);
+            
         }
         //return the distance between mother and nanny
         public void dist(Contract c)
@@ -99,7 +101,8 @@ namespace BL
             DirectionsResponse drivingDirections = GoogleMaps.Directions.Query(drivingDirectionRequest);
             Route route = drivingDirections.Routes.First();
             Leg leg = route.Legs.First();
-            c.distance = leg.Distance.Value;
+            c.distance = leg.Distance.Value/1000;
+            Console.WriteLine(leg.Distance.Value+"------------------");
         }
         //checking child's age (has to be older then 3 months)
         public void check_child_age(Mother m)
@@ -234,7 +237,7 @@ namespace BL
                 temp.OrderBy(c => c.Key);
             return temp;
         }
-        public IEnumerable<IGrouping<int, Contract>> Distance_Nanny_and_Child(bool b = false)
+        public IEnumerable<IGrouping<float, Contract>> Distance_Nanny_and_Child(bool b = false)
         {
             var temp = mydal.getContractList().GroupBy(a => a.distance);
             if (b)
@@ -242,6 +245,24 @@ namespace BL
                 temp.OrderBy(c => c.Key);
             }
             return temp;
+        }
+        public void setPayment(Contract c)
+        {
+            if (mydal.getMother(c.ID_mother).payment) c.payment = c.Wages_per_months;
+            else c.payment = c.Wages_per_hours * c.hours_Of_Employment;
+        }
+        public void monthlyPayment(Contract c)
+        {
+            if (c.payment == 0) setPayment(c);
+            try
+            {
+                mydal.getMother(c.ID_mother).BankAccount.add(-c.payment);
+                mydal.getNanny(c.ID_nanny).BankAccount.add(c.payment);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }

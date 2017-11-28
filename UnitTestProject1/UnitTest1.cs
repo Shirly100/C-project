@@ -84,24 +84,68 @@ namespace UnitTestProject1
                 {BE.Days.Wed, new KeyValuePair<int, int>(13,14 )}
              }
             };
+            Child ch = new Child
+            {
+                Age = 3.5F,
+                Allergies = false,
+                BirthDate = "01/08/2017",
+                FirstName = "Leiky",
+                ID_child = 1234,
+                ID_Mother = 123,
+                SpecialNeeds = true
+            };
+           
+            Contract cccc = new Contract
+            {
+                ContractID = 100,
+                ID_child = ch.ID_child,
+                ID_nanny = n.ID,
+                ID_mother = m.ID,
+                StartDate = "15/11/2017"
+            };
+            Contract c = new Contract
+            {
+                ContractID = 100,
+                ID_child = ch.ID_child,
+                ID_nanny = n.ID,
+                ID_mother = m.ID,
+                StartDate = "15/10/2017"
+            };
             factoryBL.get_bl().addMother(m);
             factoryBL.get_bl().addNanny(nanny);
             factoryBL.get_bl().addNanny(n);
+            factoryBL.get_bl().addChild(ch);
+            factoryBL.get_bl().addContract(cccc);
         }
         [TestMethod]
         public void TestMethod1()
         {
-            foreach( Mother i in DataSource.Mothers)
+            Child chil = new Child
+            {
+                Age = 5F,
+                Allergies = false,
+                BirthDate = "01/08/2017",
+                FirstName = "Leiky",
+                ID_child = 1234,
+                ID_Mother = 123,
+                SpecialNeeds = true
+            };
+            foreach ( Mother i in DataSource.Mothers)
                 Console.WriteLine(i.ToString());
             foreach (Nanny i in DataSource.Nannies)
                 Console.WriteLine(i.ToString());
+            foreach (Contract i in DataSource.contracts)
+                Console.WriteLine(i.ToString());
+            foreach (Child i in DataSource.Children)
+                Console.WriteLine(i.ToString());
             Console.WriteLine("fffff");
             var result = factoryBL.get_bl();
-            var t = result.Nanny_For_Mother(m);
+            result.updateChild(chil);
+            var t = result.Nannies_by_Children_Ages();
            // Console.WriteLine(nanny.ToString());
             foreach (var item in t)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine(item.Key.ToString());
             }
         }
     }

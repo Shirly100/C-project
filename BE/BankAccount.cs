@@ -16,6 +16,11 @@ namespace BE
         public Address BranchAddress { get; set; }
         public int AccountNumber { get; set; }
         public double Balance { get; set; }
+        public void add(float s)
+        {
+            if (s < 0 && Balance + s < 0) throw new Exception("mother doesn't have enough money");
+            Balance += s;
+        }
         public override string ToString()
         {
             string Result = "Bank Accont details:\n";

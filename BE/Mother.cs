@@ -8,7 +8,7 @@ namespace BE
 {
     public class Mother : PersonDetails
     {
-      
+        public bool payment{ set; get; }
         public List<Child> myChildren = new List<Child>();
         //range in km
         public float Range { get; set; }

@@ -8,7 +8,7 @@ namespace BE
 {
     public class Contract
     {
-        public int distance;
+        public float distance { get; set; }
         private static int ContractNumber = 10000000;
         private int contractID;
         public int ContractID
@@ -27,6 +27,7 @@ namespace BE
         public bool signed_contract { get; set; }
         public float Wages_per_hours { get; set; }
         public float Wages_per_months { get; set; }
+        public float payment { get; set; } 
         public bool siblings { get; set; }
         public int NumOfSiblings { get; set; }//if there are siblings,how many
         public Dictionary<Days, string> WorkDays = new Dictionary<Days, string>();//example: "Sun: 8:00-14:00"
@@ -70,13 +71,9 @@ namespace BE
             result += string.Format("Start date: {0}\n", StartDate);
             result += string.Format("End date: {0}\n", EndDate);
             result += string.Format("Hours of employment:: {0}\n", hours_Of_Employment);
-            
+            result += "distance" + distance;
             return result;
 
         }
-
-
-
-
     }
 }
