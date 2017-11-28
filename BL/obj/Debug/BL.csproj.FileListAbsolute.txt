@@ -15,3 +15,15 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\bin\Debug\DAL.pdb
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\bin\Debug\DS.pdb
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\obj\Debug\BL.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BL\obj\Debug\BL.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BL\bin\Debug\BL.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BL\bin\Debug\BL.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BL\bin\Debug\BE.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BL\bin\Debug\DAL.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BL\bin\Debug\DS.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BL\bin\Debug\GoogleMapsApi.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BL\bin\Debug\BE.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BL\bin\Debug\DAL.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BL\bin\Debug\DS.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BL\obj\Debug\BL.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BL\obj\Debug\BL.pdb
