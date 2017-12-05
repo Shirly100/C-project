@@ -4,17 +4,26 @@
 winexe
 C#
 .cs
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\
 PLWPF
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\App.xaml
 10-1016224888
 
 1883615405
 16-560932440
 addcontract.xaml;addmother.xaml;MainWindow.xaml;motherzone.xaml;nannyzone.xaml;nextMain.xaml;wchild.xaml;wcontract.xaml;wmother.xaml;wnanny.xaml;
+=======
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\App.xaml
+11151548125
+
+9-2090862747
+15-1651524215
+MainWindow.xaml;
+>>>>>>> d7d40bdea9822a176340367ed4c7cf45dac014fc
 
 True
 

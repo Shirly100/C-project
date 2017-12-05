@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="393.75" Width="617.105">
     <Grid>
+<<<<<<< HEAD
         <Button Content="Button" HorizontalAlignment="Left" Margin="0,0,0,-0.333" VerticalAlignment="Top" Width="509" Height="321" Click="button_Click" />
+=======
+>>>>>>> d7d40bdea9822a176340367ed4c7cf45dac014fc
 
     </Grid>
 </Window>
