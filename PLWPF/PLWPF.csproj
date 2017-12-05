@@ -54,6 +54,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="addcontract.xaml.cs">
+      <DependentUpon>addcontract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="addmother.xaml.cs">
+      <DependentUpon>addmother.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="motherzone.xaml.cs">
+      <DependentUpon>motherzone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="nannyzone.xaml.cs">
+      <DependentUpon>nannyzone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wchild.xaml.cs">
+      <DependentUpon>wchild.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wcontract.xaml.cs">
+      <DependentUpon>wcontract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wmother.xaml.cs">
+      <DependentUpon>wmother.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wnanny.xaml.cs">
+      <DependentUpon>wnanny.xaml</DependentUpon>
+    </Compile>
+    <Page Include="addcontract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addmother.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,8 +98,39 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="motherzone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="nannyzone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="nextMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wchild.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wcontract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wmother.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wnanny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="nextMain.xaml.cs">
+      <DependentUpon>nextMain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -101,6 +164,10 @@
     <ProjectReference Include="..\BL\BL.csproj">
       <Project>{a363da97-da84-4022-a294-bf046b8e047b}</Project>
       <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{22d3387c-dcc7-4f3f-9f0b-522b245d6e95}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

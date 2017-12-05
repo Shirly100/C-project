@@ -24,5 +24,14 @@ namespace PLWPF
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            nextMain nex = new nextMain();
+            nex.ShowDialog();
+            this.Close();
+        }
     }
+  
 }
