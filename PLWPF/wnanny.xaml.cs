@@ -28,6 +28,23 @@ namespace PLWPF
             bl = factoryBL.get_bl();
         }
 
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            addnanny nex = new addnanny();
+            nex.ShowDialog();
+        }
+        private void Remove(object sender, RoutedEventArgs e)
+        {
+            removenanny nex1 = new removenanny();
+            nex1.ShowDialog();
+        }
+
+        private void Update(object sender, RoutedEventArgs e)
+        {
+            updatenanny nex3 = new updatenanny();
+            nex3.ShowDialog();
+        }
+
         private void EnterClicked(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)

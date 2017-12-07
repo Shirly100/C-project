@@ -129,6 +129,12 @@ namespace DAL
             }
             return result;
         }
+
+        public List<Child> getChildListAlone()
+        {
+            return DataSource.Children;
+        }
+
         #endregion
         #region Contract functions
         public void addContract(Contract c)

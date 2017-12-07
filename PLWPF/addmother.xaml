@@ -5,61 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="addmother" Height="377.863" Width="300">
+        Title="addmother" Height="533.863" Width="277.667">
     <Grid Margin="0,12,0,-3.667">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="54*"/>
-            <ColumnDefinition Width="142*"/>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="73*"/>
-        </Grid.ColumnDefinitions>
-
-        <Grid x:Name="grid1" VerticalAlignment="Top" Margin="17,5,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="4" Height="287" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="93.667"/>
-                <ColumnDefinition Width="10.333"/>
-                <ColumnDefinition Width="11"/>
-                <ColumnDefinition Width="111.667"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Label VerticalAlignment="Center" Grid.Row="8
-" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Salery For Hour:" Grid.ColumnSpan="2"/>
-
-            <TextBox x:Name="bruto_Salery_For_HourTextBox" Width="120" VerticalAlignment="Center" Text="{Binding Bruto_Salery_For_Hour}" Grid.Row="8" Margin="3,3,-0.333,5" Height="24" HorizontalAlignment="Left" Grid.Column="2" Grid.ColumnSpan="3" />
-            <Label VerticalAlignment="Center" Grid.Row="6" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="End Working:" />
-            <DatePicker x:Name="end_WorkingDatePicker" SelectedDateChanged="end_WorkingDatePicker_SelectedDateChanged" VerticalAlignment="Center" SelectedDate="{Binding End_Working}" Grid.Row="6" Margin="0,4" HorizontalAlignment="Left" Grid.Column="3" />
-            <Label VerticalAlignment="Center" Grid.Row="2" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="id Mother:"/>
-            <ComboBox x:Name="id_EmployerComboBox" SelectionChanged="id_EmployeeComboBox_SelectionChanged"  Width="120" VerticalAlignment="Center" Text="{Binding id_Employee}" Grid.Row="1" Margin="3,4,-0.333,4" Height="24" HorizontalAlignment="Left" Grid.Column="2" Grid.ColumnSpan="3"/>
-            <Label VerticalAlignment="Center"  Grid.Row="1" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="id Nanny:"/>
-            <ComboBox x:Name="id_EmployeeComboBox"  VerticalAlignment="Bottom" Text="{Binding id_Employer}" SelectionChanged="id_EmployerComboBox_SelectionChanged" Grid.Row="2" Margin="0,0,-0.333,4" Height="24" Grid.Column="2" HorizontalAlignment="Right" Width="120" Grid.ColumnSpan="3" />
-            <Label VerticalAlignment="Center"  Grid.Row="0" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="id Child:"/>
-            <ComboBox x:Name="id_ChidComboBox"  VerticalAlignment="Bottom" Text="{Binding id_Child}" SelectionChanged="id_ChildComboBox_SelectionChanged" Margin="0,0,-0.333,3" Height="24" HorizontalAlignment="Right" Width="120" Grid.ColumnSpan="3" Grid.Column="2" />
-
-            <Label VerticalAlignment="Center"  Grid.Row="3" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="if contract:"/>
-            <CheckBox x:Name="if_contractCheckBox"  VerticalAlignment="Center" Grid.Row="3" Margin="0,11,0,5" IsChecked="{Binding if_contract}" HorizontalAlignment="Left" Grid.Column="3" Content=""/>
-            <Label VerticalAlignment="Center"  Grid.Row="4" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="if interview:"/>
-            <CheckBox x:Name="if_interviewCheckBox"  VerticalAlignment="Center" Grid.Row="4" Margin="0,8" IsChecked="{Binding if_interview}" HorizontalAlignment="Left" Grid.Column="3" Content=""/>
-            <Label VerticalAlignment="Center" Grid.Row="7" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Num Of Hours:"/>
-            <TextBox x:Name="num_Of_HoursTextBox" Width="120" VerticalAlignment="Center" Text="{Binding Num_Of_Hours}" Grid.Row="7" Margin="3,4,-0.333,4" Height="24" HorizontalAlignment="Left" Grid.Column="2" Grid.ColumnSpan="3" />
-            <Label VerticalAlignment="Center" Grid.Row="5" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Started Working:" Grid.ColumnSpan="2"/>
-            <DatePicker x:Name="started_WorkingDatePicker" SelectedDateChanged="started_WorkingDatePicker_SelectedDateChanged" VerticalAlignment="Center" SelectedDate="{Binding Started_Working}" Grid.Row="5" Margin="0,4" HorizontalAlignment="Left" Grid.Column="3"/>
-        </Grid>
-        <Button x:Name="add_button" Content="add" HorizontalAlignment="Left" Margin="37,300,0,0" VerticalAlignment="Top" Width="75" Click="add_button_Click" Grid.Column="1" />
-
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="32,24,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="firstname" HorizontalAlignment="Left" Height="23" Margin="119,28,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="firstname_TextChanged"/>
+        <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="32,60,0,0" VerticalAlignment="Top" Width="67"/>
+        <TextBox x:Name="LasrName" HorizontalAlignment="Left" Height="23" Margin="119,63,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="LasrName_TextChanged" />
+        <Label x:Name="ID" Content="Id" HorizontalAlignment="Left" Margin="32,94,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="id" HorizontalAlignment="Left" Height="23" Margin="119,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="id_TextChanged"/>
+        <Label x:Name="Pelephone" Content="pelephone" HorizontalAlignment="Left" Margin="32,125,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Telephone" HorizontalAlignment="Left" Height="23" Margin="119,128,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="Telephone_TextChanged"/>
+        <Button x:Name="address" Content="Address" HorizontalAlignment="Left" Margin="32,168,0,0" VerticalAlignment="Top" Width="207" Click="address_Click"/>
+        <Button x:Name="bank" Content="Bank Account" HorizontalAlignment="Left" Margin="32,211,0,0" VerticalAlignment="Top" Width="207" Click="bank_Click"/>
+        <Button x:Name="AddChild" Content="Add child" HorizontalAlignment="Left" Margin="32,253,0,0" VerticalAlignment="Top" Width="207" Click="AddChild_Click"/>
+        <Label x:Name="range" Content="Range" HorizontalAlignment="Left" Margin="32,336,0,0" VerticalAlignment="Top" Width="46"/>
+        <Slider x:Name="slider" Value="5" TickPlacement="BottomRight" Ticks="0,2,4,6,8,10" HorizontalAlignment="Left" Margin="83,336,0,0" VerticalAlignment="Top" Width="156" ValueChanged="slider_ValueChanged" Height="26"/>
+        <Button x:Name="add" Content="Add Mother" HorizontalAlignment="Left" Margin="93,416,0,0" VerticalAlignment="Top" Width="75" Click="add_Click"/>
+        <Button x:Name="hours" Content="Create Scheduale" HorizontalAlignment="Left" Margin="32,297,0,0" VerticalAlignment="Top" Width="207" Click="hours_Click"/>
     </Grid>
 </Window>

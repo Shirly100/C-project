@@ -23,5 +23,22 @@ namespace PLWPF
         {
             InitializeComponent();
         }
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            addchild nex = new addchild();
+            nex.ShowDialog();
+        }
+        private void Remove(object sender, RoutedEventArgs e)
+        {
+            removechild nex1 = new removechild();
+            nex1.ShowDialog();
+        }
+
+        private void Update(object sender, RoutedEventArgs e)
+        {
+            updatechild nex3 = new updatechild();
+            nex3.ShowDialog();
+        }
+
     }
 }

@@ -23,30 +23,29 @@ namespace PLWPF
     public partial class wmother : Window
     {
         IBL bl;
+        Mother mo;
         public wmother()
         {
-            InitializeComponent();
             bl = factoryBL.get_bl();
+            mo = new Mother();
+            DataContext = mo;
+            InitializeComponent();
         }
 
         private void Add(object sender, RoutedEventArgs e)
         {
-            wcontract nex = new wcontract();
+            addmother nex = new addmother();
             nex.ShowDialog();
         }
         private void Remove(object sender, RoutedEventArgs e)
         {
-            wnanny nex1 = new wnanny();
+            removemother nex1 = new removemother();
             nex1.ShowDialog();
         }
-        private void Show(object sender, RoutedEventArgs e)
-        {
-            wmother nex2 = new wmother();
-            nex2.ShowDialog();
-        }
+
         private void Update(object sender, RoutedEventArgs e)
         {
-            wchild nex3 = new wchild();
+            updatemother nex3 = new updatemother();
             nex3.ShowDialog();
         }
 
@@ -56,18 +55,22 @@ namespace PLWPF
             {
                 try
                 {
-                    long s = Int64.Parse(tb.Text);
-                    Mother mo = bl.getMother(s);
+                    string s = tb.Text;
+                    mo = bl.getMother((long)Convert.ToDouble(s));
                     motherzone nex3 = new motherzone(mo);
                     nex3.ShowDialog();
                 }
                 catch (Exception exep)
                 {
-                    Console.WriteLine("not a valid id");
-                    Console.WriteLine(exep.Message);
+                    MessageBox.Show("not a valid id", "Error",MessageBoxButton.OK);
                 }
 
             }
+        }
+
+        private void tb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+         
         }
     }
 }

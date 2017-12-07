@@ -23,5 +23,22 @@ namespace PLWPF
         {
             InitializeComponent();
         }
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            addcontract nex = new addcontract();
+            nex.ShowDialog();
+        }
+        private void Remove(object sender, RoutedEventArgs e)
+        {
+            removecontract nex1 = new removecontract();
+            nex1.ShowDialog();
+        }
+
+        private void Update(object sender, RoutedEventArgs e)
+        {
+            updatecontract nex3 = new updatecontract();
+            nex3.ShowDialog();
+        }
+
     }
 }

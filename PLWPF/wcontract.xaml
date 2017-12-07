@@ -5,11 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="wcintract" Height="300" Width="300">
+        Title="wcontract" Height="300" Width="300">
     <Grid>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="104,82,0,0" VerticalAlignment="Top" Width="75" Click="Add"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="104,31,0,0" VerticalAlignment="Top" Width="75" Click="Update"/>
-        <Button Content="Remove" HorizontalAlignment="Left" Margin="104,136,0,0" VerticalAlignment="Top" Width="75" Click="Remove"/>
-        <Button Content="Show" HorizontalAlignment="Left" Margin="104,194,0,0" VerticalAlignment="Top" Width="75" Click="Show"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="104,115,0,0" VerticalAlignment="Top" Width="75" Click="Add"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="104,45,0,0" VerticalAlignment="Top" Width="75" Click="Update"/>
+        <Button Content="Remove" HorizontalAlignment="Left" Margin="104,184,0,0" VerticalAlignment="Top" Width="75" Click="Remove"/>
     </Grid>
 </Window>

@@ -16,7 +16,7 @@ namespace BE
         public string LastName { get; set; }
         public string Telephone { get; set; }
         public string Pelephone { get; set; }
-        public  Address Address { get; set; }
+        public Address Address { get; set; }
         public BankAccount BankAccount { get; set; }
         public int Age { get; set; }
         public override string ToString()

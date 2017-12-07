@@ -24,6 +24,7 @@ namespace BL
         List<int> getBanksBrancheList(List<BankAccount> a);
         List<string> getBanksNameList(List<BankAccount> a);
         Child getChild(long id);
+        List<Child> getChildListAlone();
         List<Child> getChildList(List<Mother> m);
         List<Contract> getContractList();
         Mother getMother(long id);

@@ -28,18 +28,10 @@ namespace PLWPF
             bl = factoryBL.get_bl();
             InitializeComponent();
             temp_con = new Contract();
-
-            id_EmployeeComboBox.ItemsSource = bl.getNannyList();
-            id_EmployeeComboBox.DisplayMemberPath = "Employee_ID_Number";
-            id_EmployeeComboBox.SelectedValuePath = "Employee_ID_Number";
-
             id_EmployerComboBox.ItemsSource = bl.getMotherList();
-            id_EmployerComboBox.DisplayMemberPath = "company_or_employer_id ";
-            id_EmployerComboBox.SelectedValuePath = "company_or_employer_id ";
+            id_ChidComboBox.ItemsSource = bl.getChildListAlone();
             DataContext = temp_con;
         }
-
-
 
         private void add_button_Click(object sender, RoutedEventArgs e)
         {
@@ -66,16 +58,6 @@ namespace PLWPF
             }
         }
 
-        private void id_EmployerComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            temp_con.ID_mother = ((Mother)(id_EmployerComboBox.SelectedItem)).ID;
-
-        }
-        private void id_EmployeeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            temp_con.ID_nanny = ((Nanny)id_EmployeeComboBox.SelectedItem).ID;
-        }
-
         private void started_WorkingDatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             temp_con.StartDate = ((DateTime)started_WorkingDatePicker.SelectedDate).ToLongDateString();
@@ -89,6 +71,12 @@ namespace PLWPF
         private void id_ChildComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             temp_con.ID_child = ((Child)id_ChidComboBox.SelectedItem).ID_child;
+        }
+
+        private void id_EmployeeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            temp_con.ID_nanny = ((Nanny)(id_EmployerComboBox.SelectedItem)).ID;
+        
         }
     }
 }

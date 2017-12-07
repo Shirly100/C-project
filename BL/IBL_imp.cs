@@ -39,6 +39,10 @@ namespace BL
         public void removeChild(Child c) => mydal.removeChild(c);
         public void updateChild(Child c) => mydal.updateChild(c);
         public Child getChild(long id) => mydal.getChild(id);
+        public List<Child> getChildListAlone()
+        {
+            return mydal.getChildListAlone();
+        }
         public List<Child> getChildList(List<Mother> m) => mydal.getChildList(m);
         #endregion
         #region BankAccount functions
