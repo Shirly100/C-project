@@ -28,7 +28,6 @@ namespace PLWPF
             bl = factoryBL.get_bl();
             InitializeComponent();
             temp_con = new Contract();
-            id_EmployerComboBox.ItemsSource = bl.getMotherList();
             id_ChidComboBox.ItemsSource = bl.getChildListAlone();
             DataContext = temp_con;
         }
@@ -71,12 +70,17 @@ namespace PLWPF
         private void id_ChildComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             temp_con.ID_child = ((Child)id_ChidComboBox.SelectedItem).ID_child;
+            temp_con.ID_mother = (bl.getChild(temp_con.ID_child).ID_Mother);
         }
 
-        private void id_EmployeeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void choosenanny_Click(object sender, RoutedEventArgs e)
         {
-            temp_con.ID_nanny = ((Nanny)(id_EmployerComboBox.SelectedItem)).ID;
-        
+            chooseNanny nan = new chooseNanny(bl.getMother(temp_con.ID_mother));
+            bool? result = nan.ShowDialog();
+            if (result != false)
+            {
+                temp_con.ID_nanny = nan.n.ID;
+            }
         }
     }
 }

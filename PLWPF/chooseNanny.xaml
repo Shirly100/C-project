@@ -1,0 +1,55 @@
+﻿<Window x:Class="PLWPF.chooseNanny"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="chooseNanny" Height="456.945" Width="362.438">
+    <Window.Resources>
+        <!-- You can implement your own BooleanToVisibilityConverter but there is one already implemented. So the next line creates an instance of the BooleanToVisibilityConverter that you will be able to reference with the specified key -->
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Window.Resources>
+    <Grid>
+        <Label Content="Please check the boxes next to the relevant criteria" HorizontalAlignment="Left" Margin="42,26,0,0" VerticalAlignment="Top" Width="290" Height="28"/>
+        <Label Content="Distance (range)" HorizontalAlignment="Left" Margin="42,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.805"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <CheckBox x:Name="range" Content="" HorizontalAlignment="Left" Margin="166,85,0,0" VerticalAlignment="Top" />
+        <Label Content="Age of children" HorizontalAlignment="Left" Margin="42,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.805"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <CheckBox x:Name="age" Content="" HorizontalAlignment="Left" Margin="166,161,0,0" VerticalAlignment="Top" Checked="age_Checked"/>
+        <Label Content="Vocation by ministry" HorizontalAlignment="Left" Margin="42,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.805"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <CheckBox x:Name="vocations" Content="" HorizontalAlignment="Left" Margin="166,125,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="chage" HorizontalAlignment="Left" Height="23" Margin="265,196,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="53" Visibility="{Binding IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" />
+        <Label Content="please write minimum age of children:" HorizontalAlignment="Left" Margin="42,194,0,0" VerticalAlignment="Top" Width="223" Visibility="{Binding IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" />
+        <Label Content="The nannies that &#10;meet your needs are: &#10;please choose one" HorizontalAlignment="Left" Margin="42,281,0,0" VerticalAlignment="Top" Width="131" Height="65"/>
+        <ComboBox x:Name="nannies" HorizontalAlignment="Left" Margin="178,298,0,0" VerticalAlignment="Top" Width="140" Height="28" />
+        <Button x:Name="choose" Content="Choose Nanny" HorizontalAlignment="Left" Margin="122,371,0,0" VerticalAlignment="Top" Width="108" Height="32" Click="choose_Click"/>
+        <Button x:Name="find" Content="Find me a Nanny!" HorizontalAlignment="Left" Margin="42,236,0,0" VerticalAlignment="Top" Width="276" Height="34" Click="find_Click"/>
+    </Grid>
+</Window>

@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="winAddress" Height="300" Width="300">
+        Title="winAddress" Height="349.333" Width="300">
     <Grid>
-        
+        <Label Content="State:" HorizontalAlignment="Left" Margin="31,27,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="state" HorizontalAlignment="Left" Height="23" Margin="146,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <Label Content="City:" HorizontalAlignment="Left" Margin="31,65,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="city" HorizontalAlignment="Left" Height="23" Margin="146,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <Label Content="Zip Code:" HorizontalAlignment="Left" Margin="31,103,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="zip" HorizontalAlignment="Left" Height="23" Margin="146,107,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <Label Content="Street:" HorizontalAlignment="Left" Margin="31,141,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="street" HorizontalAlignment="Left" Height="23" Margin="146,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <Label Content="Number:" HorizontalAlignment="Left" Margin="31,183,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="num" HorizontalAlignment="Left" Height="23" Margin="146,187,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
+        <Label Content="Floor:" HorizontalAlignment="Left" Margin="31,224,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="floor" HorizontalAlignment="Left" Height="23" Margin="146,228,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
+        <Button x:Name="address" Content="Create Address" HorizontalAlignment="Left" Margin="31,277,0,0" VerticalAlignment="Top" Width="235" Click="address_Click"/>
+
     </Grid>
 </Window>

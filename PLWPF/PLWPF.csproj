@@ -86,14 +86,11 @@
     <Compile Include="addnanny.xaml.cs">
       <DependentUpon>addnanny.xaml</DependentUpon>
     </Compile>
+    <Compile Include="chooseNanny.xaml.cs">
+      <DependentUpon>chooseNanny.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EditScheduale.xaml.cs">
       <DependentUpon>EditScheduale.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="motherzone.xaml.cs">
-      <DependentUpon>motherzone.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="nannyzone.xaml.cs">
-      <DependentUpon>nannyzone.xaml</DependentUpon>
     </Compile>
     <Compile Include="removechild.xaml.cs">
       <DependentUpon>removechild.xaml</DependentUpon>
@@ -153,6 +150,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="chooseNanny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EditScheduale.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -169,14 +170,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="motherzone.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="nannyzone.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="nextMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

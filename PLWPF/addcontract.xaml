@@ -42,8 +42,7 @@
             <Label VerticalAlignment="Center" Grid.Row="8" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Salary By Hour?" Grid.ColumnSpan="2"/>
             <Label VerticalAlignment="Center" Grid.Row="6" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="End Working:" />
             <DatePicker x:Name="end_WorkingDatePicker" SelectedDateChanged="end_WorkingDatePicker_SelectedDateChanged" VerticalAlignment="Center" SelectedDate="{Binding End_Working}" Grid.Row="6" Margin="0,4" HorizontalAlignment="Left" Grid.Column="3" />
-            <ComboBox x:Name="id_EmployerComboBox" SelectionChanged="id_EmployeeComboBox_SelectionChanged"  Width="120" VerticalAlignment="Center" Text="{Binding id_Employee}" Grid.Row="1" Margin="3,4,-0.333,4" Height="24" HorizontalAlignment="Left" Grid.Column="2" Grid.ColumnSpan="3"/>
-            <Label VerticalAlignment="Center"  Grid.Row="1" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="id Nanny:"/>
+            <Label VerticalAlignment="Center"  Grid.Row="1" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Nanny:"/>
             <Label VerticalAlignment="Center"  Grid.Row="0" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="id Child:"/>
             <ComboBox x:Name="id_ChidComboBox"  VerticalAlignment="Bottom" Text="{Binding id_Child}" SelectionChanged="id_ChildComboBox_SelectionChanged" Margin="0,0,-0.333,3" Height="24" HorizontalAlignment="Right" Width="120" Grid.ColumnSpan="3" Grid.Column="2" />
 
@@ -56,6 +55,7 @@
             <Label VerticalAlignment="Center" Grid.Row="5" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Started Working:" Grid.ColumnSpan="2"/>
             <DatePicker x:Name="started_WorkingDatePicker" SelectedDateChanged="started_WorkingDatePicker_SelectedDateChanged" VerticalAlignment="Center" SelectedDate="{Binding Started_Working}" Grid.Row="5" Margin="0,4" HorizontalAlignment="Left" Grid.Column="3"/>
             <CheckBox Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="0.333,9,0,0" Grid.Row="8" VerticalAlignment="Top" />
+            <Button x:Name="choosenanny" Content="Choose Nanny" Grid.Column="2" HorizontalAlignment="Left" Margin="3,7.667,-0.333,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3" Height="20" Click="choosenanny_Click"/>
         </Grid>
         <Button x:Name="add_button" Content="Add Contract" HorizontalAlignment="Left" Margin="30,282,0,0" VerticalAlignment="Top" Width="105" Click="add_button_Click" Grid.Column="1" Height="27" />
 

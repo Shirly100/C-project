@@ -29,7 +29,7 @@ namespace PLWPF
             m = new Mother();
             DataContext = m;
             InitializeComponent();
-            motherc.DataContext = bl.getMotherList();
+            motherc.ItemsSource = bl.getMotherList();
         }
 
         private void motherc_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -55,13 +55,21 @@ namespace PLWPF
         private void address_Click(object sender, RoutedEventArgs e)
         {
             winAddress w = new winAddress();
-            w.ShowDialog();
+            bool? addre = w.ShowDialog();
+            if (addre != false)
+            {
+                m.Address = w.ad;
+            }
         }
 
         private void bank_Click(object sender, RoutedEventArgs e)
         {
             winBank w1 = new winBank();
-            w1.ShowDialog();
+            bool? ban = w1.ShowDialog();
+            if (ban != false)
+            {
+                m.BankAccount = w1.ba;
+            }
         }
 
         //maybe make a specified window
@@ -80,6 +88,8 @@ namespace PLWPF
         {
             try
             {
+                //m = (Mother)motherc.SelectedItem;
+                
                 bl.updateMother(m);
                 Close();
             }

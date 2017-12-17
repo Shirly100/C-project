@@ -49,25 +49,6 @@ namespace PLWPF
             nex3.ShowDialog();
         }
 
-        private void EnterClicked(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                try
-                {
-                    string s = tb.Text;
-                    mo = bl.getMother((long)Convert.ToDouble(s));
-                    motherzone nex3 = new motherzone(mo);
-                    nex3.ShowDialog();
-                }
-                catch (Exception exep)
-                {
-                    MessageBox.Show("not a valid id", "Error",MessageBoxButton.OK);
-                }
-
-            }
-        }
-
         private void tb_TextChanged(object sender, TextChangedEventArgs e)
         {
          

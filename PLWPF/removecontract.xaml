@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="removecontract" Height="300" Width="300">
+        Title="removecontract" Height="251" Width="246">
     <Grid>
-        
+        <Label Content="Choose Contract to Remove" HorizontalAlignment="Left" Margin="44,41,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="choose" HorizontalAlignment="Left" Margin="44,93,0,0" VerticalAlignment="Top" Width="152" Height="31" SelectionChanged="choose_SelectionChanged"/>
+        <Button x:Name="remove" Content="Remove Contract" HorizontalAlignment="Left" Margin="44,156,0,0" VerticalAlignment="Top" Width="152" Click="remove_Click"/>
+
     </Grid>
 </Window>

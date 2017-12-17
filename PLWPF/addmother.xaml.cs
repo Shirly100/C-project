@@ -56,13 +56,21 @@ namespace PLWPF
         private void address_Click(object sender, RoutedEventArgs e)
         {
             winAddress w = new winAddress();
-            w.ShowDialog();
+            bool? addre = w.ShowDialog();
+            if (addre != false)
+            {
+                temp_m.Address = w.ad;
+            }
         }
 
         private void bank_Click(object sender, RoutedEventArgs e)
         {
             winBank w1 = new winBank();
-            w1.ShowDialog();
+            bool? ban = w1.ShowDialog();
+            if (ban != false)
+            {
+                temp_m.BankAccount = w1.ba;
+            }
         }
 
         //maybe make a specified window

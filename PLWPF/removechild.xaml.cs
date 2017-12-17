@@ -28,7 +28,7 @@ namespace PLWPF
             bl = factoryBL.get_bl();
             c = new Child();
             InitializeComponent();
-            ID_c.DataContext = bl.getChildListAlone();
+            ID_c.ItemsSource = bl.getChildListAlone();
         }
 
         private void ID_c_SelectionChanged(object sender, SelectionChangedEventArgs e)

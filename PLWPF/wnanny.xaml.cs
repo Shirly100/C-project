@@ -45,24 +45,5 @@ namespace PLWPF
             nex3.ShowDialog();
         }
 
-        private void EnterClicked(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                try
-                {
-                    long s = Int64.Parse(tb.Text);
-                    Nanny mo = bl.getNanny(s);
-                    nannyzone nex3 = new nannyzone(mo);
-                    nex3.ShowDialog();
-                }
-                catch (Exception exep)
-                {
-                    Console.WriteLine("not a valid id");
-                    Console.WriteLine(exep.Message);
-                }
-
-            }
-        }
     }
 }

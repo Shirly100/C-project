@@ -58,13 +58,21 @@ namespace PLWPF
         private void address_Click(object sender, RoutedEventArgs e)
         {
             winAddress w = new winAddress();
-            w.ShowDialog();
+            bool? addre = w.ShowDialog();
+            if (addre != false)
+            {
+                temp_n.Address = w.ad;
+            }
         }
 
         private void bank_Click(object sender, RoutedEventArgs e)
         {
             winBank w1 = new winBank();
-            w1.ShowDialog();
+            bool? ban = w1.ShowDialog();
+            if (ban != false)
+            {
+                temp_n.BankAccount = w1.ba;
+            }
         }
 
         private void add_Click(object sender, RoutedEventArgs e)
@@ -108,5 +116,9 @@ namespace PLWPF
             temp_n.MaxNumOfChildren = (int)num_child.SelectedItem;
         }
 
+        private void age_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            temp_n.Age = (int)Convert.ToInt16(age.Text);
+        }
     }
 }

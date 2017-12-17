@@ -20,7 +20,7 @@ namespace DAL
         public void removeNanny(Nanny n)
         {
             int index = DataSource.Nannies.FindIndex(t => t.ID == n.ID);
-            if (index == -1) throw new Exception("this nanny is not exist");
+            if (index == -1) throw new Exception("this nanny does not exist");
             DataSource.Nannies.Remove(n);
         }
         public void updateNanny(Nanny n)
@@ -32,7 +32,7 @@ namespace DAL
         public Nanny getNanny(long id)
         {
             int index = DataSource.Nannies.FindIndex(t => t.ID == id);
-            if (index == -1) throw new Exception("this nanny is not exist");
+            if (index == -1) throw new Exception("this nanny does not exist");
             return DataSource.Nannies[index];
         }
         public List<Nanny> getNannyList() => DataSource.Nannies;
@@ -47,19 +47,19 @@ namespace DAL
         public void removeMother(Mother m)
         {
             int index = DataSource.Mothers.FindIndex(t => t.ID == m.ID);
-            if (index == -1) throw new Exception("this mother is not exist");
+            if (index == -1) throw new Exception("this mother does not exist");
             DataSource.Mothers.Remove(m);
         }
         public void updateMother(Mother m)
         {
-            int index = DataSource.Nannies.FindIndex(t => t.ID == m.ID);
+            int index = DataSource.Mothers.FindIndex(t => t.ID == m.ID);
             if (index == -1) throw new Exception("You are trying to update non-existing mother");
             DataSource.Mothers[index] = m;
         }
         public Mother getMother(long id)
         {
             int index = DataSource.Mothers.FindIndex(t => t.ID == id);
-            if (index == -1) throw new Exception("this mother is not exist");
+            if (index == -1) throw new Exception("this mother does not exist");
             return DataSource.Mothers[index];
         }
         public List<Mother> getMotherList() => DataSource.Mothers;
