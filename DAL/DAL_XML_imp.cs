@@ -114,27 +114,27 @@ namespace DAL
         #region Build XElement
         XElement BuildXelementContract(Contract c)
         {
-            XElement ContractID = new XElement("ContractID",c.ContractID);
-            XElement ID_nanny = new XElement("ID_nanny",c.ID_nanny);
-            XElement ID_child = new XElement("ID_child",c.ID_child);
-            XElement interview = new XElement("Interview",c.interview);
-            XElement signed_contract = new XElement("Signed",c.signed_contract);
-            XElement Wages_per_hours = new XElement("Hours",c.Wages_per_hours);
-            XElement Wages_per_months = new XElement("Monthly",c.Wages_per_months);
-            XElement siblings = new XElement("Siblings",c.siblings);
-            XElement NumOfSiblings = new XElement("NumofSibling",c.NumOfSiblings);
-            XElement WorkDays = new XElement("WorkDays",c.WorkDays);
-            XElement StartDate = new XElement("StartDate",c.StartDate);
-            XElement EndDate = new XElement("EndDate",c.EndDate);
-            XElement hours_Of_Employment = new XElement("EmploymentHours",c.hours_Of_Employment);
-            XElement ID_mother = new XElement("ID_Mother",c.ID_mother);
-            return new XElement("Contract", ContractID, ID_nanny, ID_child, interview, signed_contract, Wages_per_hours,Wages_per_months, siblings, NumOfSiblings, WorkDays, StartDate, EndDate, hours_Of_Employment, ID_mother);
+            XElement ContractID = new XElement("ContractID", c.ContractID);
+            XElement ID_nanny = new XElement("ID_nanny", c.ID_nanny);
+            XElement ID_child = new XElement("ID_child", c.ID_child);
+            XElement interview = new XElement("Interview", c.interview);
+            XElement signed_contract = new XElement("Signed", c.signed_contract);
+            XElement Wages_per_hours = new XElement("Hours", c.Wages_per_hours);
+            XElement Wages_per_months = new XElement("Monthly", c.Wages_per_months);
+            XElement siblings = new XElement("Siblings", c.siblings);
+            XElement NumOfSiblings = new XElement("NumofSibling", c.NumOfSiblings);
+            XElement WorkDays = new XElement("WorkDays", c.WorkDays);
+            XElement StartDate = new XElement("StartDate", c.StartDate);
+            XElement EndDate = new XElement("EndDate", c.EndDate);
+            XElement hours_Of_Employment = new XElement("EmploymentHours", c.hours_Of_Employment);
+            XElement ID_mother = new XElement("ID_Mother", c.ID_mother);
+            return new XElement("Contract", ContractID, ID_nanny, ID_child, interview, signed_contract, Wages_per_hours, Wages_per_months, siblings, NumOfSiblings, WorkDays, StartDate, EndDate, hours_Of_Employment, ID_mother);
         }
 
         XElement BuildXelementNanny(Nanny n)
         {
             XElement ID = new XElement("ID", n.ID);
-            XElement FirstName = new XElement("FirstName",n.FirstName);
+            XElement FirstName = new XElement("FirstName", n.FirstName);
             XElement LastName = new XElement("LastName", n.LastName);
             XElement Telephone = new XElement("Telephone", n.Telephone);
             XElement Pelephone = new XElement("Pelephone", n.Pelephone);
@@ -147,7 +147,16 @@ namespace DAL
             XElement MaxAgeOfChild = new XElement("MaxAgeOfChild", n.MaxAgeOfChild);
             XElement HourlyRate = new XElement("HourlyRate", n.HourlyRate);
             XElement MonthlyRate = new XElement("MonthlyRate", n.MonthlyRate);
-            XElement WorkDays = new XElement("WorkDays", n.WorkDays);
+
+            XElement WorkDays = new XElement("WorkDays",
+                 (from d in n.WorkDays
+                  select new XElement("Day",
+                      new XAttribute("Day", d.Key.ToString()),
+                      new XElement("Start", d.Value.Key.ToString()),
+                      new XElement("End", d.Value.Value.ToString())  
+                      )
+                  ) );
+
             XElement Ministry_Vocations = new XElement("Ministry_Vocations", n.Ministry_Vocations);
             XElement Recommendations = new XElement("Recommendations", n.Recommendations);
             XElement BankAccount = new XElement("BankAccount", n.BankAccount);
@@ -183,6 +192,7 @@ namespace DAL
             XElement Age = new XElement("Age", c.Age);
             return new XElement("Child", ID_child, ID_Mother, FirstName, Age, BirthDate, SpecialNeeds, Allergies, allergies);
         }
+
         #endregion
 
         #region Build Object
@@ -205,6 +215,54 @@ namespace DAL
 
             //c.WorkDays = Dictionary<Days, string>{ (BE.Days)Enum.Parse(typeof(BE.Days), xc.Element("WorkDays").Value),xc.Element("WorkDays").Value};
             return c;
+        }
+
+        Child BuildChild(XElement xc)
+        {
+            Child c = new Child();
+            c.ID_child = Convert.ToInt32(xc.Element("ID_child").Value);
+            c.ID_Mother = Convert.ToInt32(xc.Element("ID_Mother").Value);
+            c.FirstName = xc.Element("FirstName").Value;
+            c.Age = Convert.ToInt32(xc.Element("Age").Value);
+            c.Allergies = Convert.ToBoolean(xc.Element("Allergies").Value);
+            c.allergies = xc.Element("allergies").Value;
+            c.SpecialNeeds = Convert.ToBoolean(xc.Element("SpecialNeeds").Value);
+            c.BirthDate = xc.Element("BirthDate").Value;
+            return c;
+        }
+
+        Mother BuildMother(XElement xm)
+        {
+            Mother m = new Mother();
+            m.ID = Convert.ToInt32(xm.Element("ID").Value);
+            m.FirstName = xm.Element("FirstName").Value;
+            m.LastName = xm.Element("LastName").Value;
+            m.Age = Convert.ToInt32(xm.Element("Age").Value);
+            m.Telephone = xm.Element("Telephone").Value;
+            m.Pelephone = xm.Element("Pelephone").Value;
+            m.Range = Convert.ToInt32(xm.Element("Range").Value);
+            m.payment = Convert.ToBoolean(xm.Element("payment").Value);
+            Address a = new Address(); //.... complete all complicated ones
+            m.Address = a;
+            //m.WorkDays
+            return m;
+        }
+
+        Nanny BuildNanny(XElement xn)
+        {
+            Nanny n = new Nanny();
+            n.ID = Convert.ToInt32(xn.Element("ID").Value);
+            n.FirstName = xn.Element("FirstName").Value;
+            n.LastName = xn.Element("LastName").Value;
+            n.Age = Convert.ToInt32(xn.Element("Age").Value);
+            n.Telephone = xn.Element("Telephone").Value;
+            n.Pelephone = xn.Element("Pelephone").Value;
+            //n.BirthDate = 
+
+            Address a = new Address(); //.... complete all complicated ones
+            n.Address = a;
+            //m.WorkDays
+            return n;
         }
 
 
