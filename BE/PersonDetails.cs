@@ -16,7 +16,7 @@ namespace BE
         public string LastName { get; set; }
         public string Telephone { get; set; }
         public string Pelephone { get; set; }
-        public  Address Address { get; set; }
+        public Address Address { get; set; }
         public BankAccount BankAccount { get; set; }
         public int Age { get; set; }
         public override string ToString()
@@ -25,9 +25,9 @@ namespace BE
             string result = "";
             result += LastName + " " + FirstName + '\n';
             result += string.Format("ID: {0}\n", ID);
-            result += string.Format("Telephone: {0}\n", Telephone);
-            result += string.Format("Pelephone: {0}\n", Pelephone);
-            result += Address.ToString();
+            //result += string.Format("Telephone: {0}\n", Telephone);
+            //result += string.Format("Pelephone: {0}\n", Pelephone);
+            //result += Address.ToString();
             return result;
 
             

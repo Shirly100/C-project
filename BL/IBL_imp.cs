@@ -9,6 +9,7 @@ using DAL;
 using GoogleMapsApi.Entities.Directions.Request;
 using GoogleMapsApi.Entities.Directions.Response;
 using GoogleMapsApi;
+using System.Threading;
 
 namespace BL
 {
@@ -18,7 +19,7 @@ namespace BL
         #region Nanny functions
         public void addNanny(Nanny n)
         {
-            if (n.BirthDate.Year < 1900 || ((DateTime.Now.Year - n.BirthDate.Year) < 18))
+            if (n.Age < 18)
                 throw new Exception("not aged enough");
             mydal.addNanny(n);
         }
@@ -39,6 +40,10 @@ namespace BL
         public void removeChild(Child c) => mydal.removeChild(c);
         public void updateChild(Child c) => mydal.updateChild(c);
         public Child getChild(long id) => mydal.getChild(id);
+        public List<Child> getChildListAlone()
+        {
+            return mydal.getChildListAlone();
+        }
         public List<Child> getChildList(List<Mother> m) => mydal.getChildList(m);
         #endregion
         #region BankAccount functions
@@ -77,7 +82,7 @@ namespace BL
                     throw new Exception("Nanny have reached the maximum number of children alowed");
                 getNanny(c.ID_nanny).numOfChildren += 1;
                 salary(c);
-                dist(c);
+                //dist(c);
                 setPayment(c);
                 mydal.addContract(c);
             }
@@ -143,8 +148,13 @@ namespace BL
                     Origin = ad,
                     Destination = nan
                 };
-                DirectionsResponse drivingDirections = GoogleMaps.Directions.Query(drivingDirectionRequest);
-                Route route = drivingDirections.Routes.First();
+                //DirectionsResponse drivingDirections = GoogleMaps.Directions.QueryAsync(drivingDirectionRequest);
+                var task = GoogleMaps.Directions.QueryAsync(drivingDirectionRequest);
+                while (!task.IsCompleted)
+                {
+                    Thread.Sleep(100);
+                }
+                Route route = task.Result.Routes.First();
                 Leg leg = route.Legs.First();
                 if (leg.Distance.Value/1000 <= m.Range) ans.Add(n);
                 Console.WriteLine(leg.Distance.Value);
@@ -184,6 +194,16 @@ namespace BL
                 if (flag)
                     n.Add(item1);
             }
+            /*List<Nanny> temp = Nanny_In_Range(m);
+            foreach (Nanny nn in n)
+            {
+                if (temp.IndexOf(nn) >= 0) {}
+                else
+                {
+                    n.Remove(nn);
+                }
+            }
+            */
             return n;
         }
         //return all children which doen't has ananny

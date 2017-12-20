@@ -28,6 +28,7 @@ namespace DAL
         void removeChild(Child c);
         void updateChild(Child c);
         Child getChild(long id);
+        List<Child> getChildListAlone();
         List<Child> getChildList(List<Mother> m);
         #endregion
 

@@ -139,8 +139,10 @@ namespace UnitTestProject1
             foreach (Child i in DataSource.Children)
                 Console.WriteLine(i.ToString());
             Console.WriteLine("fffff");
+            Mother upm = new Mother {ID = 123 };
             var result = factoryBL.get_bl();
             result.updateChild(chil);
+            result.updateMother(upm);
             var t = result.Nannies_by_Children_Ages();
            // Console.WriteLine(nanny.ToString());
             foreach (var item in t)

@@ -13,6 +13,21 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -23,6 +38,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +49,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PLWPF.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -54,6 +74,90 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="addchild.xaml.cs">
+      <DependentUpon>addchild.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="addcontract.xaml.cs">
+      <DependentUpon>addcontract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="addmother.xaml.cs">
+      <DependentUpon>addmother.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="addnanny.xaml.cs">
+      <DependentUpon>addnanny.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="chooseNanny.xaml.cs">
+      <DependentUpon>chooseNanny.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditScheduale.xaml.cs">
+      <DependentUpon>EditScheduale.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="removechild.xaml.cs">
+      <DependentUpon>removechild.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="removecontract.xaml.cs">
+      <DependentUpon>removecontract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="removemother.xaml.cs">
+      <DependentUpon>removemother.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="removenanny.xaml.cs">
+      <DependentUpon>removenanny.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="updatechild.xaml.cs">
+      <DependentUpon>updatechild.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="updatecontract.xaml.cs">
+      <DependentUpon>updatecontract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="updatemother.xaml.cs">
+      <DependentUpon>updatemother.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="updatenanny.xaml.cs">
+      <DependentUpon>updatenanny.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wchild.xaml.cs">
+      <DependentUpon>wchild.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wcontract.xaml.cs">
+      <DependentUpon>wcontract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winAddress.xaml.cs">
+      <DependentUpon>winAddress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winBank.xaml.cs">
+      <DependentUpon>winBank.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wmother.xaml.cs">
+      <DependentUpon>wmother.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wnanny.xaml.cs">
+      <DependentUpon>wnanny.xaml</DependentUpon>
+    </Compile>
+    <Page Include="addchild.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addcontract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addmother.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addnanny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="chooseNanny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditScheduale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,8 +170,71 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="nextMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="removechild.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="removecontract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="removemother.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="removenanny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="updatechild.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="updatecontract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="updatemother.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="updatenanny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wchild.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wcontract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winAddress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winBank.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wmother.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wnanny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="nextMain.xaml.cs">
+      <DependentUpon>nextMain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -102,6 +269,23 @@
       <Project>{a363da97-da84-4022-a294-bf046b8e047b}</Project>
       <Name>BL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{22d3387c-dcc7-4f3f-9f0b-522b245d6e95}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

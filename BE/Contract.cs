@@ -43,7 +43,7 @@ namespace BE
             result += string.Format("ID of nanny: {0}\n", ID_nanny);
             result += string.Format("ID of mother: {0}\n", ID_mother);
             result += string.Format("ID of child: {0}\n", ID_child);
-            if (interview == true)
+            /*if (interview == true)
                 result += string.Format("Interview: Yes\n");
             else
                 result += string.Format("Interview: No\n");
@@ -72,6 +72,7 @@ namespace BE
             result += string.Format("End date: {0}\n", EndDate);
             result += string.Format("Hours of employment:: {0}\n", hours_Of_Employment);
             result += "distance" + distance;
+            */
             return result;
 
         }

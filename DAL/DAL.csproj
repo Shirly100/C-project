@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Be_Extensions.cs" />
     <Compile Include="DAL_imp.cs" />
+    <Compile Include="DAL_XML_imp.cs" />
     <Compile Include="FactoryDal.cs" />
     <Compile Include="Idal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

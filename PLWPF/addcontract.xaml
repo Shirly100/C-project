@@ -1,0 +1,63 @@
+﻿<Window x:Class="PLWPF.addcontract"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="addcontract" Height="367" Width="279">
+
+
+    <Grid Margin="0,12,0,-3.667">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="142*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="73*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="grid1" VerticalAlignment="Top" Margin="17,5,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="4" Height="287" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="93.667"/>
+                <ColumnDefinition Width="10.333"/>
+                <ColumnDefinition Width="11"/>
+                <ColumnDefinition Width="111.667"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label VerticalAlignment="Center" Grid.Row="8" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Salary By Hour?" Grid.ColumnSpan="2"/>
+            <Label VerticalAlignment="Center" Grid.Row="6" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="End Working:" />
+            <DatePicker x:Name="end_WorkingDatePicker" SelectedDateChanged="end_WorkingDatePicker_SelectedDateChanged" VerticalAlignment="Center" SelectedDate="{Binding End_Working}" Grid.Row="6" Margin="0,4" HorizontalAlignment="Left" Grid.Column="3" />
+            <Label VerticalAlignment="Center"  Grid.Row="1" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Nanny:"/>
+            <Label VerticalAlignment="Center"  Grid.Row="0" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="id Child:"/>
+            <ComboBox x:Name="id_ChidComboBox"  VerticalAlignment="Bottom" Text="{Binding id_Child}" SelectionChanged="id_ChildComboBox_SelectionChanged" Margin="0,0,-0.333,3" Height="24" HorizontalAlignment="Right" Width="120" Grid.ColumnSpan="3" Grid.Column="2" />
+
+            <Label VerticalAlignment="Center"  Grid.Row="3" Margin="3,4,0,3.333" HorizontalAlignment="Left" Grid.Column="0" Content="signed contract:" Grid.ColumnSpan="2" Width="99"/>
+            <CheckBox x:Name="if_contractCheckBox"  VerticalAlignment="Center" Grid.Row="3" Margin="0,11,0,5" IsChecked="{Binding if_contract}" HorizontalAlignment="Left" Grid.Column="3" Content=""/>
+            <Label VerticalAlignment="Center"  Grid.Row="4" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="if interview:"/>
+            <CheckBox x:Name="if_interviewCheckBox"  VerticalAlignment="Center" Grid.Row="4" Margin="0,8" IsChecked="{Binding if_interview}" HorizontalAlignment="Left" Grid.Column="3" Content=""/>
+            <Label VerticalAlignment="Center" Grid.Row="7" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Num Of Hours:"/>
+            <TextBox x:Name="num_Of_HoursTextBox" Width="120" VerticalAlignment="Center" Text="{Binding Num_Of_Hours}" Grid.Row="7" Margin="3,5.333,-0.333,5.333" Height="24" HorizontalAlignment="Left" Grid.Column="2" Grid.ColumnSpan="3" />
+            <Label VerticalAlignment="Center" Grid.Row="5" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Started Working:" Grid.ColumnSpan="2"/>
+            <DatePicker x:Name="started_WorkingDatePicker" SelectedDateChanged="started_WorkingDatePicker_SelectedDateChanged" VerticalAlignment="Center" SelectedDate="{Binding Started_Working}" Grid.Row="5" Margin="0,4" HorizontalAlignment="Left" Grid.Column="3"/>
+            <CheckBox Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="0.333,9,0,0" Grid.Row="8" VerticalAlignment="Top" />
+            <Button x:Name="choosenanny" Content="Choose Nanny" Grid.Column="2" HorizontalAlignment="Left" Margin="3,7.667,-0.333,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3" Height="20" Click="choosenanny_Click"/>
+        </Grid>
+        <Button x:Name="add_button" Content="Add Contract" HorizontalAlignment="Left" Margin="30,282,0,0" VerticalAlignment="Top" Width="105" Click="add_button_Click" Grid.Column="1" Height="27" />
+
+    </Grid>
+</Window>

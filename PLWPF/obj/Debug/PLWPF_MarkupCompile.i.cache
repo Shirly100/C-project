@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\App.xaml
-11151548125
+221166467625
 
-9-2090862747
-15-1651524215
-MainWindow.xaml;
+30619294511
+16-1181614500
+addchild.xaml;addcontract.xaml;addmother.xaml;addnanny.xaml;chooseNanny.xaml;EditScheduale.xaml;MainWindow.xaml;nextMain.xaml;removechild.xaml;removecontract.xaml;removemother.xaml;removenanny.xaml;updatechild.xaml;updatecontract.xaml;updatemother.xaml;updatenanny.xaml;wchild.xaml;wcontract.xaml;winAddress.xaml;winBank.xaml;wmother.xaml;wnanny.xaml;
 
 True
 
