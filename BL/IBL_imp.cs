@@ -10,12 +10,14 @@ using GoogleMapsApi.Entities.Directions.Request;
 using GoogleMapsApi.Entities.Directions.Response;
 using GoogleMapsApi;
 using System.Threading;
+using System.ComponentModel;
 
 namespace BL
 {
     class IBL_imp : IBL
     {
         Idal mydal = FactoryDal.getDal();
+        float nannyInRange = -1;
         #region Nanny functions
         public void addNanny(Nanny n)
         {
@@ -142,25 +144,56 @@ namespace BL
             {
                 string nan = n.Address.ToAddress();
                 Console.WriteLine(nan);
-                var drivingDirectionRequest = new DirectionsRequest
-                {
-                    TravelMode = TravelMode.Walking,
-                    Origin = ad,
-                    Destination = nan
-                };
-                //DirectionsResponse drivingDirections = GoogleMaps.Directions.QueryAsync(drivingDirectionRequest);
-                var task = GoogleMaps.Directions.QueryAsync(drivingDirectionRequest);
-                while (!task.IsCompleted)
-                {
-                    Thread.Sleep(100);
-                }
-                Route route = task.Result.Routes.First();
-                Leg leg = route.Legs.First();
-                if (leg.Distance.Value/1000 <= m.Range) ans.Add(n);
-                Console.WriteLine(leg.Distance.Value);
+
+                // using backgroundworker to hold google maps ...
+                // The parameters you want to pass to the do work event of the background worker.
+                List<String> arguments = new List<string> { ad, nan };
+
+                BackgroundWorker worker = new BackgroundWorker();
+                worker.DoWork += new DoWorkEventHandler(doGoogleMapsWork);
+                worker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(doGoogleMapsWorkCompleted);
+
+  
+                // This runs the event on new background worker thread.
+                worker.RunWorkerAsync(arguments);
+                if (this.nannyInRange <= m.Range)
+                    ans.Add(n);
             }
             return ans;
         }
+
+        private void doGoogleMapsWorkCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled == true)
+            {
+            }
+            else if (e.Error != null)
+            {
+            }
+            else
+            {
+                int result = Convert.ToInt32(e.Result);
+
+                nannyInRange = (float)result;
+            }
+        }
+
+        private void doGoogleMapsWork(object sender, DoWorkEventArgs e)
+        {
+            List<String> args = e.Argument as List<string>;
+            var drivingDirectionRequest = new DirectionsRequest
+            {
+                TravelMode = TravelMode.Walking,
+                Origin = args[0],
+                Destination = args[1]
+            };
+            DirectionsResponse drivingDirections = GoogleMaps.Directions.Query(drivingDirectionRequest);
+            Route route = drivingDirections.Routes.First();
+            Leg leg = route.Legs.First();
+            e.Result =(leg.Distance.Value / 1000 );
+          Console.WriteLine(leg.Distance.Value);
+        }
+
         public int Age(DateTime birthday)
         {
             DateTime now = DateTime.Today;
@@ -194,7 +227,7 @@ namespace BL
                 if (flag)
                     n.Add(item1);
             }
-            /*List<Nanny> temp = Nanny_In_Range(m);
+            List<Nanny> temp = Nanny_In_Range(m);
             foreach (Nanny nn in n)
             {
                 if (temp.IndexOf(nn) >= 0) {}
@@ -203,7 +236,7 @@ namespace BL
                     n.Remove(nn);
                 }
             }
-            */
+            
             return n;
         }
         //return all children which doen't has ananny

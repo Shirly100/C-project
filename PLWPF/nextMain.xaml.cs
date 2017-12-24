@@ -72,6 +72,25 @@ namespace PLWPF
                 BankAccount = new BankAccount { AccountNumber = 100, Balance = 10000, BankName = "Leumi", BankNumber = 22, BranchAddress = new Address { City = "Jerusalem", Street = "Beit Hadefus", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" }, BranchNumber = 65 },
 
             };
+            Mother mmm = new Mother
+            {
+                Address = new Address { City = "Jerusalem", Street = "Ben Tzvi", HouseNumber = 17, Country = "Israel", Floor = 1, ZipCode = "zip" },
+                ID = 124,
+                FirstName = "Shirly",
+                LastName = "Cohen",
+                Age = 29,
+                Pelephone = "0345566456",
+                WorkDays = new Dictionary<BE.Days, KeyValuePair<int, int>>()
+            {
+                {BE.Days.Sun, new KeyValuePair<int, int>(12,14 )},
+                {BE.Days.Mon, new KeyValuePair<int, int>(12,14 )},
+                {BE.Days.Tue, new KeyValuePair<int, int>(12,14 )},
+                {BE.Days.Wed, new KeyValuePair<int, int>(12,14 )}
+             },
+                Range = 1000,
+                BankAccount = new BankAccount { AccountNumber = 110, Balance = 10000, BankName = "Leumi", BankNumber = 22, BranchAddress = new Address { City = "Jerusalem", Street = "Beit Hadefus", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" }, BranchNumber = 65 },
+
+            };
             Nanny nanny = new Nanny
             {
                 ID = 2243,
@@ -129,6 +148,16 @@ namespace PLWPF
                 SpecialNeeds = true
             };
 
+            Child chhh = new Child
+            {
+                Age = 3.5F,
+                Allergies = false,
+                BirthDate = "01/08/2017",
+                FirstName = "Chany",
+                ID_child = 1235,
+                ID_Mother = 124,
+                SpecialNeeds = true
+            };
             Contract cccc = new Contract
             {
                 ContractID = 100,
@@ -146,10 +175,13 @@ namespace PLWPF
                 StartDate = "15/10/2017"
             };
             factoryBL.get_bl().addMother(m);
+            factoryBL.get_bl().addMother(mmm);
             factoryBL.get_bl().addNanny(nanny);
             factoryBL.get_bl().addNanny(n);
             factoryBL.get_bl().addChild(ch);
+            factoryBL.get_bl().addChild(chhh);
             factoryBL.get_bl().addContract(cccc);
+            factoryBL.get_bl().addContract(c);
         }
     }
 }
