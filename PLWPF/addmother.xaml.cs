@@ -55,7 +55,7 @@ namespace PLWPF
 
         private void address_Click(object sender, RoutedEventArgs e)
         {
-            winAddress w = new winAddress();
+            var w = new winAddress();
             bool? addre = w.ShowDialog();
             if (addre != false)
             {

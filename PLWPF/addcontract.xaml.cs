@@ -76,12 +76,10 @@ namespace PLWPF
 
         private void choosenanny_Click(object sender, RoutedEventArgs e)
         {
-            chooseNanny nan = new chooseNanny(bl.getMother(temp_con.ID_mother));
-            bool? result = nan.ShowDialog();
-            if (result != false)
+            var nan = new chooseNanny(bl.getMother(temp_con.ID_mother));
+            if (nan.ShowDialog() == false)
             {
-                temp_con.ID_nanny = nan.n.ID;
-                Console.WriteLine(nan.n.ID);
+                temp_con.ID_nanny = nan.nID;
             }
         }
 
