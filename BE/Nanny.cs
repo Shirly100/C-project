@@ -20,7 +20,7 @@ namespace BE
         public float MonthlyRate { get; set; }
         public Dictionary<Days, KeyValuePair<int, int>> WorkDays = new Dictionary<Days, KeyValuePair<int, int>>();//example: "Sun: 8:00-14:00"
         public bool Ministry_Vocations { get; set; }
-        public StringBuilder Recommendations { get; set; }
+        public string Recommendations { get; set; }
 
         public override string ToString()
         {

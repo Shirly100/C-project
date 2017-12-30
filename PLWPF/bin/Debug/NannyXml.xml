@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nannies>
+  <Nanny>
+    <numOfChildren>0</numOfChildren>
+    <myChildren />
+    <ID>2243</ID>
+    <FirstName>rivi</FirstName>
+    <LastName>bar</LastName>
+    <Telephone />
+    <Pelephone />
+    <Address>
+      <Address>
+        <Country>Israel</Country>
+        <City>Jerusalem</City>
+        <Floor>1</Floor>
+        <HouseNumber>11</HouseNumber>
+        <ZipCode>zip</ZipCode>
+        <Street>Beit Hadefus</Street>
+      </Address>
+    </Address>
+    <BirthDate>1995-12-26T00:00:00</BirthDate>
+    <Elevator>true</Elevator>
+    <Age>20</Age>
+    <ExperienceYears>0</ExperienceYears>
+    <MaxAgeOfChild>0</MaxAgeOfChild>
+    <MaxNumOfChildren>5</MaxNumOfChildren>
+    <HourlyRate>27</HourlyRate>
+    <MonthlyRate>1000</MonthlyRate>
+    <WorkDays>
+      <Day Day="Sun">
+        <Start>8</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Mon">
+        <Start>8</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Tue">
+        <Start>8</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Wed">
+        <Start>8</Start>
+        <End>14</End>
+      </Day>
+    </WorkDays>
+    <Ministry_Vocations>false</Ministry_Vocations>
+    <Recommendations />
+    <BankAccount>
+      <BankAccount>
+        <AccountNumber>200</AccountNumber>
+        <Balance>10</Balance>
+        <BankName>Leumi</BankName>
+        <BankNumber>22</BankNumber>
+        <BranchAddress>
+          <Address>
+            <Country>Israel</Country>
+            <City>Jerusalem</City>
+            <Floor>1</Floor>
+            <HouseNumber>7</HouseNumber>
+            <ZipCode>zip</ZipCode>
+            <Street>Beit Hadefus</Street>
+          </Address>
+        </BranchAddress>
+        <BranchNumber>65</BranchNumber>
+      </BankAccount>
+    </BankAccount>
+  </Nanny>
+  <Nanny>
+    <numOfChildren>0</numOfChildren>
+    <myChildren />
+    <ID>243</ID>
+    <FirstName>rivi2</FirstName>
+    <LastName>bar2</LastName>
+    <Telephone />
+    <Pelephone />
+    <Address>
+      <Address>
+        <Country>Israel</Country>
+        <City>Jerusalem</City>
+        <Floor>1</Floor>
+        <HouseNumber>11</HouseNumber>
+        <ZipCode>zip</ZipCode>
+        <Street>Beit Hadefus</Street>
+      </Address>
+    </Address>
+    <BirthDate>1995-12-26T00:00:00</BirthDate>
+    <Elevator>true</Elevator>
+    <Age>20</Age>
+    <ExperienceYears>0</ExperienceYears>
+    <MaxAgeOfChild>0</MaxAgeOfChild>
+    <MaxNumOfChildren>5</MaxNumOfChildren>
+    <HourlyRate>27</HourlyRate>
+    <MonthlyRate>1000</MonthlyRate>
+    <WorkDays>
+      <Day Day="Sun">
+        <Start>13</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Mon">
+        <Start>13</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Tue">
+        <Start>13</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Wed">
+        <Start>13</Start>
+        <End>14</End>
+      </Day>
+    </WorkDays>
+    <Ministry_Vocations>false</Ministry_Vocations>
+    <Recommendations />
+    <BankAccount>
+      <BankAccount>
+        <AccountNumber>200</AccountNumber>
+        <Balance>10</Balance>
+        <BankName>Leumi</BankName>
+        <BankNumber>22</BankNumber>
+        <BranchAddress>
+          <Address>
+            <Country>Israel</Country>
+            <City>Jerusalem</City>
+            <Floor>1</Floor>
+            <HouseNumber>7</HouseNumber>
+            <ZipCode>zip</ZipCode>
+            <Street>Beit Hadefus</Street>
+          </Address>
+        </BranchAddress>
+        <BranchNumber>65</BranchNumber>
+      </BankAccount>
+    </BankAccount>
+  </Nanny>
+</nannies>

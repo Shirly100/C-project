@@ -30,7 +30,7 @@ namespace BE
         public float payment { get; set; } 
         public bool siblings { get; set; }
         public int NumOfSiblings { get; set; }//if there are siblings,how many
-        public Dictionary<Days, string> WorkDays = new Dictionary<Days, string>();//example: "Sun: 8:00-14:00"
+        public Dictionary<Days, KeyValuePair<int, int>> WorkDays = new Dictionary<Days, KeyValuePair<int, int>>();//example: "Sun: 8:00-14:00"
         public string StartDate { get; set; }//in form: 23/12/2017
         public string EndDate { get; set; }
         public float hours_Of_Employment { get; set; }
