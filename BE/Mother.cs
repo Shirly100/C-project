@@ -17,13 +17,14 @@ namespace BE
         public override string ToString()
         {
             string Result=base.ToString();
-            /*Result += (GoalAddress.Street != null) ? "Required location: " + GoalAddress + "\n" : "";
+            Result += (GoalAddress.Street != null) ? "Required location: " + GoalAddress + "\n" : "";
             Result += "Required days: \n";
+            Result += Address;
             foreach (var item in WorkDays)
             {
                 Result += "Day: " + item.Key + "   \t";
                 Result += "Hours: " + item.Value + '\n';
-            } */
+            } 
             return Result;
         }
     }

@@ -24,6 +24,7 @@ namespace PLWPF
     {
         IBL bl;
         public Nanny n;
+        public long nID;
         Mother m;
         public chooseNanny(Mother mom)
         {
@@ -66,15 +67,10 @@ namespace PLWPF
 
         private void choose_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                n = (Nanny)nannies.SelectedItem;
-                Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            n = (Nanny)nannies.SelectedItem;
+            nID = n.ID;
+            Console.WriteLine(nID);
+            this.Close();
         }
 
         private void find_Click(object sender, RoutedEventArgs e)

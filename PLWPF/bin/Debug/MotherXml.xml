@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mother>
+  <Mother>
+    <ID>123</ID>
+    <payment>false</payment>
+    <Age>25</Age>
+    <FirstName>Chany</FirstName>
+    <LastName>Cohen</LastName>
+    <Telephone />
+    <Pelephone>03455666</Pelephone>
+    <Address>
+      <Address>
+        <Country>Israel</Country>
+        <City>Jerusalem</City>
+        <Floor>1</Floor>
+        <HouseNumber>7</HouseNumber>
+        <ZipCode>zip</ZipCode>
+        <Street>Beit Hadefus</Street>
+      </Address>
+    </Address>
+    <WorkDays>
+      <Day Day="Sun">
+        <Start>12</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Mon">
+        <Start>12</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Tue">
+        <Start>12</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Wed">
+        <Start>12</Start>
+        <End>14</End>
+      </Day>
+    </WorkDays>
+    <BankAccount>
+      <BankAccount>
+        <AccountNumber>100</AccountNumber>
+        <Balance>10000</Balance>
+        <BankName>Leumi</BankName>
+        <BankNumber>22</BankNumber>
+        <BranchAddress>
+          <Address>
+            <Country>Israel</Country>
+            <City>Jerusalem</City>
+            <Floor>1</Floor>
+            <HouseNumber>7</HouseNumber>
+            <ZipCode>zip</ZipCode>
+            <Street>Beit Hadefus</Street>
+          </Address>
+        </BranchAddress>
+        <BranchNumber>65</BranchNumber>
+      </BankAccount>
+    </BankAccount>
+    <Range>50</Range>
+    <GoalAddress>
+      <Address>
+        <Country />
+        <City />
+        <Floor>0</Floor>
+        <HouseNumber>0</HouseNumber>
+        <ZipCode />
+        <Street />
+      </Address>
+    </GoalAddress>
+    <myChildren />
+  </Mother>
+  <Mother>
+    <ID>124</ID>
+    <payment>false</payment>
+    <Age>29</Age>
+    <FirstName>Shirly</FirstName>
+    <LastName>Cohen</LastName>
+    <Telephone />
+    <Pelephone>0345566456</Pelephone>
+    <Address>
+      <Address>
+        <Country>Israel</Country>
+        <City>Jerusalem</City>
+        <Floor>1</Floor>
+        <HouseNumber>17</HouseNumber>
+        <ZipCode>zip</ZipCode>
+        <Street>Ben Tzvi</Street>
+      </Address>
+    </Address>
+    <WorkDays>
+      <Day Day="Sun">
+        <Start>12</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Mon">
+        <Start>12</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Tue">
+        <Start>12</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Wed">
+        <Start>12</Start>
+        <End>14</End>
+      </Day>
+    </WorkDays>
+    <BankAccount>
+      <BankAccount>
+        <AccountNumber>110</AccountNumber>
+        <Balance>10000</Balance>
+        <BankName>Leumi</BankName>
+        <BankNumber>22</BankNumber>
+        <BranchAddress>
+          <Address>
+            <Country>Israel</Country>
+            <City>Jerusalem</City>
+            <Floor>1</Floor>
+            <HouseNumber>7</HouseNumber>
+            <ZipCode>zip</ZipCode>
+            <Street>Beit Hadefus</Street>
+          </Address>
+        </BranchAddress>
+        <BranchNumber>65</BranchNumber>
+      </BankAccount>
+    </BankAccount>
+    <Range>1000</Range>
+    <GoalAddress>
+      <Address>
+        <Country />
+        <City />
+        <Floor>0</Floor>
+        <HouseNumber>0</HouseNumber>
+        <ZipCode />
+        <Street />
+      </Address>
+    </GoalAddress>
+    <myChildren />
+  </Mother>
+</mother>
