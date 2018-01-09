@@ -20,4 +20,14 @@
     <Allergies>false</Allergies>
     <allergies />
   </Child>
+  <Child>
+    <ID_child>123</ID_child>
+    <ID_Mother>124</ID_Mother>
+    <FirstName>please write name</FirstName>
+    <Age>0</Age>
+    <BirthDate>1/4/2018 12:00:00 AM</BirthDate>
+    <SpecialNeeds>true</SpecialNeeds>
+    <Allergies>true</Allergies>
+    <allergies />
+  </Child>
 </children>

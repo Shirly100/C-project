@@ -22,3 +22,4 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\bin\Debug\BE.pdb
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
