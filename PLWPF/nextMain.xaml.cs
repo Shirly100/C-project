@@ -25,7 +25,7 @@ namespace PLWPF
         public nextMain()
         {
             bl = factoryBL.get_bl();
-            init();
+            //init();
             InitializeComponent();
         }
         private void Contract(object sender, RoutedEventArgs e)
