@@ -10,6 +10,8 @@ namespace DAL
 {
     public class DAL_imp : Idal
     {
+        static int ContractSerial = 100000;
+
         #region Nanny functions
         public void addNanny(Nanny n)
         {
@@ -141,6 +143,7 @@ namespace DAL
         {
             foreach (var item in DS.DataSource.contracts)
                 if (item.ContractID == c.ContractID) throw new Exception("You are trying to add already-existing contract");
+            c.ContractID = ++ContractSerial;
             DataSource.contracts.Add(c.ContractDeepClone());
             if (getNanny(c.ID_nanny).myChildren.IndexOf(getChild(c.ID_child)) == -1)
                 getNanny(c.ID_nanny).myChildren.Add(getChild(c.ID_child));

@@ -9,31 +9,21 @@ namespace BE
     public class Contract
     {
         public float distance { get; set; }
-        private static int ContractNumber = 10000000;
-        private int contractID;
-        public int ContractID
-        {
-            get { return contractID; }
-            set
-            {
-                ContractNumber++;
-                contractID = ContractNumber;
-            }
-        }
+        public int ContractID { get; set; }
         public long ID_nanny { get; set; }
         public long ID_child { get; set; }
         public long ID_mother { get; set; }
         public bool interview { get; set; }
         public bool signed_contract { get; set; }
-        public float Wages_per_hours { get; set; }
-        public float Wages_per_months { get; set; }
-        public float payment { get; set; } 
+        public double Wages_per_hours { get; set; }
+        public double Wages_per_months { get; set; }
+        public double payment { get; set; } 
         public bool siblings { get; set; }
         public int NumOfSiblings { get; set; }//if there are siblings,how many
         public Dictionary<Days, KeyValuePair<int, int>> WorkDays = new Dictionary<Days, KeyValuePair<int, int>>();//example: "Sun: 8:00-14:00"
         public string StartDate { get; set; }//in form: 23/12/2017
         public string EndDate { get; set; }
-        public float hours_Of_Employment { get; set; }
+        public int hours_Of_Employment { get; set; }
 
         public override string ToString()
         {

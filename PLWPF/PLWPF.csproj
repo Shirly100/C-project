@@ -56,6 +56,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -91,6 +92,9 @@
     </Compile>
     <Compile Include="EditScheduale.xaml.cs">
       <DependentUpon>EditScheduale.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="grouping.xaml.cs">
+      <DependentUpon>grouping.xaml</DependentUpon>
     </Compile>
     <Compile Include="removechild.xaml.cs">
       <DependentUpon>removechild.xaml</DependentUpon>
@@ -155,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EditScheduale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="grouping.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -286,6 +294,14 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\90168532.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\get-bitcoins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo_118_light.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

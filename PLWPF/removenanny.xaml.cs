@@ -28,7 +28,8 @@ namespace PLWPF
             bl = factoryBL.get_bl();
             n = new Nanny();
             InitializeComponent();
-            choose.ItemsSource = bl.getNannyList();
+            choose.ItemsSource = from m in bl.getNannyList()
+                                 select String.Concat(m.FirstName, ' ', m.LastName);
         }
 
         private void choose_SelectionChanged(object sender, SelectionChangedEventArgs e)

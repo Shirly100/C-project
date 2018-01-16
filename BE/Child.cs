@@ -16,7 +16,7 @@ namespace BE
         public bool SpecialNeeds { get; set; }
         public bool Allergies { get; set; }
         public string allergies { get; set; }
-        public float Age { get; set; }//in months
+        public int Age { get; set; }//in months
         
 
         public override string ToString()

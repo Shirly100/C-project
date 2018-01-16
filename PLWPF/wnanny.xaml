@@ -5,10 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="wnanny" Height="246.667" Width="300">
+        Title="wnanny" Height="457.667" Width="239.999">
     <Grid>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="104,36,0,0" VerticalAlignment="Top" Width="75" Click="Add"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="104,95,0,0" VerticalAlignment="Top" Width="75" Click="Update"/>
-        <Button Content="Remove" HorizontalAlignment="Left" Margin="104,154,0,0" VerticalAlignment="Top" Width="75" Click="Remove"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="55,89,0,0" VerticalAlignment="Top" Width="121" Click="Add" Height="34" FontWeight="Bold" FontSize="16">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="55,194,0,0" VerticalAlignment="Top" Width="121" Click="Update" Height="35" FontWeight="Bold" FontSize="16">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Remove" HorizontalAlignment="Left" Margin="55,299,0,0" VerticalAlignment="Top" Width="121" Click="Remove" Height="36" FontWeight="Bold" FontSize="16">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>

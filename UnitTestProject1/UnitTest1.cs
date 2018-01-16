@@ -86,7 +86,7 @@ namespace UnitTestProject1
             };
             Child ch = new Child
             {
-                Age = 3.5F,
+                Age = 3,
                 Allergies = false,
                 BirthDate = "01/08/2017",
                 FirstName = "Leiky",
@@ -122,7 +122,7 @@ namespace UnitTestProject1
         {
             Child chil = new Child
             {
-                Age = 5F,
+                Age = 5,
                 Allergies = false,
                 BirthDate = "01/08/2017",
                 FirstName = "Leiky",

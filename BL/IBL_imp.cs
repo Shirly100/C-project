@@ -69,8 +69,8 @@ namespace BL
             float hourly = getNanny(c.ID_nanny).HourlyRate;
             float monthly = getNanny(c.ID_nanny).MonthlyRate;
             int numOfChildren = getMother(c.ID_mother).myChildren.Count();
-            c.Wages_per_hours = (hourly / 100) * (100 - numOfChildren * 2);
-            c.Wages_per_months = (monthly / 100) * (100 - numOfChildren * 2);
+            c.Wages_per_hours = (int)(hourly / 100) * (100 - numOfChildren * 2);
+            c.Wages_per_months = (int)(monthly / 100) * (100 - numOfChildren * 2);
         }
         public void addContract(Contract c) => addContract(c, mydal.getMother(c.ID_mother));
         //verifing ages, nanny avalability, adding all factors to nanny and the contract
@@ -132,7 +132,7 @@ namespace BL
         }
         public void removeContract(Contract c) => mydal.removeContract(c);
         public void updateContract(Contract c) => mydal.updateContract(c);
-        public List<Contract> getContractList() => DataSource.contracts;
+        public List<Contract> getContractList() => mydal.getContractList();
         #endregion
         //finding all nannies within mother's given range
         public List<Nanny> Nanny_In_Range(Mother m)
@@ -140,7 +140,7 @@ namespace BL
             List<Nanny> ans = new List<Nanny>();
             string ad = m.Address.ToAddress();
             Console.WriteLine(ad);
-            foreach (Nanny n in DataSource.Nannies)
+            foreach (Nanny n in getNannyList())
             {
                 string nan = n.Address.ToAddress();
                 Console.WriteLine(nan);
@@ -205,7 +205,7 @@ namespace BL
         public List<Nanny> Nanny_For_Mother(Mother m)
         {
             List<Nanny> n = new List<Nanny>();
-            foreach (var item1 in DS.DataSource.Nannies)
+            foreach (var item1 in getNannyList())
             {
                 bool flag = true;
                 foreach (var d in m.WorkDays)
@@ -227,16 +227,21 @@ namespace BL
                 if (flag)
                     n.Add(item1);
             }
-            List<Nanny> temp = Nanny_In_Range(m);
-            foreach (Nanny nn in n)
-            {
-                if (temp.IndexOf(nn) >= 0) {}
-                else
-                {
-                    n.Remove(nn);
-                }
-            }
-            
+            /* List<Nanny> temp = Nanny_In_Range(m);
+             List<Nanny> ret = new List<Nanny>(); 
+             foreach (Nanny nn in n)
+             {
+                 if (temp.IndexOf(nn) >= 0) {
+                     ret.Add(nn);
+                 }
+                 else
+                 {
+
+                 }
+             }
+
+             return ret;
+             */
             return n;
         }
         //return all children which doen't has ananny
@@ -244,7 +249,7 @@ namespace BL
         {
             List<Child> noNanny = new List<Child>();
             foreach (var item1 in c)
-                if (!(DS.DataSource.contracts.Any(contract => contract.ID_child == item1.ID_child)))
+                if (!(getContractList().Any(contract => contract.ID_child == item1.ID_child)))
                     noNanny.Add(item1);
             return noNanny;
         }
@@ -268,9 +273,9 @@ namespace BL
             IEnumerable<Contract> a = mydal.getContractList().Where(t => (function(t)));
             return a.Count();
         }
-        public IEnumerable<IGrouping<float, Nanny>> Nannies_by_Children_Ages(bool b = false)
+        public IEnumerable<IGrouping<int, Nanny>> Nannies_by_Children_Ages(bool b = false)
         {
-            var temp = from t in DS.DataSource.contracts
+            var temp = from t in getContractList()
                        group mydal.getNanny(t.ID_nanny) by mydal.getChild(t.ID_child).Age;
             if (b)
                 temp.OrderBy(c => c.Key);
@@ -302,7 +307,7 @@ namespace BL
         public void setPayment(Contract c)
         {
             if (mydal.getMother(c.ID_mother).payment) c.payment = c.Wages_per_months;
-            else c.payment = c.Wages_per_hours * c.hours_Of_Employment;
+            else c.payment = (int)(c.Wages_per_hours * c.hours_Of_Employment);
         }
         public void monthlyPayment(Contract c)
         {

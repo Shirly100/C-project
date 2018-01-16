@@ -65,3 +65,5 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\EditScheduale.
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\EditScheduale.baml
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\chooseNanny.g.cs
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\chooseNanny.baml
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\grouping.g.cs
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\grouping.baml

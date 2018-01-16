@@ -1,2 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contracts />
+<contracts>
+  <Contract>
+    <distance>0</distance>
+    <payment>0</payment>
+    <ContractID>100</ContractID>
+    <ID_nanny>243</ID_nanny>
+    <ID_child>1234</ID_child>
+    <interview>false</interview>
+    <signed_contract>false</signed_contract>
+    <Wages_per_hours>0</Wages_per_hours>
+    <Wages_per_months>980</Wages_per_months>
+    <siblings>false</siblings>
+    <NumOfSiblings>0</NumOfSiblings>
+    <WorkDays />
+    <StartDate>Tuesday, November 21, 2017</StartDate>
+    <EndDate>Thursday, February 15, 2018</EndDate>
+    <hours_Of_Employment>0</hours_Of_Employment>
+    <ID_Mother>123</ID_Mother>
+  </Contract>
+  <Contract>
+    <distance>0</distance>
+    <payment>0</payment>
+    <ContractID>101</ContractID>
+    <ID_nanny>243</ID_nanny>
+    <ID_child>1234</ID_child>
+    <interview>false</interview>
+    <signed_contract>false</signed_contract>
+    <Wages_per_hours>0</Wages_per_hours>
+    <Wages_per_months>980</Wages_per_months>
+    <siblings>false</siblings>
+    <NumOfSiblings>0</NumOfSiblings>
+    <WorkDays />
+    <StartDate>15/10/2017</StartDate>
+    <EndDate />
+    <hours_Of_Employment>0</hours_Of_Employment>
+    <ID_Mother>123</ID_Mother>
+  </Contract>
+</contracts>

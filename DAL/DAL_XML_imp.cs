@@ -127,10 +127,27 @@ namespace DAL
             }
         }
 
+        private int MaxContractID()
+        {
+            int result;
+            var kayam = contracts.Elements().Any();
+
+            if (!kayam)
+            {
+                result = 100000;
+            }
+            else
+            {
+                result = (from c in contracts.Elements()
+                          select Int32.Parse(c.Element("ContractID").Value)).Max();
+            }
+            return result;
+        }
+
         #region Build XElement
         XElement BuildXelementContract(Contract c)
         {
-            XElement ContractID = new XElement("ContractID", c.ContractID);
+            XElement ContractID = new XElement("ContractID", (MaxContractID() + 1).ToString());
             XElement payment = new XElement("payment", c.payment);
             XElement distance = new XElement("distance", c.distance);
             XElement ID_nanny = new XElement("ID_nanny", c.ID_nanny);
@@ -153,7 +170,9 @@ namespace DAL
             XElement EndDate = new XElement("EndDate", c.EndDate);
             XElement hours_Of_Employment = new XElement("hours_Of_Employment", c.hours_Of_Employment);
             XElement ID_mother = new XElement("ID_Mother", c.ID_mother);
-            return new XElement("Contract",distance,payment, ContractID, ID_nanny, ID_child, interview, signed_contract, Wages_per_hours, Wages_per_months, siblings, NumOfSiblings, WorkDays, StartDate, EndDate, hours_Of_Employment, ID_mother);
+            return new XElement("Contract", distance,payment, ContractID, ID_nanny, ID_child,
+                interview, signed_contract, Wages_per_hours, Wages_per_months, 
+                siblings, NumOfSiblings, WorkDays, StartDate, EndDate, hours_Of_Employment, ID_mother);
         }
 
         XElement BuildXelementNanny(Nanny n)
@@ -187,7 +206,7 @@ namespace DAL
             XElement Recommendations = new XElement("Recommendations", n.Recommendations);
             XElement BankAccount = new XElement("BankAccount", BuildXelementBankAccount(n.BankAccount));
             XElement Age = new XElement("Age", n.Age);
-            return new XElement("Nanny", numOfChildren, myChildren, ID, FirstName, LastName, Telephone, Pelephone, Address, BirthDate, Elevator, Age, ExperienceYears, MaxAgeOfChild, MaxNumOfChildren, HourlyRate, MonthlyRate, WorkDays, Ministry_Vocations, Recommendations, BankAccount);
+            return new XElement("Nanny", MaxAgeOfChild, MaxNumOfChildren,MinAgeOfChild, numOfChildren, myChildren, ID, FirstName, LastName, Telephone, Pelephone, Address, BirthDate, Elevator, Age, ExperienceYears, HourlyRate, MonthlyRate, WorkDays, Ministry_Vocations, Recommendations, BankAccount);
         }
 
         XElement BuildXelementMother(Mother m)
@@ -258,7 +277,7 @@ namespace DAL
             c.ContractID = Convert.ToInt32(xc.Element("ContractID").Value);
             c.ID_mother = Convert.ToInt32(xc.Element("ID_Mother").Value);
             c.ID_child = Convert.ToInt32(xc.Element("ID_child").Value);
-            c.ID_nanny = Convert.ToInt32(xc.Element("ID_Nanny").Value);
+            c.ID_nanny = Convert.ToInt32(xc.Element("ID_nanny").Value);
             c.distance = Convert.ToInt32(xc.Element("distance").Value);
             c.interview = Convert.ToBoolean(xc.Element("interview").Value);
             c.signed_contract = Convert.ToBoolean(xc.Element("signed_contract").Value);
@@ -401,7 +420,7 @@ namespace DAL
         public Nanny getNanny(long id)
         {
             return BuildNanny((from e in nannies.Elements()
-                                        where Convert.ToInt64(e.Element("ID").Value) == id
+                                        where Convert.ToInt32(e.Element("ID").Value) == id
                                         select e).FirstOrDefault());
         }
 
@@ -409,7 +428,7 @@ namespace DAL
         {
 
             XElement temp = ((from e in nannies.Elements()
-                              where Convert.ToInt64(e.Element("ID").Value) == n.ID
+                              where Convert.ToInt32(e.Element("ID").Value) == n.ID
                               select e).FirstOrDefault());
             if (temp == null)
                 throw new Exception("This nanny does not exist");
@@ -420,7 +439,7 @@ namespace DAL
         public void updateNanny(Nanny n)
         {
             XElement temp = ((from e in nannies.Elements()
-                              where Convert.ToInt64(e.Element("ID").Value) == n.ID
+                              where Convert.ToInt32(e.Element("ID").Value) == n.ID
                               select e).FirstOrDefault());
             if (temp == null)
                 throw new Exception("This Nanny not exist");
@@ -434,6 +453,7 @@ namespace DAL
             var items = from temp in nannies.Elements()
                         select BuildNanny(temp);
             listn = items.ToList();
+            Console.WriteLine(listn);
             return listn;
         }
         #endregion
@@ -455,8 +475,9 @@ namespace DAL
         public Mother getMother(long id)
         {
             return BuildMother((from e in mothers.Elements()
-                               where Convert.ToInt64(e.Element("ID").Value) == id
+                               where Convert.ToInt32(e.Element("ID").Value) == id
                                select e).FirstOrDefault());
+
         }
 
         public void removeMother(Mother m)
@@ -488,7 +509,23 @@ namespace DAL
             var items = from temp in mothers.Elements()
                         select BuildMother(temp);
             listm = items.ToList();
+            Console.WriteLine(listm);
+
             return listm;
+        }
+
+        public void addChildren(Child c)
+        {
+            Mother m = new Mother();
+            XElement temp = ((from e in mothers.Elements()
+                              where Convert.ToInt64(e.Element("ID").Value) == c.ID_Mother
+                              select e).FirstOrDefault());
+            if (temp == null)
+                throw new Exception("This Mother not exist");
+            m = BuildMother(temp);
+            m.myChildren.Add(c);
+            temp.ReplaceWith(BuildXelementMother(m));
+            mothers.Save(MotherXml);
         }
         #endregion
 
@@ -502,6 +539,7 @@ namespace DAL
                               select e).FirstOrDefault());
             if (temp != null)
                 throw new Exception("This Child already exist");
+            addChildren(c);
             children.Add(BuildXelementChild(c));
             children.Save(ChildXml);
         }
@@ -568,6 +606,12 @@ namespace DAL
         }
         public void addContract(Contract c)
         {
+
+            XElement temp = ((from e in contracts.Elements()
+                              where Convert.ToInt32(e.Element("ContractID").Value) == c.ContractID
+                              select e).FirstOrDefault());
+            if (temp != null)
+                throw new Exception("This contract already exist");
             contracts.Add(BuildXelementContract(c));
             contracts.Save(ContractXml);
         }
@@ -587,11 +631,13 @@ namespace DAL
         {
 
             XElement temp = (from e in contracts.Elements()
-                             where Convert.ToInt64(e.Element("ContractID").Value) == c.ContractID
+                             where Convert.ToInt32(e.Element("ContractID").Value) == c.ContractID
                              select e).FirstOrDefault();
+            Console.WriteLine(c.ContractID);
+            Console.WriteLine(temp);
 
             if (temp == null)
-                throw new Exception("This contract does not exist");
+                throw new Exception("This contract exist");
 
             temp.ReplaceWith(BuildXelementContract(c));
             contracts.Save(ContractXml);
@@ -603,12 +649,9 @@ namespace DAL
             var items = from temp in contracts.Elements()
                         select BuildContract(temp);
             ListContract = items.ToList();
-            return ListContract;
-        }
+            Console.WriteLine(ListContract);
 
-        public void addChildren(Child c)
-        {
-            throw new NotImplementedException();
+            return ListContract;
         }
 
         public List<BankAccount> getBanksAccountList()

@@ -5,17 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="winBank" Height="284.132" Width="300">
+        Title="winBank" Height="356.885" Width="450.642">
     <Grid>
-        <Label Content="Bank Name:" HorizontalAlignment="Left" Margin="34,30,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="bank" HorizontalAlignment="Left" Margin="144,32,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Branch Name:" HorizontalAlignment="Left" Margin="34,66,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="bran" HorizontalAlignment="Left" Margin="144,68,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Account number:" HorizontalAlignment="Left" Margin="34,107,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="num" HorizontalAlignment="Left" Height="23" Margin="144,111,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
-        <Label Content="Initial Balance:" HorizontalAlignment="Left" Margin="34,146,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="balan" HorizontalAlignment="Left" Height="23" Margin="144,150,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="create" Content="Create Account" HorizontalAlignment="Left" Margin="76,203,0,0" VerticalAlignment="Top" Width="147" Height="26" Click="create_Click"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\get-bitcoins.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Label Content="Bank Name:" HorizontalAlignment="Left" Margin="34,34,0,0" VerticalAlignment="Top" Height="32" Width="118" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="2" ShadowDepth="1"/>
+            </Label.Effect>
+        </Label>
+        <ComboBox x:Name="bank" HorizontalAlignment="Left" Margin="211,39,0,0" VerticalAlignment="Top" Width="193" Height="28">
+            <ComboBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <Label Content="Branch Name:" HorizontalAlignment="Left" Margin="34,84,0,0" VerticalAlignment="Top" Height="32" Width="135" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="2" ShadowDepth="1"/>
+            </Label.Effect>
+        </Label>
+        <ComboBox x:Name="bran" HorizontalAlignment="Left" Margin="211,88,0,0" VerticalAlignment="Top" Width="193" Height="27">
+            <ComboBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <Label Content="Account number:" HorizontalAlignment="Left" Margin="34,129,0,0" VerticalAlignment="Top" Height="33" Width="162" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="2" ShadowDepth="1"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="num" HorizontalAlignment="Left" Height="28" Margin="211,138,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="193" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="Initial Balance:" HorizontalAlignment="Left" Margin="34,177,0,0" VerticalAlignment="Top" Height="32" Width="137" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="2" ShadowDepth="1"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="balan" HorizontalAlignment="Left" Height="28" Margin="211,184,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="193">
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button x:Name="create" Content="Create Account" HorizontalAlignment="Left" Margin="102,247,0,0" VerticalAlignment="Top" Width="236" Height="32" Click="create_Click" FontWeight="Bold" FontSize="16">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Window>

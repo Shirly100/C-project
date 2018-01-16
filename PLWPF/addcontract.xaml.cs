@@ -28,7 +28,8 @@ namespace PLWPF
             bl = factoryBL.get_bl();
             InitializeComponent();
             temp_con = new Contract();
-            id_ChidComboBox.ItemsSource = bl.getChildListAlone();
+            id_ChidComboBox.ItemsSource =  from m in bl.getChildListAlone()
+                                          select String.Concat(m.FirstName); 
             DataContext = temp_con;
         }
 

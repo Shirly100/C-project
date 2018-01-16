@@ -32,7 +32,8 @@ namespace PLWPF
             InitializeComponent();
             exper.ItemsSource = nums;
             num_child.ItemsSource = nums;
-            motherc.ItemsSource = bl.getNannyList();
+            motherc.ItemsSource =  from m in bl.getNannyList() 
+                                  select String.Concat(m.FirstName, ' ', m.LastName);
         }
 
         private void firstname_TextChanged(object sender, TextChangedEventArgs e)

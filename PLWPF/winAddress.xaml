@@ -5,21 +5,76 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="winAddress" Height="349.333" Width="300">
+        Title="winAddress" Height="444.333" Width="385">
     <Grid>
-        <Label Content="State:" HorizontalAlignment="Left" Margin="31,27,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="state" HorizontalAlignment="Left" Height="23" Margin="146,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
-        <Label Content="City:" HorizontalAlignment="Left" Margin="31,65,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="city" HorizontalAlignment="Left" Height="23" Margin="146,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
-        <Label Content="Zip Code:" HorizontalAlignment="Left" Margin="31,103,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="zip" HorizontalAlignment="Left" Height="23" Margin="146,107,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
-        <Label Content="Street:" HorizontalAlignment="Left" Margin="31,141,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="street" HorizontalAlignment="Left" Height="23" Margin="146,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
-        <Label Content="Number:" HorizontalAlignment="Left" Margin="31,183,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="num" HorizontalAlignment="Left" Height="23" Margin="146,187,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
-        <Label Content="Floor:" HorizontalAlignment="Left" Margin="31,224,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="floor" HorizontalAlignment="Left" Height="23" Margin="146,228,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" />
-        <Button x:Name="address" Content="Create Address" HorizontalAlignment="Left" Margin="31,277,0,0" VerticalAlignment="Top" Width="235" Click="address_Click"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\demo_118_light.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Label Content="State:" HorizontalAlignment="Left" Margin="31,27,0,0" VerticalAlignment="Top" Height="35" Width="92" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="1" BlurRadius="3"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="state" HorizontalAlignment="Left" Height="30" Margin="179,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="City:" HorizontalAlignment="Left" Margin="31,76,0,0" VerticalAlignment="Top" Height="34" Width="77" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="1" BlurRadius="3"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="city" HorizontalAlignment="Left" Height="29" Margin="179,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="Zip Code:" HorizontalAlignment="Left" Margin="31,125,0,0" VerticalAlignment="Top" Height="35" Width="142" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="1" BlurRadius="3"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="zip" HorizontalAlignment="Left" Height="29" Margin="179,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="Street:" HorizontalAlignment="Left" Margin="31,175,0,0" VerticalAlignment="Top" Height="33" Width="102" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="1" BlurRadius="3"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="street" HorizontalAlignment="Left" Height="30" Margin="179,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="Number:" HorizontalAlignment="Left" Margin="31,229,0,0" VerticalAlignment="Top" Height="35" Width="129" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="1" BlurRadius="3"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="num" HorizontalAlignment="Left" Height="30" Margin="179,234,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="154" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="Floor:" HorizontalAlignment="Left" Margin="31,282,0,0" VerticalAlignment="Top" Height="34" Width="92" FontSize="20">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="1" BlurRadius="3"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="floor" HorizontalAlignment="Left" Height="29" Margin="179,288,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="154" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button x:Name="address" Content="Create Address" HorizontalAlignment="Left" Margin="31,341,0,0" VerticalAlignment="Top" Width="302" Click="address_Click" Height="36" FontSize="20" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Window>

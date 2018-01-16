@@ -34,7 +34,8 @@ namespace PLWPF
             InitializeComponent();
             IsChecked = false;
             DataContext = this;
-            nannies.ItemsSource = bl.getNannyList();
+            nannies.ItemsSource = from m in bl.getNannyList()
+                                  select String.Concat(m.FirstName, ' ', m.LastName); ;
         }
         private Boolean _IsChecked;
 
@@ -75,13 +76,7 @@ namespace PLWPF
 
         private void find_Click(object sender, RoutedEventArgs e)
         {
-            bool? ran = range.IsChecked;
-            if (ran != false)
-                if (m.Range <= 0)
-                    m.Range = 1000;
-            bool? agg = age.IsChecked;
-            float agedef = 0;
-            if (agg != false) agedef = Convert.ToInt32(chage.Text);
+            
             nannies.ItemsSource = bl.Nanny_For_Mother(m);
             //finish showing only relevant nannies = needs change in bl also
         }

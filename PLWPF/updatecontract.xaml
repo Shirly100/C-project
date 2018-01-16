@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="updatecontract" Height="345.96" Width="270.466">
     <Grid Margin="0,12,0,-3.667">
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="54*"/>
             <ColumnDefinition Width="142*"/>
@@ -41,7 +44,7 @@
             <Label VerticalAlignment="Center" Grid.Row="6" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="End Working:" />
             <DatePicker x:Name="end_WorkingDatePicker" SelectedDateChanged="end_WorkingDatePicker_SelectedDateChanged" VerticalAlignment="Center" SelectedDate="{Binding End_Working}" Grid.Row="6" Margin="0,4" HorizontalAlignment="Left" Grid.Column="3" />
             <Label VerticalAlignment="Center"  Grid.Row="0" Margin="3,4,0,3.333" HorizontalAlignment="Left" Grid.Column="0" Content="Choose contract:" Grid.ColumnSpan="3" Width="104"/>
-            <ComboBox x:Name="choose"  VerticalAlignment="Bottom"  Margin="0,0,-0.333,3" Height="24" HorizontalAlignment="Right" Width="120" Grid.ColumnSpan="3" Grid.Column="2" />
+            <ComboBox x:Name="choose"  VerticalAlignment="Bottom"  Margin="0,0,-0.333,3" Height="24" HorizontalAlignment="Right" Width="120" Grid.ColumnSpan="3" Grid.Column="2" SelectionChanged="choose_SelectionChanged" />
 
             <Label VerticalAlignment="Center"  Grid.Row="3" Margin="3,4,0,3.333" HorizontalAlignment="Left" Grid.Column="0" Content="signed contract:" Grid.ColumnSpan="2" Width="99"/>
             <CheckBox x:Name="if_contractCheckBox"  VerticalAlignment="Center" Grid.Row="3" Margin="0,11,0,5" IsChecked="{Binding if_contract}" HorizontalAlignment="Left" Grid.Column="3" Content=""/>

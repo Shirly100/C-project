@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <nannies>
   <Nanny>
+    <MaxAgeOfChild>0</MaxAgeOfChild>
+    <MaxNumOfChildren>5</MaxNumOfChildren>
+    <MinAgeOfChild>2</MinAgeOfChild>
     <numOfChildren>0</numOfChildren>
     <myChildren />
     <ID>2243</ID>
@@ -22,8 +25,6 @@
     <Elevator>true</Elevator>
     <Age>20</Age>
     <ExperienceYears>0</ExperienceYears>
-    <MaxAgeOfChild>0</MaxAgeOfChild>
-    <MaxNumOfChildren>5</MaxNumOfChildren>
     <HourlyRate>27</HourlyRate>
     <MonthlyRate>1000</MonthlyRate>
     <WorkDays>
@@ -67,6 +68,9 @@
     </BankAccount>
   </Nanny>
   <Nanny>
+    <MaxAgeOfChild>0</MaxAgeOfChild>
+    <MaxNumOfChildren>5</MaxNumOfChildren>
+    <MinAgeOfChild>2</MinAgeOfChild>
     <numOfChildren>0</numOfChildren>
     <myChildren />
     <ID>243</ID>
@@ -88,8 +92,6 @@
     <Elevator>true</Elevator>
     <Age>20</Age>
     <ExperienceYears>0</ExperienceYears>
-    <MaxAgeOfChild>0</MaxAgeOfChild>
-    <MaxNumOfChildren>5</MaxNumOfChildren>
     <HourlyRate>27</HourlyRate>
     <MonthlyRate>1000</MonthlyRate>
     <WorkDays>

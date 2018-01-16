@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,8 @@ namespace PLWPF
             m = new Mother();
             InitializeComponent();
             DataContext = tempc;
-            child_combo.ItemsSource = bl.getMotherList();
+            child_combo.ItemsSource = from m in bl.getMotherList()
+                                      select String.Concat(m.FirstName,' ',m.LastName);
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

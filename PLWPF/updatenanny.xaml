@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="updatenanny" Height="591.517" Width="286.118">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
         <Label Content="Choose Nanny" HorizontalAlignment="Left" Margin="32,19,0,0" VerticalAlignment="Top" Width="94"/>
         <ComboBox x:Name="motherc" HorizontalAlignment="Left" Margin="119,24,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="motherc_SelectionChanged"/>
 

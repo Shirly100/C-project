@@ -6,7 +6,7 @@
     <Age>25</Age>
     <FirstName>Chany</FirstName>
     <LastName>Cohen</LastName>
-    <Telephone />
+    <Telephone></Telephone>
     <Pelephone>03455666</Pelephone>
     <Address>
       <Address>
@@ -58,15 +58,36 @@
     <Range>50</Range>
     <GoalAddress>
       <Address>
-        <Country />
-        <City />
+        <Country></Country>
+        <City></City>
         <Floor>0</Floor>
         <HouseNumber>0</HouseNumber>
-        <ZipCode />
-        <Street />
+        <ZipCode></ZipCode>
+        <Street></Street>
       </Address>
     </GoalAddress>
-    <myChildren />
+    <myChildren>
+      <Child>
+        <ID_child>1234</ID_child>
+        <ID_Mother>123</ID_Mother>
+        <FirstName>Leiky</FirstName>
+        <Age>3</Age>
+        <BirthDate>01/08/2017</BirthDate>
+        <SpecialNeeds>true</SpecialNeeds>
+        <Allergies>false</Allergies>
+        <allergies></allergies>
+      </Child>
+      <Child>
+        <ID_child>222222</ID_child>
+        <ID_Mother>123</ID_Mother>
+        <FirstName>please write name</FirstName>
+        <Age>-9</Age>
+        <BirthDate>10/18/2017 12:00:00 AM</BirthDate>
+        <SpecialNeeds>false</SpecialNeeds>
+        <Allergies>false</Allergies>
+        <allergies />
+      </Child>
+    </myChildren>
   </Mother>
   <Mother>
     <ID>124</ID>
@@ -74,7 +95,7 @@
     <Age>29</Age>
     <FirstName>Shirly</FirstName>
     <LastName>Cohen</LastName>
-    <Telephone />
+    <Telephone></Telephone>
     <Pelephone>0345566456</Pelephone>
     <Address>
       <Address>
@@ -126,14 +147,25 @@
     <Range>1000</Range>
     <GoalAddress>
       <Address>
-        <Country />
-        <City />
+        <Country></Country>
+        <City></City>
         <Floor>0</Floor>
         <HouseNumber>0</HouseNumber>
-        <ZipCode />
-        <Street />
+        <ZipCode></ZipCode>
+        <Street></Street>
       </Address>
     </GoalAddress>
-    <myChildren />
+    <myChildren>
+      <Child>
+        <ID_child>1235</ID_child>
+        <ID_Mother>124</ID_Mother>
+        <FirstName>Chany</FirstName>
+        <Age>3</Age>
+        <BirthDate>01/08/2017</BirthDate>
+        <SpecialNeeds>true</SpecialNeeds>
+        <Allergies>false</Allergies>
+        <allergies />
+      </Child>
+    </myChildren>
   </Mother>
 </mother>
