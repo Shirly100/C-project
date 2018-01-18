@@ -75,16 +75,6 @@
         <BirthDate>01/08/2017</BirthDate>
         <SpecialNeeds>true</SpecialNeeds>
         <Allergies>false</Allergies>
-        <allergies></allergies>
-      </Child>
-      <Child>
-        <ID_child>222222</ID_child>
-        <ID_Mother>123</ID_Mother>
-        <FirstName>please write name</FirstName>
-        <Age>-9</Age>
-        <BirthDate>10/18/2017 12:00:00 AM</BirthDate>
-        <SpecialNeeds>false</SpecialNeeds>
-        <Allergies>false</Allergies>
         <allergies />
       </Child>
     </myChildren>

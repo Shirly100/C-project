@@ -29,8 +29,8 @@ namespace PLWPF
             m = new Mother();
             DataContext = m;
             InitializeComponent();
-            motherc.ItemsSource = from m in bl.getMotherList()
-                              select String.Concat(m.FirstName, ' ', m.LastName);
+            motherc.ItemsSource = bl.getMotherList();
+            motherc.DisplayMemberPath = "str";
         }
 
         private void motherc_SelectionChanged(object sender, SelectionChangedEventArgs e)

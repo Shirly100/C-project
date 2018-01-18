@@ -34,25 +34,24 @@ namespace PLWPF
             num_child.ItemsSource = nums;
         }
 
-        private void firstname_TextChanged(object sender, TextChangedEventArgs e)
+        private void add_Click(object sender, RoutedEventArgs e)
         {
-            temp_n.FirstName = firstname.Text;
-        }
-
-        private void LasrName_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            temp_n.LastName = LasrName.Text;
-        }
-
-        private void id_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            string i = id.Text;
-            temp_n.ID = (long)Convert.ToDouble(i);
-        }
-
-        private void Telephone_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            temp_n.Pelephone = Telephone.Text;
+            if (temp_n.ID >1 && temp_n.FirstName.Length >1 && temp_n.LastName.Length >1)
+            {
+                try
+                {
+                    bl.addNanny(temp_n);
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill in all fields correctly");
+            }
         }
 
         private void address_Click(object sender, RoutedEventArgs e)
@@ -75,50 +74,15 @@ namespace PLWPF
             }
         }
 
-        private void add_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                bl.addNanny(temp_n);
-                Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void hours_Click(object sender, RoutedEventArgs e)
         {
-
             EditScheduale editSchedule = new EditScheduale();
             bool? result = editSchedule.ShowDialog();
             if (result != false)
             {
                 temp_n.WorkDays = editSchedule.MyDictionary;
             }
-
         }
 
-
-        private void elevate_Checked(object sender, RoutedEventArgs e)
-        {
-            temp_n.Elevator = true;
-        }
-
-        private void exper_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            temp_n.ExperienceYears = Convert.ToInt32(exper.SelectedValue);
-        }
-
-        private void num_child_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            temp_n.MaxNumOfChildren = (int)num_child.SelectedItem;
-        }
-
-        private void age_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            temp_n.Age = (int)Convert.ToInt16(age.Text);
-        }
     }
 }

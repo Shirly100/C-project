@@ -5,59 +5,82 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="addcontract" Height="367" Width="279">
+        Title="addcontract" Height="250.332" Width="279">
 
-
-    <Grid Margin="0,12,0,-3.667">
+    <Grid  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="54*"/>
-            <ColumnDefinition Width="142*"/>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        <Label x:Name="End_Working" VerticalAlignment="Center" Grid.Row="3"  HorizontalAlignment="Left" Grid.Column="0" Content="End Working:" FontWeight="Bold"  >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <DatePicker x:Name="end_WorkingDatePicker" SelectedDateChanged="end_WorkingDatePicker_SelectedDateChanged" VerticalAlignment="Center" Grid.Row="3"  HorizontalAlignment="Stretch" Grid.Column="1"  FontWeight="Bold" >
+            <DatePicker.Effect>
+                <DropShadowEffect Opacity="0.3"/>
+            </DatePicker.Effect>
+        </DatePicker>
+        <Label VerticalAlignment="Center"  Grid.Row="1"  HorizontalAlignment="Left" Grid.Column="0" Content="Nanny:" FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <Label VerticalAlignment="Center"  Grid.Row="0" HorizontalAlignment="Left" Grid.Column="0" Content="Child name:" FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <ComboBox x:Name="id_ChidComboBox"  VerticalAlignment="center" SelectionChanged="id_ChildComboBox_SelectionChanged"  HorizontalAlignment="Stretch"  Grid.Row="0" Grid.Column="1" FontWeight="Bold" >
+            <ComboBox.Effect>
+                <DropShadowEffect Opacity="0.3"/>
+            </ComboBox.Effect>
+        </ComboBox>
 
-        <Grid x:Name="grid1" VerticalAlignment="Top" Margin="17,5,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="4" Height="287" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="93.667"/>
-                <ColumnDefinition Width="10.333"/>
-                <ColumnDefinition Width="11"/>
-                <ColumnDefinition Width="111.667"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Label VerticalAlignment="Center" Grid.Row="8" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Salary By Hour?" Grid.ColumnSpan="2"/>
-            <Label x:Name="End_Working" VerticalAlignment="Center" Grid.Row="6" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="End Working:" />
-            <DatePicker x:Name="end_WorkingDatePicker" SelectedDateChanged="end_WorkingDatePicker_SelectedDateChanged" VerticalAlignment="Center" Grid.Row="6" Margin="0,4" HorizontalAlignment="Left" Grid.Column="3" />
-            <Label VerticalAlignment="Center"  Grid.Row="1" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Nanny:"/>
-            <Label VerticalAlignment="Center"  Grid.Row="0" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="id Child:" Cursor="None"/>
-            <ComboBox x:Name="id_ChidComboBox"  VerticalAlignment="Bottom" SelectionChanged="id_ChildComboBox_SelectionChanged" Margin="0,0,-0.333,3" Height="24" HorizontalAlignment="Right" Width="120" Grid.ColumnSpan="3" Grid.Column="2" />
+        <Label VerticalAlignment="Center" Grid.Row="4" HorizontalAlignment="Left" Grid.Column="0" Content="Num Of Hours:" FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="num_Of_HoursTextBox" VerticalAlignment="Center" Grid.Row="4"  Text="{Binding Path=hours_Of_Employment}" HorizontalAlignment="Stretch" Grid.Column="1" FontWeight="Bold">
+            <TextBox.Effect>
+                <DropShadowEffect Opacity="0.3"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label VerticalAlignment="Center" Grid.Row="2"  HorizontalAlignment="Left" Grid.Column="0" Content="Started Working:"  FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <DatePicker x:Name="started_WorkingDatePicker" SelectedDateChanged="started_WorkingDatePicker_SelectedDateChanged" VerticalAlignment="Center"  Grid.Row="2" HorizontalAlignment="Stretch" Grid.Column="1" FontWeight="Bold" >
+            <DatePicker.Effect>
+                <DropShadowEffect Opacity="0.3"/>
+            </DatePicker.Effect>
+        </DatePicker>
+        <Button  x:Name="choosenanny" Content="Choose Nanny" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"  Click="choosenanny_Click" FontWeight="Bold" >
+            <Button.Effect>
+                <DropShadowEffect Opacity="0.3"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="add_button" Grid.Row="5" Grid.RowSpan="2" Content="Add Contract" HorizontalAlignment="center" VerticalAlignment="center" Click="add_button_Click"  Grid.Column="0" Grid.ColumnSpan="2"  FontWeight="Bold" >
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
 
-            <Label VerticalAlignment="Center"  Grid.Row="3" Margin="3,4,0,3.333" HorizontalAlignment="Left" Grid.Column="0" Content="signed contract:" Grid.ColumnSpan="2" Width="99"/>
-            <CheckBox x:Name="if_contractCheckBox"  VerticalAlignment="Center" Grid.Row="3" Margin="0,11,0,5"  HorizontalAlignment="Left" Grid.Column="3" Content="" Checked="if_contractCheckBox_Checked"/>
-            <Label VerticalAlignment="Center"  Grid.Row="4" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="if interview:"/>
-            <CheckBox x:Name="if_interviewCheckBox"  VerticalAlignment="Center" Grid.Row="4" Margin="0,8" HorizontalAlignment="Left" Grid.Column="3" Content="" Checked="if_interviewCheckBox_Checked"/>
-            <Label VerticalAlignment="Center" Grid.Row="7" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Num Of Hours:"/>
-            <TextBox x:Name="num_Of_HoursTextBox" Width="120" VerticalAlignment="Center" Grid.Row="7" Margin="3,5.333,-0.333,5.333" Height="24" HorizontalAlignment="Left" Grid.Column="2" Grid.ColumnSpan="3" TextChanged="num_Of_HoursTextBox_TextChanged" />
-            <Label VerticalAlignment="Center" Grid.Row="5" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Started Working:" Grid.ColumnSpan="2"/>
-            <DatePicker x:Name="started_WorkingDatePicker" SelectedDateChanged="started_WorkingDatePicker_SelectedDateChanged" VerticalAlignment="Center"  Grid.Row="5" Margin="0,4" HorizontalAlignment="Left" Grid.Column="3"/>
-            <CheckBox Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="0.333,9,0,0" Grid.Row="8" VerticalAlignment="Top" />
-            <Button x:Name="choosenanny" Content="Choose Nanny" Grid.Column="2" HorizontalAlignment="Left" Margin="3,7.667,-0.333,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3" Height="20" Click="choosenanny_Click"/>
-        </Grid>
-        <Button x:Name="add_button" Content="Add Contract" HorizontalAlignment="Left" Margin="30,282,0,0" VerticalAlignment="Top" Width="105" Click="add_button_Click" Grid.Column="1" Height="27" />
-
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.2"  />
+        </Grid.Background>
     </Grid>
+
 </Window>

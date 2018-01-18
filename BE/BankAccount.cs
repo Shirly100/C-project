@@ -26,7 +26,7 @@ namespace BE
             string Result = "Bank Accont details:\n";
             Result += "---------------------\n";
             Result += string.Format("Bank {0}, number {1}\n", BankName, BankNumber);
-            //Result += "Branch Address:\n" + BranchAddress.ToString();
+            Result += "Branch Address:\n" + BranchAddress.ToString();
             Result += "Branch number:\n" + BranchNumber;
             Result += string.Format("Account Number: {0}\n", AccountNumber);
             return Result;

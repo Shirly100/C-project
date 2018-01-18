@@ -12,7 +12,7 @@ namespace BE
         public int numOfChildren { get; set; }
         public DateTime BirthDate { get; set; } 
         public bool Elevator { get; set; }
-        public float ExperienceYears { get; set; }
+        public int ExperienceYears { get; set; }
         public int MaxNumOfChildren { get; set; }
         public float MinAgeOfChild { get; set; }
         public float MaxAgeOfChild { get; set; }
@@ -47,7 +47,6 @@ namespace BE
                 result += "Ministry Of Education vactions: No\n";
             result += BankAccount.ToString();
             result += string.Format("Recommendations: {0}\n", Recommendations);
-            
             return result;
         }
 

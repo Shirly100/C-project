@@ -34,8 +34,8 @@ namespace PLWPF
             InitializeComponent();
             IsChecked = false;
             DataContext = this;
-            nannies.ItemsSource = from m in bl.getNannyList()
-                                  select String.Concat(m.FirstName, ' ', m.LastName); ;
+            nannies.ItemsSource = bl.getNannyList();
+            nannies.DisplayMemberPath = "str";
         }
         private Boolean _IsChecked;
 

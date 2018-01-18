@@ -152,8 +152,6 @@ namespace DAL
             XElement distance = new XElement("distance", c.distance);
             XElement ID_nanny = new XElement("ID_nanny", c.ID_nanny);
             XElement ID_child = new XElement("ID_child", c.ID_child);
-            XElement interview = new XElement("interview", c.interview);
-            XElement signed_contract = new XElement("signed_contract", c.signed_contract);
             XElement Wages_per_hours = new XElement("Wages_per_hours", c.Wages_per_hours);
             XElement Wages_per_months = new XElement("Wages_per_months", c.Wages_per_months);
             XElement siblings = new XElement("siblings", c.siblings);
@@ -171,7 +169,7 @@ namespace DAL
             XElement hours_Of_Employment = new XElement("hours_Of_Employment", c.hours_Of_Employment);
             XElement ID_mother = new XElement("ID_Mother", c.ID_mother);
             return new XElement("Contract", distance,payment, ContractID, ID_nanny, ID_child,
-                interview, signed_contract, Wages_per_hours, Wages_per_months, 
+                 Wages_per_hours, Wages_per_months, 
                 siblings, NumOfSiblings, WorkDays, StartDate, EndDate, hours_Of_Employment, ID_mother);
         }
 
@@ -279,8 +277,6 @@ namespace DAL
             c.ID_child = Convert.ToInt32(xc.Element("ID_child").Value);
             c.ID_nanny = Convert.ToInt32(xc.Element("ID_nanny").Value);
             c.distance = Convert.ToInt32(xc.Element("distance").Value);
-            c.interview = Convert.ToBoolean(xc.Element("interview").Value);
-            c.signed_contract = Convert.ToBoolean(xc.Element("signed_contract").Value);
             c.Wages_per_hours = Convert.ToInt32(xc.Element("Wages_per_hours").Value);
             c.Wages_per_months = Convert.ToInt32(xc.Element("Wages_per_months").Value);
             c.StartDate = (xc.Element("StartDate").Value);

@@ -24,9 +24,6 @@ namespace DAL
             };
         }
 
-
-
-
         internal static Mother MotherDeepClone(this Mother m)
         {
             return new Mother
@@ -42,8 +39,6 @@ namespace DAL
 
             };
         }
-
-
 
         internal static Nanny NannyDeepClone(this Nanny n)
         {
@@ -76,8 +71,6 @@ namespace DAL
                 ContractID = c.ContractID,
                 ID_nanny = c.ID_nanny,
                 ID_child = c.ID_child,
-                interview = c.interview,
-                signed_contract = c.signed_contract,
                 Wages_per_hours = c.Wages_per_hours,
                 Wages_per_months = c.Wages_per_months,
                 siblings = c.siblings,
@@ -87,7 +80,6 @@ namespace DAL
                 EndDate = c.EndDate,
                 hours_Of_Employment = c.hours_Of_Employment,
                 ID_mother = c.ID_mother
-
             };
         }
     }

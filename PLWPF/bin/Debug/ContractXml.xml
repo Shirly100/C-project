@@ -3,29 +3,25 @@
   <Contract>
     <distance>0</distance>
     <payment>0</payment>
-    <ContractID>100</ContractID>
+    <ContractID>100001</ContractID>
     <ID_nanny>243</ID_nanny>
     <ID_child>1234</ID_child>
-    <interview>false</interview>
-    <signed_contract>false</signed_contract>
     <Wages_per_hours>0</Wages_per_hours>
     <Wages_per_months>980</Wages_per_months>
     <siblings>false</siblings>
     <NumOfSiblings>0</NumOfSiblings>
     <WorkDays />
-    <StartDate>Tuesday, November 21, 2017</StartDate>
-    <EndDate>Thursday, February 15, 2018</EndDate>
+    <StartDate>15/11/2017</StartDate>
+    <EndDate />
     <hours_Of_Employment>0</hours_Of_Employment>
     <ID_Mother>123</ID_Mother>
   </Contract>
   <Contract>
     <distance>0</distance>
     <payment>0</payment>
-    <ContractID>101</ContractID>
+    <ContractID>100002</ContractID>
     <ID_nanny>243</ID_nanny>
     <ID_child>1234</ID_child>
-    <interview>false</interview>
-    <signed_contract>false</signed_contract>
     <Wages_per_hours>0</Wages_per_hours>
     <Wages_per_months>980</Wages_per_months>
     <siblings>false</siblings>
@@ -35,5 +31,21 @@
     <EndDate />
     <hours_Of_Employment>0</hours_Of_Employment>
     <ID_Mother>123</ID_Mother>
+  </Contract>
+  <Contract>
+    <distance>0</distance>
+    <payment>0</payment>
+    <ContractID>100003</ContractID>
+    <ID_nanny>2243</ID_nanny>
+    <ID_child>1235</ID_child>
+    <Wages_per_hours>0</Wages_per_hours>
+    <Wages_per_months>980</Wages_per_months>
+    <siblings>false</siblings>
+    <NumOfSiblings>0</NumOfSiblings>
+    <WorkDays />
+    <StartDate>Monday, January 1, 2018</StartDate>
+    <EndDate>Friday, March 16, 2018</EndDate>
+    <hours_Of_Employment>100</hours_Of_Employment>
+    <ID_Mother>124</ID_Mother>
   </Contract>
 </contracts>

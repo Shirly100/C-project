@@ -32,8 +32,8 @@ namespace PLWPF
             m = new Mother();
             InitializeComponent();
             DataContext = tempc;
-            child_combo.ItemsSource = from m in bl.getMotherList()
-                                      select String.Concat(m.FirstName,' ',m.LastName);
+            child_combo.ItemsSource = bl.getMotherList();
+            child_combo.DisplayMemberPath = "str";
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

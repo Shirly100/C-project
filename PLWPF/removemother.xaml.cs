@@ -28,8 +28,8 @@ namespace PLWPF
             bl = factoryBL.get_bl();
             m = new Mother();
             InitializeComponent();
-            choose.ItemsSource =   from m in bl.getMotherList()
-                                  select String.Concat(m.FirstName, ' ', m.LastName);
+            choose.ItemsSource = bl.getMotherList();
+            choose.DisplayMemberPath = "str";
         }
 
         private void choose_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -8,19 +8,17 @@
         Title="addmother" Height="533.863" Width="277.667">
     <Grid Margin="0,12,0,-3.667">
         <Label Content="First Name" HorizontalAlignment="Left" Margin="32,24,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="firstname" HorizontalAlignment="Left" Height="23" Margin="119,28,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="firstname_TextChanged"/>
+        <TextBox x:Name="firstname" HorizontalAlignment="Left" Height="23" Margin="119,28,0,0" TextWrapping="Wrap" Text="{Binding Path=FirstName}" VerticalAlignment="Top" Width="120" />
         <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="32,60,0,0" VerticalAlignment="Top" Width="67"/>
-        <TextBox x:Name="LasrName" HorizontalAlignment="Left" Height="23" Margin="119,63,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="LasrName_TextChanged" />
+        <TextBox x:Name="LasrName" HorizontalAlignment="Left" Height="23" Margin="119,63,0,0" TextWrapping="Wrap" Text="{Binding Path=LastName}" VerticalAlignment="Top" Width="120" />
         <Label x:Name="ID" Content="Id" HorizontalAlignment="Left" Margin="32,94,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="id" HorizontalAlignment="Left" Height="23" Margin="119,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="id_TextChanged"/>
+        <TextBox x:Name="id" HorizontalAlignment="Left" Height="23" Margin="119,97,0,0" TextWrapping="Wrap" Text="{Binding Path=ID, NotifyOnValidationError=True, ValidatesOnDataErrors=True}"  VerticalAlignment="Top" Width="120" />
         <Label x:Name="Pelephone" Content="pelephone" HorizontalAlignment="Left" Margin="32,125,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Telephone" HorizontalAlignment="Left" Height="23" Margin="119,128,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="Telephone_TextChanged"/>
+        <TextBox x:Name="Telephone" HorizontalAlignment="Left" Height="23" Margin="119,128,0,0" TextWrapping="Wrap" Text="{Binding Path=Pelephone}" VerticalAlignment="Top" Width="120" />
         <Button x:Name="address" Content="Address" HorizontalAlignment="Left" Margin="32,168,0,0" VerticalAlignment="Top" Width="207" Click="address_Click"/>
         <Button x:Name="bank" Content="Bank Account" HorizontalAlignment="Left" Margin="32,211,0,0" VerticalAlignment="Top" Width="207" Click="bank_Click"/>
         <Button x:Name="AddChild" Content="Add child" HorizontalAlignment="Left" Margin="32,253,0,0" VerticalAlignment="Top" Width="207" Click="AddChild_Click"/>
-        <Label x:Name="range" Content="Range" HorizontalAlignment="Left" Margin="32,336,0,0" VerticalAlignment="Top" Width="46"/>
-        <Slider x:Name="slider" Value="5" TickPlacement="BottomRight" Ticks="0,2,4,6,8,10" HorizontalAlignment="Left" Margin="83,336,0,0" VerticalAlignment="Top" Width="156" ValueChanged="slider_ValueChanged" Height="26"/>
-        <Button x:Name="add" Content="Add Mother" HorizontalAlignment="Left" Margin="93,416,0,0" VerticalAlignment="Top" Width="75" Click="add_Click"/>
+        <Button x:Name="add" Content="Add Mother" HorizontalAlignment="Left" Margin="93,416,0,0"  VerticalAlignment="Top" Width="75" Click="add_Click"/>
         <Button x:Name="hours" Content="Create Scheduale" HorizontalAlignment="Left" Margin="32,297,0,0" VerticalAlignment="Top" Width="207" Click="hours_Click"/>
     </Grid>
 </Window>

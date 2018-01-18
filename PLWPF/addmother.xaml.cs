@@ -32,27 +32,6 @@ namespace PLWPF
             InitializeComponent();
         }
 
-        private void firstname_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            temp_m.FirstName = firstname.Text;
-        }
-
-        private void LasrName_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            temp_m.LastName = LasrName.Text;
-        }
-
-        private void id_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            string i = id.Text;
-            temp_m.ID = (long)Convert.ToDouble(i);
-        }
-
-        private void Telephone_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            temp_m.Pelephone = Telephone.Text;
-        }
-
         private void address_Click(object sender, RoutedEventArgs e)
         {
             var w = new winAddress();
@@ -80,26 +59,23 @@ namespace PLWPF
             w2.ShowDialog();
         }
 
-        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            temp_m.Range = (float)slider.Value;
-        }
-
-        private void b_TargetUpdated(object sender, DataTransferEventArgs e)
-        {
-
-        }
-
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (temp_m.ID > 0 && temp_m.FirstName.Length>1 && temp_m.LastName.Length > 1)
             {
-                bl.addMother(temp_m);
-                Close();
+                try
+                {
+                    bl.addMother(temp_m);
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Please fill all feilds correctly");
             }
         }
 

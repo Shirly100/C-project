@@ -28,8 +28,8 @@ namespace PLWPF
             bl = factoryBL.get_bl();
             InitializeComponent();
             temp_con = new Contract();
-            choose.ItemsSource =  from m in bl.getContractList() 
-                                select m.ContractID;
+            choose.ItemsSource = bl.getContractList();
+            choose.DisplayMemberPath = "ContractID";
             DataContext = temp_con;
         }
 
