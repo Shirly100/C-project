@@ -137,3 +137,5 @@ C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\Supe
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF.exe
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF.pdb
 >>>>>>> a91964122434af208300cb47d6380976d8671a4c
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\grouping.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\grouping.baml
