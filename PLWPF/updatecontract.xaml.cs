@@ -29,6 +29,7 @@ namespace PLWPF
             InitializeComponent();
             temp_con = new Contract();
             choose.ItemsSource = bl.getContractList();
+            choose.DisplayMemberPath = "ContractID";
             DataContext = temp_con;
         }
 
@@ -48,6 +49,7 @@ namespace PLWPF
                     started_WorkingDatePicker.BorderBrush = Brushes.Red;
                     throw new Exception("INCORRECT DATE");
                 }
+                
                 bl.updateContract(temp_con);
                 Close();
             }
@@ -67,5 +69,9 @@ namespace PLWPF
             temp_con.EndDate = ((DateTime)end_WorkingDatePicker.SelectedDate).ToLongDateString();
         }
 
+        private void choose_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            temp_con = (Contract)choose.SelectedItem;
+        }
     }
 }

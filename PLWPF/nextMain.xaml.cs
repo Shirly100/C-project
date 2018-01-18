@@ -49,7 +49,11 @@ namespace PLWPF
             nex3.ShowDialog();
         }
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            grouping g = new grouping();
+            g.ShowDialog();
+        }
         //adding entities to database
         private void init()
         {
@@ -139,7 +143,7 @@ namespace PLWPF
             };
             Child ch = new Child
             {
-                Age = 3.5F,
+                Age = 3,
                 Allergies = false,
                 BirthDate = "01/08/2017",
                 FirstName = "Leiky",
@@ -150,7 +154,7 @@ namespace PLWPF
 
             Child chhh = new Child
             {
-                Age = 3.5F,
+                Age = 3,
                 Allergies = false,
                 BirthDate = "01/08/2017",
                 FirstName = "Chany",
@@ -168,7 +172,7 @@ namespace PLWPF
             };
             Contract c = new Contract
             {
-                ContractID = 100,
+                ContractID = 101,
                 ID_child = ch.ID_child,
                 ID_nanny = n.ID,
                 ID_mother = m.ID,
@@ -183,5 +187,6 @@ namespace PLWPF
             factoryBL.get_bl().addContract(cccc);
             factoryBL.get_bl().addContract(c);
         }
+
     }
 }

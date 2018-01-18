@@ -30,6 +30,7 @@ namespace PLWPF
             DataContext = m;
             InitializeComponent();
             motherc.ItemsSource = bl.getMotherList();
+            motherc.DisplayMemberPath = "str";
         }
 
         private void motherc_SelectionChanged(object sender, SelectionChangedEventArgs e)

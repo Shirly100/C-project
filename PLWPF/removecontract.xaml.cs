@@ -29,6 +29,7 @@ namespace PLWPF
             c = new Contract();
             InitializeComponent();
             choose.ItemsSource = bl.getContractList();
+            choose.DisplayMemberPath = "ContractID";
         }
 
         private void choose_SelectionChanged(object sender, SelectionChangedEventArgs e)

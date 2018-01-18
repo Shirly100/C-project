@@ -29,6 +29,7 @@ namespace PLWPF
             InitializeComponent();
             temp_con = new Contract();
             id_ChidComboBox.ItemsSource = bl.getChildListAlone();
+            id_ChidComboBox.DisplayMemberPath = "FirstName";
             DataContext = temp_con;
         }
 
@@ -81,21 +82,6 @@ namespace PLWPF
             {
                 temp_con.ID_nanny = nan.nID;
             }
-        }
-
-        private void if_contractCheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            temp_con.signed_contract = true;
-        }
-
-        private void if_interviewCheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            temp_con.interview = true;
-        }
-
-        private void num_Of_HoursTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            temp_con.hours_Of_Employment = Convert.ToInt32(num_Of_HoursTextBox.Text);
         }
 
     }

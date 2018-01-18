@@ -16,7 +16,7 @@ namespace BE
         public Address BranchAddress { get; set; }
         public int AccountNumber { get; set; }
         public double Balance { get; set; }
-        public void add(float s)
+        public void add(double s)
         {
             if (s < 0 && Balance + s < 0) throw new Exception("mother doesn't have enough money");
             Balance += s;
@@ -26,7 +26,7 @@ namespace BE
             string Result = "Bank Accont details:\n";
             Result += "---------------------\n";
             Result += string.Format("Bank {0}, number {1}\n", BankName, BankNumber);
-            //Result += "Branch Address:\n" + BranchAddress.ToString();
+            Result += "Branch Address:\n" + BranchAddress.ToString();
             Result += "Branch number:\n" + BranchNumber;
             Result += string.Format("Account Number: {0}\n", AccountNumber);
             return Result;

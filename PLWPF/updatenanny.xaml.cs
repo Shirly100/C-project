@@ -33,6 +33,7 @@ namespace PLWPF
             exper.ItemsSource = nums;
             num_child.ItemsSource = nums;
             motherc.ItemsSource = bl.getNannyList();
+            motherc.DisplayMemberPath = "str";
         }
 
         private void firstname_TextChanged(object sender, TextChangedEventArgs e)

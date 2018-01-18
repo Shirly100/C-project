@@ -65,6 +65,10 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\EditScheduale.
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\EditScheduale.baml
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\chooseNanny.g.cs
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\chooseNanny.baml
+<<<<<<< HEAD
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\grouping.g.cs
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\grouping.baml
+=======
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\PLWPF.exe.config
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\PLWPF.exe
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\PLWPF.pdb
@@ -132,3 +136,4 @@ C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\Supe
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF.csproj.CoreCompileInputs.cache
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF.exe
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF.pdb
+>>>>>>> a91964122434af208300cb47d6380976d8671a4c

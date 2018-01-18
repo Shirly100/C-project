@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="393.75" Width="617.105">
+        Title="MainWindow" Height="560.274" Width="670.173">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="0,0,-0.333,-0.333" VerticalAlignment="Top" Width="611" Height="365" Click="button_Click" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button x:Name="click" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="663" Height="531"  Click="button_Click" Opacity="0" Grid.ColumnSpan="3" Margin="0,0,0,-0.333" />
     </Grid>
 </Window>

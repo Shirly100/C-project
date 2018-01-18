@@ -29,6 +29,7 @@ namespace PLWPF
             c = new Child();
             InitializeComponent();
             ID_c.ItemsSource = bl.getChildListAlone();
+            ID_c.DisplayMemberPath = "FirstName";
         }
 
         private void ID_c_SelectionChanged(object sender, SelectionChangedEventArgs e)

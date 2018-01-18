@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="updatemother" Height="429.875" Width="270.027">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
         <Label Content="First Name" HorizontalAlignment="Left" Margin="23,53,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="firstname" HorizontalAlignment="Left" Height="23" Margin="119,57,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="firstname_TextChanged"/>
         <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="23,89,0,0" VerticalAlignment="Top" Width="67"/>

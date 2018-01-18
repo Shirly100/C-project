@@ -5,12 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="nextMain" Height="300" Width="300">
+        Title="nextMain" Height="437.333" Width="556.666">
     <Grid>
-        <Button Content="Contract" HorizontalAlignment="Left" Margin="104,16,0,0" VerticalAlignment="Top" Width="75" Click="Contract"/>
-        <Button Content="Child" HorizontalAlignment="Left" Margin="104,80,0,0" VerticalAlignment="Top" Width="75" Click="Child"/>
-        <Button Content="Mother" HorizontalAlignment="Left" Margin="104,139,0,0" VerticalAlignment="Top" Width="75" Click="Mother"/>
-        <Button Content="Nanny" HorizontalAlignment="Left" Margin="104,208,0,0" VerticalAlignment="Top" Width="75" Click="Nanny"/>
+            <Button Content="Contract" HorizontalAlignment="Left" Margin="290,266,0,0" VerticalAlignment="Top" Width="96" Click="Contract" Height="25">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Child" HorizontalAlignment="Left" Margin="290,207,0,0" VerticalAlignment="Top" Width="96" Click="Child" Height="25">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Mother" HorizontalAlignment="Left" Margin="132,266,0,0" VerticalAlignment="Top" Width="97" Click="Mother" Height="25">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Nanny" HorizontalAlignment="Left" Margin="132,208,0,0" VerticalAlignment="Top" Width="97" Click="Nanny" Height="26">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Grouping" HorizontalAlignment="Left" Margin="132,331,0,0" VerticalAlignment="Top" Width="254" Height="30" FontSize="14" FontWeight="Bold" Click="Button_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
 
+        <Grid HorizontalAlignment="Left" Height="388" Margin="10,10,0,0" VerticalAlignment="Top" Width="530"/>
+                <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
     </Grid>
 </Window>

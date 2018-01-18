@@ -29,6 +29,7 @@ namespace PLWPF
             m = new Mother();
             InitializeComponent();
             choose.ItemsSource = bl.getMotherList();
+            choose.DisplayMemberPath = "str";
         }
 
         private void choose_SelectionChanged(object sender, SelectionChangedEventArgs e)

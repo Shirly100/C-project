@@ -21,17 +21,28 @@ namespace BE
         public int Age { get; set; }
         public override string ToString()
         {
-
             string result = "";
             result += LastName + " " + FirstName + '\n';
             result += string.Format("ID: {0}\n", ID);
-            //result += string.Format("Telephone: {0}\n", Telephone);
-            //result += string.Format("Pelephone: {0}\n", Pelephone);
-            //result += Address.ToString();
+            result += string.Format("Telephone: {0}\n", Telephone);
+            result += string.Format("Pelephone: {0}\n", Pelephone);
+            result += Address.ToString();
             return result;
-
-            
-
+        }
+        public string personStr()
+        {
+            string res = "";
+            res += FirstName + " " + LastName;
+            return res;
+        }
+        public string str { get
+            {
+               return personStr();
+            }
+            set
+            {
+                str = personStr();
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,7 @@ namespace PLWPF
             InitializeComponent();
             DataContext = tempc;
             child_combo.ItemsSource = bl.getMotherList();
+            child_combo.DisplayMemberPath = "str";
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

@@ -29,6 +29,7 @@ namespace PLWPF
             n = new Nanny();
             InitializeComponent();
             choose.ItemsSource = bl.getNannyList();
+            choose.DisplayMemberPath = "str";
         }
 
         private void choose_SelectionChanged(object sender, SelectionChangedEventArgs e)
