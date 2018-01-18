@@ -5,20 +5,93 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="addmother" Height="533.863" Width="277.667">
-    <Grid Margin="0,12,0,-3.667">
-        <Label Content="First Name" HorizontalAlignment="Left" Margin="32,24,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="firstname" HorizontalAlignment="Left" Height="23" Margin="119,28,0,0" TextWrapping="Wrap" Text="{Binding Path=FirstName}" VerticalAlignment="Top" Width="120" />
-        <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="32,60,0,0" VerticalAlignment="Top" Width="67"/>
-        <TextBox x:Name="LasrName" HorizontalAlignment="Left" Height="23" Margin="119,63,0,0" TextWrapping="Wrap" Text="{Binding Path=LastName}" VerticalAlignment="Top" Width="120" />
-        <Label x:Name="ID" Content="Id" HorizontalAlignment="Left" Margin="32,94,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="id" HorizontalAlignment="Left" Height="23" Margin="119,97,0,0" TextWrapping="Wrap" Text="{Binding Path=ID, NotifyOnValidationError=True, ValidatesOnDataErrors=True}"  VerticalAlignment="Top" Width="120" />
-        <Label x:Name="Pelephone" Content="pelephone" HorizontalAlignment="Left" Margin="32,125,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Telephone" HorizontalAlignment="Left" Height="23" Margin="119,128,0,0" TextWrapping="Wrap" Text="{Binding Path=Pelephone}" VerticalAlignment="Top" Width="120" />
-        <Button x:Name="address" Content="Address" HorizontalAlignment="Left" Margin="32,168,0,0" VerticalAlignment="Top" Width="207" Click="address_Click"/>
-        <Button x:Name="bank" Content="Bank Account" HorizontalAlignment="Left" Margin="32,211,0,0" VerticalAlignment="Top" Width="207" Click="bank_Click"/>
-        <Button x:Name="AddChild" Content="Add child" HorizontalAlignment="Left" Margin="32,253,0,0" VerticalAlignment="Top" Width="207" Click="AddChild_Click"/>
-        <Button x:Name="add" Content="Add Mother" HorizontalAlignment="Left" Margin="93,416,0,0"  VerticalAlignment="Top" Width="75" Click="add_Click"/>
-        <Button x:Name="hours" Content="Create Scheduale" HorizontalAlignment="Left" Margin="32,297,0,0" VerticalAlignment="Top" Width="207" Click="hours_Click"/>
+        Title="addmother" Height="409.863" Width="277.667">
+    <Grid Margin="0,12,0.333,5.667">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="160*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="17*"/>
+        </Grid.RowDefinitions>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="32,13.333,0,0" VerticalAlignment="Top" Grid.Row="1" FontWeight="Bold" Height="26" Width="71">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <Button x:Name="AddChild" Content="Add child" HorizontalAlignment="center" VerticalAlignment="center" Width="207" Click="AddChild_Click" Grid.ColumnSpan="2" Grid.Row="8" FontWeight="Bold" Height="20" Margin="32,8.333,32.333,9">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
+
+        <TextBox x:Name="firstname" HorizontalAlignment="Left" Height="23" Margin="7.667,17.333,0,0" TextWrapping="Wrap" Text="{Binding Path=FirstName}" VerticalAlignment="Top" Width="120" Grid.Row="1" Grid.Column="1" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="32,4,0,0" VerticalAlignment="Top" Width="76" Grid.Row="2" FontWeight="Bold" Height="26">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="LasrName" HorizontalAlignment="Left" Height="23" Margin="7.667,7,0,0" TextWrapping="Wrap" Text="{Binding Path=LastName}" VerticalAlignment="Top" Width="120" Grid.Row="2" Grid.Column="1" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label x:Name="ID" Content="Id" HorizontalAlignment="Left" Margin="32,2,0,0" VerticalAlignment="Top" Grid.Row="3" FontWeight="Bold" Height="26" Width="21">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="id" HorizontalAlignment="Left" Height="23" Margin="7.667,5,0,0" TextWrapping="Wrap" Text="{Binding Path=ID, NotifyOnValidationError=True, ValidatesOnDataErrors=True}"  VerticalAlignment="Top" Width="120" Grid.Row="3" Grid.Column="1" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label x:Name="Pelephone" Content="pelephone" HorizontalAlignment="Left" Margin="32,2.333,0,0" VerticalAlignment="Top" Grid.Row="4" FontWeight="Bold" Height="26" Width="69">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="Telephone" HorizontalAlignment="Left" Height="23" Margin="7.667,5.333,0,0" TextWrapping="Wrap" Text="{Binding Path=Pelephone}" VerticalAlignment="Top" Width="120" Grid.Row="4" Grid.Column="1" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button x:Name="address" Content="Address" HorizontalAlignment="Left" Margin="32,7.333,0,0" VerticalAlignment="Top" Width="207" Click="address_Click" Grid.Row="5" Grid.ColumnSpan="2" FontWeight="Bold" Height="20">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="bank" Content="Bank Account" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top" Width="207" Click="bank_Click" Grid.Row="6" Grid.ColumnSpan="2" FontWeight="Bold" Height="20">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="add" Content="Add Mother" HorizontalAlignment="center"   VerticalAlignment="center" Width="75" Click="add_Click" Grid.Row="9" Grid.ColumnSpan="2" FontWeight="Bold" Height="21" Margin="98,10,98.333,2.333" RenderTransformOrigin="0.444,0.476">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="hours" Content="Create Scheduale" HorizontalAlignment="Left" Margin="32,7.667,0,0" VerticalAlignment="Top" Width="207" Click="hours_Click" Grid.Row="7" Grid.ColumnSpan="2" FontWeight="Bold" Height="20">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.3"/>
+        </Grid.Background>
     </Grid>
 </Window>

@@ -40,5 +40,10 @@ namespace PLWPF
             nex3.ShowDialog();
         }
 
+        private void Show(object sender, RoutedEventArgs e)
+        {
+            ShowContracts s = new ShowContracts();
+            s.ShowDialog();
+        }
     }
 }

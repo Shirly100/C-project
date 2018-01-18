@@ -7,34 +7,44 @@
         mc:Ignorable="d"
         Title="nextMain" Height="437.333" Width="556.666">
     <Grid>
-            <Button Content="Contract" HorizontalAlignment="Left" Margin="290,266,0,0" VerticalAlignment="Top" Width="96" Click="Contract" Height="25">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="53*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="185*"/>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="98*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Contract" HorizontalAlignment="Left" Margin="30,17.667,0,0" VerticalAlignment="Top" Width="96" Click="Contract" Height="24" Grid.Row="2" Grid.Column="1">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="30"/>
             </Button.Effect>
         </Button>
-        <Button Content="Child" HorizontalAlignment="Left" Margin="290,207,0,0" VerticalAlignment="Top" Width="96" Click="Child" Height="25">
+        <Button Content="Child" HorizontalAlignment="Left" Margin="30,21.333,0,0" VerticalAlignment="Top" Width="96" Click="Child" Height="25" Grid.Row="1" Grid.Column="1">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="30"/>
             </Button.Effect>
         </Button>
-        <Button Content="Mother" HorizontalAlignment="Left" Margin="132,266,0,0" VerticalAlignment="Top" Width="97" Click="Mother" Height="25">
+        <Button Content="Mother" HorizontalAlignment="Left" Margin="140,17.667,0,0" VerticalAlignment="Top" Width="97" Click="Mother" Height="24" Grid.Row="2">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="30"/>
             </Button.Effect>
         </Button>
-        <Button Content="Nanny" HorizontalAlignment="Left" Margin="132,208,0,0" VerticalAlignment="Top" Width="97" Click="Nanny" Height="26">
+        <Button Content="Nanny" HorizontalAlignment="Left" Margin="140,22.333,0,0" VerticalAlignment="Top" Width="97" Click="Nanny" Height="26" Grid.Row="1">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="30"/>
             </Button.Effect>
         </Button>
-        <Button Content="Grouping" HorizontalAlignment="Left" Margin="132,331,0,0" VerticalAlignment="Top" Width="254" Height="30" FontSize="14" FontWeight="Bold" Click="Button_Click">
+        <Button Content="Grouping" HorizontalAlignment="center" VerticalAlignment="center" Width="254" Height="30" FontSize="14" FontWeight="Bold" Click="Button_Click" Grid.Row="3" Grid.ColumnSpan="2" Margin="148,34">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="30"/>
             </Button.Effect>
         </Button>
 
-        <Grid HorizontalAlignment="Left" Height="388" Margin="10,10,0,0" VerticalAlignment="Top" Width="530"/>
-                <Grid.Background>
+        <Grid HorizontalAlignment="center" Height="388"  VerticalAlignment="Center" Width="530" Grid.RowSpan="4" Grid.ColumnSpan="2" Margin="10"/>
+        <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
     </Grid>

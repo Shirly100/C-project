@@ -28,17 +28,19 @@ namespace PLWPF
             bl = factoryBL.get_bl();
             ad = new Address();
             InitializeComponent();
+            DataContext = ad;
         }
 
         private void address_Click(object sender, RoutedEventArgs e)
         {
-            ad.Country = state.Text;
-            ad.City = city.Text;
-            ad.Street = street.Text;
-            ad.ZipCode = zip.Text;
-            ad.Floor = Convert.ToInt32(floor.Text);
-            ad.HouseNumber = Convert.ToInt32(num.Text);
-            this.Close();
+            if (ad.City.Length >1 && ad.HouseNumber >0)
+            {
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please fill all fields correctly");
+            }
         }
     }
 }
