@@ -22,4 +22,8 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\bin\Debug\BE.pdb
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.pdb
+<<<<<<< HEAD
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
+=======
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
+>>>>>>> 1551e138eaaa5c57347743dcf9b5ea6727cb156a
