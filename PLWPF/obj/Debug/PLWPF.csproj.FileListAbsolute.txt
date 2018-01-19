@@ -34,6 +34,7 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\updatechild.g.
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\updatecontract.g.cs
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\updatemother.g.cs
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\updatenanny.g.cs
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\UserControlContract.g.cs
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\wchild.g.cs
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\wcontract.g.cs
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\winAddress.g.cs
@@ -65,6 +66,7 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\updatechild.ba
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\updatecontract.baml
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\updatemother.baml
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\updatenanny.baml
+C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\UserControlContract.baml
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\wchild.baml
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\wcontract.baml
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\winAddress.baml

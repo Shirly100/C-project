@@ -273,6 +273,14 @@ namespace BL
             IEnumerable<Contract> a = mydal.getContractList().Where(t => (function(t)));
             return a.Count();
         }
+        public IEnumerable<IGrouping<int, Contract>> Contracts_by_Children_Ages(bool b = false)
+        {
+            var temp = from t in getContractList()
+                       group t by mydal.getChild(t.ID_child).Age;
+            if (b)
+                temp.OrderBy(c => c.Key);
+            return temp;
+        }
         public IEnumerable<IGrouping<int, Nanny>> Nannies_by_Children_Ages(bool b = false)
         {
             var temp = from t in getContractList()

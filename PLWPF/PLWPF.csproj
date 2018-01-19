@@ -135,6 +135,9 @@
     <Compile Include="updatenanny.xaml.cs">
       <DependentUpon>updatenanny.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlContract.xaml.cs">
+      <DependentUpon>UserControlContract.xaml</DependentUpon>
+    </Compile>
     <Compile Include="wchild.xaml.cs">
       <DependentUpon>wchild.xaml</DependentUpon>
     </Compile>
@@ -246,6 +249,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="updatenanny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlContract.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -29,40 +29,57 @@ namespace PLWPF
 
 
             public EditScheduale()
-            {
-                InitializeComponent();
+            {  
                 mystuff = new Dictionary<BE.Days, KeyValuePair<int, int>>();
                 mystuff.Add(BE.Days.Sun, new KeyValuePair<int, int>(0, 0));
                 mystuff.Add(BE.Days.Mon, new KeyValuePair<int, int>(0, 0));
                 mystuff.Add(BE.Days.Tue, new KeyValuePair<int, int>(0, 0));
                 mystuff.Add(BE.Days.Wed, new KeyValuePair<int, int>(0, 0));
                 mystuff.Add(BE.Days.Thu, new KeyValuePair<int, int>(0, 0));
-            }
+            InitializeComponent();
+            DataContext = this;
+        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (this.checkSunday.IsChecked == true)
+            try
             {
-                mystuff[BE.Days.Sun] = new KeyValuePair<int, int>(Int32.Parse(startSunday.Text), Int32.Parse(endSunday.Text));
+                if (this.checkSunday.IsChecked == true)
+                {
+                    mystuff[BE.Days.Sun] = new KeyValuePair<int, int>(isInt(startSunday.Text), isInt(endSunday.Text));
+                }
+                if (this.checkMonday.IsChecked == true)
+                {
+                    mystuff[BE.Days.Mon] = new KeyValuePair<int, int>(isInt(startMonday.Text), isInt(endMonday.Text));
+                }
+                if (this.checkTuesday.IsChecked == true)
+                {
+                    mystuff[BE.Days.Tue] = new KeyValuePair<int, int>(isInt(startTuesday.Text), isInt(endTuesday.Text));
+                }
+                if (this.checkWednesday.IsChecked == true)
+                {
+                    mystuff[BE.Days.Wed] = new KeyValuePair<int, int>(isInt(startWednesday.Text), isInt(endWednesday.Text));
+                }
+                if (this.checkThursday.IsChecked == true)
+                {
+                    mystuff[BE.Days.Thu] = new KeyValuePair<int, int>(isInt(startThursday.Text), isInt(endThursday.Text));
+                }
+                this.DialogResult = true;
+                this.Close();
             }
-            if (this.checkMonday.IsChecked == true)
+            catch(Exception xe)
             {
-                mystuff[BE.Days.Mon] = new KeyValuePair<int, int>(Int32.Parse(startMonday.Text), Int32.Parse(endMonday.Text));
+                MessageBox.Show("Please fill all fields correctly \n Only int accepted (HH/MM)");
             }
-            if (this.checkTuesday.IsChecked == true)
-            {
-                mystuff[BE.Days.Tue] = new KeyValuePair<int, int>(Int32.Parse(startTuesday.Text), Int32.Parse(endTuesday.Text));
-            }
-            if (this.checkWednesday.IsChecked == true)
-            {
-                mystuff[BE.Days.Wed] = new KeyValuePair<int, int>(Int32.Parse(startWednesday.Text), Int32.Parse(endWednesday.Text));
-            }
-            if (this.checkThursday.IsChecked == true)
-            {
-                mystuff[BE.Days.Thu] = new KeyValuePair<int, int>(Int32.Parse(startThursday.Text), Int32.Parse(endThursday.Text));
-            }
-            this.DialogResult = true;
-            this.Close();
+        }
+
+        private int isInt(string s)
+        {
+            int res = 0;
+            bool isSuccess = int.TryParse(s,out res);
+            if (!isSuccess || s.Length != 4)
+                throw new Exception("Not int");
+            return res;
         }
     }
 }

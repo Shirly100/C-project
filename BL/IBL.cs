@@ -33,6 +33,7 @@ namespace BL
         List<Nanny> getNannyList();
         IEnumerable<IGrouping<KeyValuePair<string, string>, Nanny>> Nannies_by_address(bool b = false);
         IEnumerable<IGrouping<int, Nanny>> Nannies_by_Children_Ages(bool b = false);
+        IEnumerable<IGrouping<int, Contract>> Contracts_by_Children_Ages(bool b = false);
         List<Nanny> Nanny_For_Mother(Mother m);
         List<Nanny> Nanny_In_Range(Mother m);
         int num_of_contract_by_condition(Func<Contract, bool> function = null);

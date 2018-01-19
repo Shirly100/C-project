@@ -5,9 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="grouping" Height="300" Width="300">
+        Title="grouping" Height="373.333" Width="686.325">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="251" Margin="10,10,0,0" VerticalAlignment="Top" Width="273"/>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="146*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="161*"/>
+            <ColumnDefinition Width="171*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="129*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.ColumnSpan="3" TextElement.FontSize="16" Margin="0,0,24.333,1">
+            <StackPanel Orientation="Horizontal" Margin="10"/>
+        </WrapPanel>
+        <Button x:Name="GroupCont"   Content="Contracts By Age of Child" HorizontalAlignment="Stretch" VerticalAlignment="Top"  Grid.Column="0"   FontWeight="Bold" Height="20" Margin="0,4,1,0" Click="GroupCont_Click" Grid.Row="1" >
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="GroupNan" Content="Nannies by Address" HorizontalAlignment="Stretch" VerticalAlignment="Top"   FontWeight="Bold" Height="20" Margin="4,4,179,0" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" >
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="GroupNanNum" Content="Nannies by Num of Children" HorizontalAlignment="Stretch" VerticalAlignment="Top"   Grid.Column="3"  FontWeight="Bold" Height="20" Margin="1.667,4,0.333,0" Grid.ColumnSpan="2" Grid.Row="1">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="GroupNanAge"  Content="Nannies by age of children" HorizontalAlignment="Stretch" VerticalAlignment="Top"   Grid.Column="2"   FontWeight="Bold" Height="20" Margin="2,4,0.333,0" Grid.Row="1" >
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="Grouping" Content="Grouping By:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"  Grid.ColumnSpan="2"  Grid.Column="1" Grid.Row="0" FontWeight="Bold" Height="34" Margin="85,1,84.333,9" Width="122">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <ContentControl x:Name="page" Grid.ColumnSpan="4" Grid.Row="2" BorderBrush="Black" BorderThickness="2" Margin="0,0,7,0"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.3"/>
+        </Grid.Background>
     </Grid>
 </Window>

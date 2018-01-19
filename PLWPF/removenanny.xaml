@@ -7,9 +7,37 @@
         mc:Ignorable="d"
         Title="removenanny" Height="237.333" Width="260.667">
     <Grid>
-        <Label Content="Choose Nanny to Remove" HorizontalAlignment="Left" Margin="53,34,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="choose" HorizontalAlignment="Left" Margin="53,86,0,0" VerticalAlignment="Top" Width="152" Height="31" SelectionChanged="choose_SelectionChanged"/>
-        <Button x:Name="remove" Content="Remove Nanny" HorizontalAlignment="Left" Margin="53,149,0,0" VerticalAlignment="Top" Width="152" Click="remove_Click"/>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="173*"/>
+            <ColumnDefinition Width="37*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Choose Nanny to Remove" HorizontalAlignment="Left" Margin="9,34,0,0" VerticalAlignment="Top" Grid.RowSpan="2" Grid.Column="1" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <ComboBox x:Name="choose" HorizontalAlignment="Left" Margin="9,6,0,0" VerticalAlignment="Top" Width="152" Height="31" SelectionChanged="choose_SelectionChanged" Grid.Row="3" Grid.Column="1" FontWeight="Bold">
+            <ComboBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <Button x:Name="remove" Content="Remove Nanny" HorizontalAlignment="Left" Margin="9,7,0,0" VerticalAlignment="Top" Width="152" Click="remove_Click" Grid.Row="5" Grid.Column="1" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.2"  />
+        </Grid.Background>
     </Grid>
 </Window>
