@@ -27,17 +27,17 @@
                 <DropShadowEffect BlurRadius="20"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="GroupNan" Content="Nannies by Address" HorizontalAlignment="Stretch" VerticalAlignment="Top"   FontWeight="Bold" Height="20" Margin="4,4,179,0" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" >
+        <Button x:Name="GroupNan" Content="Nannies by Address" HorizontalAlignment="Stretch" VerticalAlignment="Top"   FontWeight="Bold" Height="20" Margin="4,4,179,0" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" Click="GroupNan_Click" >
             <Button.Effect>
                 <DropShadowEffect BlurRadius="20"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="GroupNanNum" Content="Nannies by Num of Children" HorizontalAlignment="Stretch" VerticalAlignment="Top"   Grid.Column="3"  FontWeight="Bold" Height="20" Margin="1.667,4,0.333,0" Grid.ColumnSpan="2" Grid.Row="1">
+        <Button x:Name="GroupNanNum" Content="Nannies by Num of Children" HorizontalAlignment="Stretch" VerticalAlignment="Top"   Grid.Column="3"  FontWeight="Bold" Height="20" Margin="1.667,4,0.333,0" Grid.ColumnSpan="2" Grid.Row="1" Click="GroupNanNum_Click">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="20"/>
             </Button.Effect>
         </Button>
-        <Button x:Name="GroupNanAge"  Content="Nannies by age of children" HorizontalAlignment="Stretch" VerticalAlignment="Top"   Grid.Column="2"   FontWeight="Bold" Height="20" Margin="2,4,0.333,0" Grid.Row="1" >
+        <Button x:Name="GroupNanAge"  Content="Nannies by age of children" HorizontalAlignment="Stretch" VerticalAlignment="Top"   Grid.Column="2"   FontWeight="Bold" Height="20" Margin="2,4,0.333,0" Grid.Row="1" Click="GroupNanAge_Click" >
             <Button.Effect>
                 <DropShadowEffect BlurRadius="20"/>
             </Button.Effect>
@@ -48,6 +48,8 @@
             </Label.Effect>
         </Label>
         <ContentControl x:Name="page" Grid.ColumnSpan="4" Grid.Row="2" BorderBrush="Black" BorderThickness="2" Margin="0,0,7,0"/>
+        <CheckBox x:Name="checkBox" Content="orderd?" Grid.Column="3" HorizontalAlignment="Left" Margin="5,14,0,0" VerticalAlignment="Top" Height="45" Width="102" Grid.RowSpan="2"/>
+
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.3"/>
         </Grid.Background>

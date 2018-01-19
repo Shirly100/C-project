@@ -30,11 +30,76 @@ namespace PLWPF
 
         private void GroupCont_Click(object sender, RoutedEventArgs e)
         {
+            bool order = false;
+            if (this.checkBox.IsChecked == true)
+            {
+                order = true;
+            }
             try
             {
                 UserControlContract uc = new UserControlContract();
                 Console.WriteLine("in click");
-                uc.Source = bl.Contracts_by_Children_Ages();
+                uc.Source = bl.Contracts_by_Children_Ages(order);
+                this.page.Content = uc;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void GroupNan_Click(object sender, RoutedEventArgs e)
+        {
+            bool order = false;
+            if (this.checkBox.IsChecked == true)
+            {
+                order = true;
+            }
+            try
+            {
+                UserControlNannyAddress uc = new UserControlNannyAddress();
+                Console.WriteLine("in click");
+                uc.Source = bl.Nannies_by_address(order);
+                this.page.Content = uc;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void GroupNanAge_Click(object sender, RoutedEventArgs e)
+        {
+            bool order = false;
+            if (this.checkBox.IsChecked == true)
+            {
+                order = true;
+            }
+            try
+            {
+                UserControlNanniesAge uc = new UserControlNanniesAge();
+                Console.WriteLine("in click");
+                uc.Source = bl.Nannies_by_Children_Ages(order);
+                this.page.Content = uc;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void GroupNanNum_Click(object sender, RoutedEventArgs e)
+        {
+            bool order = false;
+            if (this.checkBox.IsChecked == true)
+            {
+                order = true;
+            }
+            try
+            {
+                UserControlNanniesNum uc = new UserControlNanniesNum();
+                Console.WriteLine("in click");
+                uc.Source = bl.Nanny_by_num_children(order);
                 this.page.Content = uc;
             }
             catch (Exception ex)

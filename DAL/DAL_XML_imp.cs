@@ -625,6 +625,11 @@ namespace DAL
                               select e).FirstOrDefault());
             if (temp != null)
                 throw new Exception("This contract already exist");
+            //apdate children of nanny
+            Nanny n = getNanny(c.ID_nanny);
+            n.myChildren.Add(getChild(c.ID_child));
+            n.numOfChildren++;
+            updateNanny(n);
             contracts.Add(BuildXelementContract(c));
             contracts.Save(ContractXml);
         }
@@ -636,7 +641,10 @@ namespace DAL
                              select e).FirstOrDefault();
             if (temp == null)
                 throw new Exception("This contract does not exist");
-
+            Nanny n = getNanny(c.ID_nanny);
+            n.myChildren.Remove(getChild(c.ID_child));
+            n.numOfChildren--;
+            updateNanny(n);
             temp.Remove();
             contracts.Save(ContractXml);
         }

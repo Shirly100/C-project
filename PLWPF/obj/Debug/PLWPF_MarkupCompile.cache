@@ -9,25 +9,12 @@ PLWPF
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\App.xaml
-23-961525749
-
-27801232620
-171978399473
-addchild.xaml;addcontract.xaml;addmother.xaml;addnanny.xaml;chooseNanny.xaml;EditScheduale.xaml;grouping.xaml;MainWindow.xaml;nextMain.xaml;removechild.xaml;removecontract.xaml;removemother.xaml;removenanny.xaml;updatechild.xaml;updatecontract.xaml;updatemother.xaml;updatenanny.xaml;wchild.xaml;wcontract.xaml;winAddress.xaml;winBank.xaml;wmother.xaml;wnanny.xaml;
-=======
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\App.xaml
-29-875467290
+32307462522
 
-33156715643
+36-1412740282
 17-1695885763
-<<<<<<< HEAD
-addchild.xaml;addChildMother.xaml;addcontract.xaml;addmother.xaml;addnanny.xaml;chooseNanny.xaml;EditScheduale.xaml;grouping.xaml;MainWindow.xaml;nextMain.xaml;removechild.xaml;removecontract.xaml;removemother.xaml;removenanny.xaml;ShowChildren.xaml;ShowContracts.xaml;ShowMother.xaml;ShowNanny.xaml;updatechild.xaml;updatecontract.xaml;updatemother.xaml;updatenanny.xaml;UserControlContract.xaml;wchild.xaml;wcontract.xaml;winAddress.xaml;winBank.xaml;wmother.xaml;wnanny.xaml;
-=======
-addchild.xaml;addChildMother.xaml;addcontract.xaml;addmother.xaml;addnanny.xaml;chooseNanny.xaml;EditScheduale.xaml;grouping.xaml;MainWindow.xaml;nextMain.xaml;removechild.xaml;removecontract.xaml;removemother.xaml;removenanny.xaml;ShowChildren.xaml;ShowContracts.xaml;ShowMother.xaml;ShowNanny.xaml;updatechild.xaml;updatecontract.xaml;updatemother.xaml;updatenanny.xaml;wchild.xaml;wcontract.xaml;winAddress.xaml;winBank.xaml;wmother.xaml;wnanny.xaml;
->>>>>>> 5b1dc2545a68369928e777160f9b1d534936c744
->>>>>>> b046cdafcab87cddcb12af4867b334615924cb71
+addchild.xaml;addChildMother.xaml;addcontract.xaml;addmother.xaml;addnanny.xaml;chooseNanny.xaml;EditScheduale.xaml;grouping.xaml;MainWindow.xaml;nextMain.xaml;removechild.xaml;removecontract.xaml;removemother.xaml;removenanny.xaml;ShowChildren.xaml;ShowContracts.xaml;ShowMother.xaml;ShowNanny.xaml;updatechild.xaml;updatecontract.xaml;updatemother.xaml;updatenanny.xaml;UserControlContract.xaml;UserControlNanniesAge.xaml;UserControlNanniesNum.xaml;UserControlNannyAddress.xaml;wchild.xaml;wcontract.xaml;winAddress.xaml;winBank.xaml;wmother.xaml;wnanny.xaml;
 
 False
 

@@ -281,6 +281,14 @@ namespace BL
                 temp.OrderBy(c => c.Key);
             return temp;
         }
+        public IEnumerable<IGrouping<int, Nanny>> Nanny_by_num_children(bool b = false)
+        {
+            var temp = from t in getNannyList()
+                       group t by t.numOfChildren;
+            if (b)
+                temp.OrderBy(c => c.Key);
+            return temp;
+        }
         public IEnumerable<IGrouping<int, Nanny>> Nannies_by_Children_Ages(bool b = false)
         {
             var temp = from t in getContractList()

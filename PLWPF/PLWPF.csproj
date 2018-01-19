@@ -138,6 +138,15 @@
     <Compile Include="UserControlContract.xaml.cs">
       <DependentUpon>UserControlContract.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlNanniesAge.xaml.cs">
+      <DependentUpon>UserControlNanniesAge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlNanniesNum.xaml.cs">
+      <DependentUpon>UserControlNanniesNum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlNannyAddress.xaml.cs">
+      <DependentUpon>UserControlNannyAddress.xaml</DependentUpon>
+    </Compile>
     <Compile Include="wchild.xaml.cs">
       <DependentUpon>wchild.xaml</DependentUpon>
     </Compile>
@@ -253,6 +262,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlContract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlNanniesAge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlNanniesNum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlNannyAddress.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
