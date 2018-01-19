@@ -36,31 +36,10 @@ namespace PLWPF
             child_combo.DisplayMemberPath = "str";
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            tempc.FirstName = (name.Text);
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-            string c = id.Text;
-            tempc.ID_child = (long)Convert.ToDouble(c);
-        }
-
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             m = ((Mother)child_combo.SelectedItem);
             tempc.ID_Mother = m.ID;
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            tempc.SpecialNeeds = true;
-        }
-
-        private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
-        {
-            tempc.Allergies = true;
         }
 
         private void started_DateDatePicker_SelectedDateChanged(object sender, RoutedEventArgs e)
@@ -71,15 +50,22 @@ namespace PLWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            try
+
+            if (tempc.ID_child > 0 && tempc.ID_Mother > 0)
             {
-                bl.addChild(tempc);
-                Close();
+                try
+                {
+                    bl.addChild(tempc);
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Please fill all fields correctly");
             }
         }
     }

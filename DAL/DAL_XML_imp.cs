@@ -464,8 +464,13 @@ namespace DAL
                               select e).FirstOrDefault());
             if (temp != null)
                 throw new Exception("This Mother already exist");
+
             mothers.Add(BuildXelementMother(m));
             mothers.Save(MotherXml);
+            foreach (Child c in m.myChildren)
+            {
+                addChildFromMother(c);
+            }
         }
 
         public Mother getMother(long id)
@@ -486,6 +491,10 @@ namespace DAL
                 throw new Exception("This Mother does not exist");
             temp.Remove();
             mothers.Save(MotherXml);
+            foreach (Child c in m.myChildren)
+            {
+                removeChild(c);
+            }
         }
 
         public void updateMother(Mother m)
@@ -497,6 +506,10 @@ namespace DAL
                 throw new Exception("This Mother not exist");
             temp.ReplaceWith(BuildXelementMother(m));
             mothers.Save(MotherXml);
+            foreach (Child c in m.myChildren)
+            {
+                addChildFromMother(c);
+            }
         }
 
         public List<Mother> getMotherList()
@@ -509,35 +522,39 @@ namespace DAL
 
             return listm;
         }
-
-        public void addChildren(Child c)
-        {
-            Mother m = new Mother();
-            XElement temp = ((from e in mothers.Elements()
-                              where Convert.ToInt64(e.Element("ID").Value) == c.ID_Mother
-                              select e).FirstOrDefault());
-            if (temp == null)
-                throw new Exception("This Mother not exist");
-            m = BuildMother(temp);
-            m.myChildren.Add(c);
-            temp.ReplaceWith(BuildXelementMother(m));
-            mothers.Save(MotherXml);
-        }
         #endregion
 
         #region Child functions
+        public void addChildFromMother(Child c)
+        {
+            XElement temp = ((from e in children.Elements()
+                              where Convert.ToInt64(e.Element("ID_child").Value) == c.ID_child
+                              select e).FirstOrDefault());
+            if (temp != null)
+                return;
+            children.Add(BuildXelementChild(c));
+            children.Save(ChildXml);
+        }
 
         public void addChild(Child c)
         {
-
             XElement temp = ((from e in children.Elements()
                               where Convert.ToInt64(e.Element("ID_child").Value) == c.ID_child
                               select e).FirstOrDefault());
             if (temp != null)
                 throw new Exception("This Child already exist");
-            addChildren(c);
+            Mother m = new Mother();
+            XElement temp1 = ((from e in mothers.Elements()
+                              where Convert.ToInt64(e.Element("ID").Value) == c.ID_Mother
+                              select e).FirstOrDefault());
+            if (temp1 == null)
+                throw new Exception("You can't add a child without a parent");
             children.Add(BuildXelementChild(c));
             children.Save(ChildXml);
+            m = BuildMother(temp1);
+            m.myChildren.Add(c);
+            temp1.ReplaceWith(BuildXelementMother(m));
+            mothers.Save(MotherXml);
         }
 
         public Child getChild(long id)

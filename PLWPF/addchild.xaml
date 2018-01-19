@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="addchild" Height="252.001" Width="300">
-    <Grid Margin="0,7,0.333,-2.333" Height="218" VerticalAlignment="Top">
+        Title="addchild" Height="269.334" Width="364">
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -21,19 +21,71 @@
             <ColumnDefinition Width="148*"/>
         </Grid.ColumnDefinitions>
 
-        <ComboBox x:Name="child_combo" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="center" Width="120" Height="32" SelectionChanged="ComboBox_SelectionChanged" />
-        <Label Content="Id Mother" Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="108" Height="30"/>
-        <Label Content="Id Child" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="108" Height="26"/>
-        <TextBox x:Name="id" Grid.Row="1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" TextChanged="TextBox_TextChanged_1" Grid.Column="1"/>
-        <Label Content="First name" Grid.Row="2" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="108" Height="26"/>
-        <TextBox x:Name="name" Grid.Row="2" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="please write name" VerticalAlignment="Center" Width="120" TextChanged="TextBox_TextChanged" Grid.Column="1"/>
-        <Label Content="Birth date" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="108" Height="26"/>
-        <DatePicker x:Name="started_DateDatePicker" Grid.Row="3" SelectedDateChanged="started_DateDatePicker_SelectedDateChanged"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Height="24" Grid.Column="1"/>
-        <Label Content="Any special needs?" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Width="117" Height="25"/>
-        <Label Content="Any allergies?" Grid.Row="5" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="108" Height="27"/>
-        <CheckBox Content="CheckBox" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Checked="CheckBox_Checked" Height="15" Width="71" Grid.Column="1"/>
-        <CheckBox Content="CheckBox" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Checked="CheckBox_Checked_1" Height="15" Width="71" Grid.Column="1"/>
-        <Button Content="Add Child" Grid.Row="6" HorizontalAlignment="center"  VerticalAlignment="Center" Width="75" Click="Button_Click" Height="20" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="child_combo" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="center"  SelectionChanged="ComboBox_SelectionChanged" FontWeight="Bold" >
+            <ComboBox.Effect>
+                <DropShadowEffect BlurRadius="20" Opacity="0.3"/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <Label Content="Choose Mother" Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Center" FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Id Child" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="id" Grid.Row="1" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding Path=ID_child}" VerticalAlignment="Center" Grid.Column="1" FontWeight="Bold">
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20" Opacity="0.3"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="First name" Grid.Row="2" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="108" Height="26" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="name" Grid.Row="2" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding Path=FirstName}" VerticalAlignment="Center"  Grid.Column="1" FontWeight="Bold">
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20" Opacity="0.3"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="Birth date" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <DatePicker x:Name="started_DateDatePicker" Grid.Row="3" SelectedDateChanged="started_DateDatePicker_SelectedDateChanged"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" FontWeight="Bold">
+            <DatePicker.Effect>
+                <DropShadowEffect BlurRadius="20" Opacity="0.3"/>
+            </DatePicker.Effect>
+        </DatePicker>
+        <Label Content="Any special needs?" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Any allergies?" Grid.Row="5" HorizontalAlignment="Left"  VerticalAlignment="Center" FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <CheckBox Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" FontWeight="Bold">
+            <CheckBox.Effect>
+                <DropShadowEffect BlurRadius="20" Opacity="0.3"/>
+            </CheckBox.Effect>
+        </CheckBox>
+        <CheckBox  Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Column="1" FontWeight="Bold">
+            <CheckBox.Effect>
+                <DropShadowEffect BlurRadius="20" Opacity="0.3"/>
+            </CheckBox.Effect>
+        </CheckBox>
+        <Button Content="Add Child" Grid.Row="6" HorizontalAlignment="center"  VerticalAlignment="Center" Click="Button_Click" Grid.ColumnSpan="2" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.2"  />
         </Grid.Background>

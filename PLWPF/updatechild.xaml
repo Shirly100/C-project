@@ -8,19 +8,63 @@
         Title="updatechild" Height="436.667" Width="464.5">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.3"/>
         </Grid.Background>
-        <Label Content="Child ID:" HorizontalAlignment="Left" Margin="19,24,0,0" VerticalAlignment="Top" Width="102" Height="45"/>
-        <ComboBox x:Name="id_choise" HorizontalAlignment="Left" Margin="228,29,0,0" VerticalAlignment="Top" Width="192" SelectionChanged="ComboBox_SelectionChanged" Height="39"/>
-        <Label Content="First name" HorizontalAlignment="Left" Margin="19,79,0,0" VerticalAlignment="Top" Width="172" Height="45"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Height="39" Margin="228,86,0,0" TextWrapping="Wrap" Text="please write name" VerticalAlignment="Top" Width="192" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Birth date" HorizontalAlignment="Left" Margin="19,136,0,0" VerticalAlignment="Top" Width="172" Height="45"/>
-        <DatePicker x:Name="started_DateDatePicker" SelectedDateChanged="started_DateDatePicker_SelectedDateChanged"  HorizontalAlignment="Left" Margin="228,143,0,0" VerticalAlignment="Top" Width="192" Height="41"/>
-        <Label Content="Any special needs?" HorizontalAlignment="Left" Margin="19,189,0,0" VerticalAlignment="Top" Width="187" Height="44"/>
-        <Label Content="Any allergies?" HorizontalAlignment="Left" Margin="19,240,0,0" VerticalAlignment="Top" Width="172" Height="45"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="228,201,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Height="26" Width="114"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="228,253,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_1" Height="25" Width="114"/>
-        <Button Content="Update Child" HorizontalAlignment="Left" Margin="161,330,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click" Height="34"/>
+        <Label Content="Child ID:" HorizontalAlignment="Left" Margin="19,24,0,0" VerticalAlignment="Top" Width="102" Height="45" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <ComboBox x:Name="id_choise" HorizontalAlignment="Left" Margin="228,29,0,0" VerticalAlignment="Top" Width="192" SelectionChanged="ComboBox_SelectionChanged" Height="39">
+            <ComboBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <Label Content="First name" HorizontalAlignment="Left" Margin="19,79,0,0" VerticalAlignment="Top" Width="172" Height="45" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="39" Margin="228,86,0,0" TextWrapping="Wrap" Text="please write name" VerticalAlignment="Top" Width="192" TextChanged="TextBox_TextChanged">
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="Birth date" HorizontalAlignment="Left" Margin="19,136,0,0" VerticalAlignment="Top" Width="172" Height="45" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <DatePicker x:Name="started_DateDatePicker" SelectedDateChanged="started_DateDatePicker_SelectedDateChanged"  HorizontalAlignment="Left" Margin="228,143,0,0" VerticalAlignment="Top" Width="192" Height="41">
+            <DatePicker.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </DatePicker.Effect>
+        </DatePicker>
+        <Label Content="Any special needs?" HorizontalAlignment="Left" Margin="19,189,0,0" VerticalAlignment="Top" Width="187" Height="44" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Any allergies?" HorizontalAlignment="Left" Margin="19,240,0,0" VerticalAlignment="Top" Width="172" Height="45" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <CheckBox  HorizontalAlignment="Left" Margin="228,201,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Height="26" Width="114">
+            <CheckBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </CheckBox.Effect>
+        </CheckBox>
+        <CheckBox HorizontalAlignment="Left" Margin="228,253,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_1" Height="25" Width="114">
+            <CheckBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </CheckBox.Effect>
+        </CheckBox>
+        <Button Content="Update Child" HorizontalAlignment="Left" Margin="161,330,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click" Height="34" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Window>

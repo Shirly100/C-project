@@ -78,6 +78,9 @@
     <Compile Include="addchild.xaml.cs">
       <DependentUpon>addchild.xaml</DependentUpon>
     </Compile>
+    <Compile Include="addChildMother.xaml.cs">
+      <DependentUpon>addChildMother.xaml</DependentUpon>
+    </Compile>
     <Compile Include="addcontract.xaml.cs">
       <DependentUpon>addcontract.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,18 @@
     </Compile>
     <Compile Include="removenanny.xaml.cs">
       <DependentUpon>removenanny.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowChildren.xaml.cs">
+      <DependentUpon>ShowChildren.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowContracts.xaml.cs">
+      <DependentUpon>ShowContracts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowMother.xaml.cs">
+      <DependentUpon>ShowMother.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowNanny.xaml.cs">
+      <DependentUpon>ShowNanny.xaml</DependentUpon>
     </Compile>
     <Compile Include="updatechild.xaml.cs">
       <DependentUpon>updatechild.xaml</DependentUpon>
@@ -139,6 +154,10 @@
       <DependentUpon>wnanny.xaml</DependentUpon>
     </Compile>
     <Page Include="addchild.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addChildMother.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,6 +214,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="removenanny.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowChildren.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowContracts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowMother.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowNanny.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

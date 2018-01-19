@@ -32,16 +32,19 @@ namespace PLWPF
             InitializeComponent();
             bank.ItemsSource = Banks;
             bran.ItemsSource = branches;
+            DataContext = ba;
         }
 
         private void create_Click(object sender, RoutedEventArgs e)
         {
-            ba.AccountNumber = Convert.ToInt32(num.Text);
-            ba.BankName = (string)bank.SelectedItem;
-            ba.BankNumber = bank.SelectedIndex;
-            ba.BranchNumber = bran.SelectedIndex;
-            ba.Balance = Convert.ToInt32(balan.Text);
-            this.Close();
+            if (ba.AccountNumber >0 && ba.BankNumber >0 && ba.BranchNumber >0)
+            {
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please fill all fields correctly");
+            }
         }
     }
 }

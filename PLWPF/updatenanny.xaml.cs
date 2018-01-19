@@ -36,19 +36,24 @@ namespace PLWPF
             motherc.DisplayMemberPath = "str";
         }
 
-        private void firstname_TextChanged(object sender, TextChangedEventArgs e)
+        private void add_Click(object sender, RoutedEventArgs e)
         {
-            temp_n.FirstName = firstname.Text;
-        }
-
-        private void LasrName_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            temp_n.LastName = LasrName.Text;
-        }
-
-        private void Telephone_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            temp_n.Pelephone = Telephone.Text;
+            if (temp_n.ID > 1 && temp_n.FirstName.Length > 1 && temp_n.LastName.Length > 1)
+            {
+                try
+                {
+                    bl.updateNanny(temp_n);
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill in all fields correctly");
+            }
         }
 
         private void address_Click(object sender, RoutedEventArgs e)
@@ -71,19 +76,6 @@ namespace PLWPF
             }
         }
 
-        private void add_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                bl.updateNanny(temp_n);
-                Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void hours_Click(object sender, RoutedEventArgs e)
         {
 
@@ -96,25 +88,9 @@ namespace PLWPF
 
         }
 
-
-        private void elevate_Checked(object sender, RoutedEventArgs e)
-        {
-            temp_n.Elevator = true;
-        }
-
-        private void exper_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            temp_n.ExperienceYears = Convert.ToInt32(exper.SelectedValue);
-        }
-
-        private void num_child_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            temp_n.MaxNumOfChildren = (int)num_child.SelectedItem;
-        }
-
         private void motherc_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            temp_n = (Nanny)motherc.SelectedItem;
+            temp_n.ID = ((Nanny)motherc.SelectedItem).ID;
         }
     }
 }

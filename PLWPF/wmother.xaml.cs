@@ -49,9 +49,10 @@ namespace PLWPF
             nex3.ShowDialog();
         }
 
-        private void tb_TextChanged(object sender, TextChangedEventArgs e)
+        private void Show(object sender, RoutedEventArgs e)
         {
-         
+            ShowMother s = new ShowMother();
+            s.ShowDialog();
         }
     }
 }

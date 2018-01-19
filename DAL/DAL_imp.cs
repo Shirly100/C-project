@@ -276,6 +276,11 @@ namespace DAL
             }
             return bank_branches;
         }
+
+        public void addChildFromMother(Child c)
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }

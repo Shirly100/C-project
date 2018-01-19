@@ -15,12 +15,12 @@ namespace DAL
         #endregion
 
         #region Mother functions
+        void addChildFromMother(Child c);
         void addMother(Mother m);
         void removeMother(Mother m);
         void updateMother(Mother m);
         Mother getMother(long id);
         List<Mother> getMotherList();
-        void addChildren(Child c);
         #endregion
 
         #region Child functions

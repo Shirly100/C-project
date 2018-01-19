@@ -3,12 +3,12 @@
   <Child>
     <ID_child>1234</ID_child>
     <ID_Mother>123</ID_Mother>
-    <FirstName>Leiky</FirstName>
-    <Age>3</Age>
-    <BirthDate>01/08/2017</BirthDate>
+    <FirstName>please write nammbe</FirstName>
+    <Age>0</Age>
+    <BirthDate>1/8/2018 12:00:00 AM</BirthDate>
     <SpecialNeeds>true</SpecialNeeds>
     <Allergies>false</Allergies>
-    <allergies />
+    <allergies></allergies>
   </Child>
   <Child>
     <ID_child>1235</ID_child>

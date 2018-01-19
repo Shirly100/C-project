@@ -76,8 +76,8 @@
     <ID>243</ID>
     <FirstName>rivi2</FirstName>
     <LastName>bar2</LastName>
-    <Telephone />
-    <Pelephone />
+    <Telephone></Telephone>
+    <Pelephone></Pelephone>
     <Address>
       <Address>
         <Country>Israel</Country>
@@ -113,7 +113,7 @@
       </Day>
     </WorkDays>
     <Ministry_Vocations>false</Ministry_Vocations>
-    <Recommendations />
+    <Recommendations></Recommendations>
     <BankAccount>
       <BankAccount>
         <AccountNumber>200</AccountNumber>

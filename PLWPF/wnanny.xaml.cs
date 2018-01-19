@@ -45,5 +45,10 @@ namespace PLWPF
             nex3.ShowDialog();
         }
 
+        private void Show(object sender, RoutedEventArgs e)
+        {
+            ShowNanny s = new ShowNanny();
+            s.ShowDialog();
+        }
     }
 }

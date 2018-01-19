@@ -42,6 +42,16 @@ namespace PLWPF
             }
         }
 
+        private void AddChild_Click(object sender, RoutedEventArgs e)
+        {
+            addChildMother w2 = new addChildMother(temp_m);
+            bool? really = w2.ShowDialog();
+            if (really != false)
+            {
+                temp_m.myChildren.Add(w2.tempc);
+            }
+        }
+
         private void bank_Click(object sender, RoutedEventArgs e)
         {
             winBank w1 = new winBank();
@@ -50,13 +60,6 @@ namespace PLWPF
             {
                 temp_m.BankAccount = w1.ba;
             }
-        }
-
-        //maybe make a specified window
-        private void AddChild_Click(object sender, RoutedEventArgs e)
-        {
-            addchild w2 = new addchild();
-            w2.ShowDialog();
         }
 
         private void add_Click(object sender, RoutedEventArgs e)

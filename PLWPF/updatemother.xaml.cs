@@ -33,26 +33,6 @@ namespace PLWPF
             motherc.DisplayMemberPath = "str";
         }
 
-        private void motherc_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            m = (Mother)motherc.SelectedItem;
-        }
-
-        private void firstname_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            m.FirstName = firstname.Text;
-        }
-
-        private void LasrName_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            m.LastName = LasrName.Text;
-        }
-
-        private void Telephone_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            m.Pelephone = Telephone.Text;
-        }
-
         private void address_Click(object sender, RoutedEventArgs e)
         {
             winAddress w = new winAddress();
@@ -76,21 +56,20 @@ namespace PLWPF
         //maybe make a specified window
         private void AddChild_Click(object sender, RoutedEventArgs e)
         {
-            addchild w2 = new addchild();
-            w2.ShowDialog();
-        }
-
-        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            m.Range = (float)slider.Value;
+            addChildMother w2 = new addChildMother(m);
+            bool? really = w2.ShowDialog();
+            if (really != false)
+            {
+                m.myChildren.Add(w2.tempc);
+            }
         }
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (m.ID > 0 && m.FirstName.Length > 1 && m.LastName.Length > 1)
             {
-                //m = (Mother)motherc.SelectedItem;
-                
+                try
+            {               
                 bl.updateMother(m);
                 Close();
             }
@@ -98,7 +77,16 @@ namespace PLWPF
             {
                 MessageBox.Show(ex.Message);
             }
+            }
+            else
+            {
+                MessageBox.Show("Please fill all feilds correctly");
+            }
         }
 
+        private void motherc_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            m.ID = ((Mother)motherc.SelectedValue).ID;
+        }
     }
 }

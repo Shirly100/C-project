@@ -7,20 +7,31 @@
         mc:Ignorable="d"
         Title="wnanny" Height="457.667" Width="239.999">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="55,89,0,0" VerticalAlignment="Top" Width="121" Click="Add" Height="34" FontWeight="Bold" FontSize="16">
+        <Button Content="Add" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="121" Click="Add" Height="34" FontWeight="Bold" FontSize="16">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="30"/>
             </Button.Effect>
         </Button>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="55,194,0,0" VerticalAlignment="Top" Width="121" Click="Update" Height="35" FontWeight="Bold" FontSize="16">
+        <Button Content="Update" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="121" Click="Update" Height="35" FontWeight="Bold" FontSize="16">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="30"/>
             </Button.Effect>
         </Button>
-        <Button Content="Remove" HorizontalAlignment="Left" Margin="55,299,0,0" VerticalAlignment="Top" Width="121" Click="Remove" Height="36" FontWeight="Bold" FontSize="16">
+        <Button Content="Remove" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="121" Click="Remove" Height="36" FontWeight="Bold" FontSize="16">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="30"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Show" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="121" Click="Show" Height="36" FontWeight="Bold" FontSize="16">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="30"/>
             </Button.Effect>

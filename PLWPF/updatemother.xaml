@@ -5,25 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="updatemother" Height="429.875" Width="270.027">
-    <Grid>
+        Title="updatemother" Height="411.875" Width="270.027">
+    <Grid Margin="0,0,0.333,-2.333">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="88*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.3"/>
         </Grid.Background>
-        <Label Content="First Name" HorizontalAlignment="Left" Margin="23,53,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="firstname" HorizontalAlignment="Left" Height="23" Margin="119,57,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="firstname_TextChanged"/>
-        <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="23,89,0,0" VerticalAlignment="Top" Width="67"/>
-        <TextBox x:Name="LasrName" HorizontalAlignment="Left" Height="23" Margin="119,92,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="LasrName_TextChanged" />
-        <Label x:Name="Pelephone" Content="pelephone" HorizontalAlignment="Left" Margin="23,125,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Telephone" HorizontalAlignment="Left" Height="23" Margin="119,128,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" TextChanged="Telephone_TextChanged"/>
-        <Button x:Name="address" Content="Address" HorizontalAlignment="Left" Margin="23,168,0,0" VerticalAlignment="Top" Width="216" Click="address_Click"/>
-        <Button x:Name="bank" Content="Bank Account" HorizontalAlignment="Left" Margin="23,211,0,0" VerticalAlignment="Top" Width="216" Click="bank_Click"/>
-        <Button x:Name="AddChild" Content="Add child" HorizontalAlignment="Left" Margin="23,253,0,0" VerticalAlignment="Top" Width="216" Click="AddChild_Click"/>
-        <Label x:Name="range" Content="Range" HorizontalAlignment="Left" Margin="23,290,0,0" VerticalAlignment="Top" Width="46"/>
-        <Slider x:Name="slider" Value="5" TickPlacement="BottomRight" Ticks="0,2,4,6,8,10" HorizontalAlignment="Left" Margin="74,290,0,0" VerticalAlignment="Top" Width="165" ValueChanged="slider_ValueChanged" Height="26"/>
-        <Button x:Name="add" Content="Update Mother" HorizontalAlignment="Left" Margin="83,348,0,0" VerticalAlignment="Top" Width="110" Click="add_Click"/>
-        <Label Content="Choose Mother" HorizontalAlignment="Left" Margin="23,19,0,0" VerticalAlignment="Top" Width="94"/>
-        <ComboBox x:Name="motherc" HorizontalAlignment="Left" Margin="119,24,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="motherc_SelectionChanged"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="23,2.667,0,0" VerticalAlignment="Top" Grid.Row="2"/>
+        <TextBox x:Name="firstname" HorizontalAlignment="Left" Height="23" Margin="5,6.667,0,0" TextWrapping="Wrap" Text="{Binding Path=FirstName}" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.Row="2"/>
+        <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="23,4.667,0,0" VerticalAlignment="Top" Width="67" Grid.Row="3"/>
+        <TextBox x:Name="LasrName" HorizontalAlignment="Left" Height="23" Margin="5,7.667,0,0" TextWrapping="Wrap" Text="{Binding Path=LastName}" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.Row="3" />
+        <Label x:Name="Pelephone" Content="pelephone" HorizontalAlignment="Left" Margin="23,4.667,0,0" VerticalAlignment="Top" Grid.Row="4"/>
+        <TextBox x:Name="Telephone" HorizontalAlignment="Left" Height="23" Margin="5,7.667,0,0" TextWrapping="Wrap" Text="{Binding Path=Pelephone}" VerticalAlignment="Top" Width="120"  Grid.Column="1" Grid.Row="4"/>
+        <Button x:Name="address" Content="Address" HorizontalAlignment="Left" Margin="23,9.667,0,0" VerticalAlignment="Top" Width="216" Click="address_Click" Grid.ColumnSpan="2" Grid.Row="5"/>
+        <Button x:Name="bank" Content="Bank Account" HorizontalAlignment="Left" Margin="23,11.333,0,0" VerticalAlignment="Top" Width="216" Click="bank_Click" Grid.ColumnSpan="2" Grid.Row="6"/>
+        <Button x:Name="AddChild" Content="Add child" HorizontalAlignment="Left" Margin="23,9.333,0,0" VerticalAlignment="Top" Width="216" Click="AddChild_Click" Grid.ColumnSpan="2" Grid.Row="7"/>
+        <Button x:Name="add" Content="Update Mother" HorizontalAlignment="Left" Margin="79,30.333,0,0" VerticalAlignment="Top" Width="110" Click="add_Click" Grid.ColumnSpan="2" Grid.Row="8"/>
+        <Label Content="Choose Mother" HorizontalAlignment="Left" Margin="23,3,0,0" VerticalAlignment="Top" Width="94" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <ComboBox x:Name="motherc" HorizontalAlignment="Left" Margin="5,8,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding Path=m}" Grid.Column="1" Grid.Row="1" SelectionChanged="motherc_SelectionChanged"/>
 
     </Grid>
 </Window>
