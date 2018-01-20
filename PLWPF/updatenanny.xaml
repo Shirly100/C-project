@@ -29,7 +29,7 @@
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.3"/>
+            <ImageBrush ImageSource="C:\Users\Shirly\background_material_red.jpg" Stretch="UniformToFill" Opacity="0.3"/>
         </Grid.Background>
         <Label Content="Choose Nanny" HorizontalAlignment="Left" Margin="32,3.667,0,0" VerticalAlignment="Top" Width="94" Grid.ColumnSpan="2" Grid.Row="1" FontWeight="Bold">
             <Label.Effect>
