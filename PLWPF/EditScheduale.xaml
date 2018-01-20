@@ -7,30 +7,147 @@
         mc:Ignorable="d"
         Title="EditScheduale" Height="350.602" Width="307.229">
     <Grid>
-        <Label Content="Day" HorizontalAlignment="Left" Margin="27,30,0,0" VerticalAlignment="Top" Width="46"/>
-        <Label Content="Start Hour" HorizontalAlignment="Left" Margin="136,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.935,0.666"/>
-        <Label Content="End Hour" HorizontalAlignment="Left" Margin="216,30,0,0" VerticalAlignment="Top"/>
-        <Label Content="Thursday" HorizontalAlignment="Left" Margin="27,241,0,0" VerticalAlignment="Top" Width="65"/>
-        <Label Content="Wednesday" HorizontalAlignment="Left" Margin="27,198,0,0" VerticalAlignment="Top" Width="65"/>
-        <Label Content="Tuesday" HorizontalAlignment="Left" Margin="27,159,0,0" VerticalAlignment="Top" Width="65"/>
-        <Label Content="Monday" HorizontalAlignment="Left" Margin="27,115,0,0" VerticalAlignment="Top" Width="65"/>
-        <Label x:Name="s" Content="Sunday" HorizontalAlignment="Left" Margin="27,75,0,0" VerticalAlignment="Top" Width="65"/>
-        <CheckBox x:Name="checkSunday" Content="" HorizontalAlignment="Left" Margin="97,82,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkMonday" Content="" HorizontalAlignment="Left" Margin="97,124,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkTuesday" Content="" HorizontalAlignment="Left" Margin="97,167,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkWednesday" Content="" HorizontalAlignment="Left" Margin="97,206,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkThursday" Content="" HorizontalAlignment="Left" Margin="97,249,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="startSunday" HorizontalAlignment="Left" Height="23" Margin="136,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" />
-        <TextBox x:Name="endSunday" HorizontalAlignment="Left" Height="23" Margin="214,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" />
-        <TextBox x:Name="startMonday" HorizontalAlignment="Left" Height="23" Margin="136,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" />
-        <TextBox x:Name="endMonday" HorizontalAlignment="Left" Height="23" Margin="214,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" />
-        <TextBox x:Name="startTuesday" HorizontalAlignment="Left" Height="23" Margin="136,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" />
-        <TextBox x:Name="endTuesday" HorizontalAlignment="Left" Height="23" Margin="214,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" />
-        <TextBox x:Name="startWednesday" HorizontalAlignment="Left" Height="23" Margin="136,205,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" />
-        <TextBox x:Name="endWednesday" HorizontalAlignment="Left" Height="23" Margin="214,205,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" />
-        <TextBox x:Name="startThursday" HorizontalAlignment="Left" Height="23" Margin="136,247,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" />
-        <TextBox x:Name="endThursday" HorizontalAlignment="Left" Height="23" Margin="214,247,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" />
-        <Button Content="Save Scheduale" HorizontalAlignment="Left" Margin="27,288,0,0" VerticalAlignment="Top" Width="249" Click="Button_Click_1"/>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="18*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="47*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Day" HorizontalAlignment="Left" Margin="7,2.333,0,0" VerticalAlignment="Top" Width="46" Grid.Row="1" Grid.Column="1" FontWeight="Bold" Height="26">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Start Hour" HorizontalAlignment="Left" Margin="12,2.333,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.935,0.666" Grid.Row="1" Grid.Column="3" FontWeight="Bold" Height="26" Width="69">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="End Hour" HorizontalAlignment="Left" Margin="9.333,2.333,0,0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="4" FontWeight="Bold" Height="26" Width="63">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Thursday" HorizontalAlignment="Left" Margin="7,3.333,0,0" VerticalAlignment="Top" Width="65" Grid.Row="7" Grid.Column="1" FontWeight="Bold" Height="26">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Wednesday" HorizontalAlignment="Left" Margin="7,2.333,0,0" VerticalAlignment="Top" Width="75" Grid.Row="6" Grid.Column="1" FontWeight="Bold" Height="26">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Tuesday" HorizontalAlignment="Left" Margin="7,3.667,0,0" VerticalAlignment="Top" Width="65" Grid.Row="5" Grid.Column="1" FontWeight="Bold" Height="26">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Monday" HorizontalAlignment="Left" Margin="7,1.333,0,0" VerticalAlignment="Top" Width="65" Grid.Row="4" Grid.Column="1" FontWeight="Bold" Height="26">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="s" Content="Sunday" HorizontalAlignment="Left" Margin="7,3.333,0,0" VerticalAlignment="Top" Width="65" Grid.Row="3" Grid.Column="1" FontWeight="Bold" Height="26">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </Label.Effect>
+        </Label>
+        <CheckBox x:Name="checkSunday" Content="" HorizontalAlignment="Left" Margin="5.333,10.333,0,0" VerticalAlignment="Top" Grid.Row="3" Grid.Column="2" FontWeight="Bold" Height="15" Width="20" Grid.ColumnSpan="2">
+            <CheckBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </CheckBox.Effect>
+        </CheckBox>
+        <CheckBox x:Name="checkMonday" Content="" HorizontalAlignment="Left" Margin="5.333,10.333,0,0" VerticalAlignment="Top" Grid.Row="4" Grid.Column="2" FontWeight="Bold" Height="15" Width="20" Grid.ColumnSpan="2">
+            <CheckBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </CheckBox.Effect>
+        </CheckBox>
+        <CheckBox x:Name="checkTuesday" Content="" HorizontalAlignment="Left" Margin="5.333,11.667,0,0" VerticalAlignment="Top" Grid.Row="5" Grid.Column="2" FontWeight="Bold" Height="15" Width="20" Grid.ColumnSpan="2">
+            <CheckBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </CheckBox.Effect>
+        </CheckBox>
+        <CheckBox x:Name="checkWednesday" Content="" HorizontalAlignment="Left" Margin="5.333,10.333,0,0" VerticalAlignment="Top" Grid.Row="6" Grid.Column="2" FontWeight="Bold" Height="15" Width="20" Grid.ColumnSpan="2">
+            <CheckBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </CheckBox.Effect>
+        </CheckBox>
+        <CheckBox x:Name="checkThursday" Content="" HorizontalAlignment="Left" Margin="5.333,11.333,0,0" VerticalAlignment="Top" Grid.Row="7" Grid.Column="2" FontWeight="Bold" Height="15" Width="20" Grid.ColumnSpan="2">
+            <CheckBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </CheckBox.Effect>
+        </CheckBox>
+        <TextBox x:Name="startSunday" Text="{Binding mystuff[0].Value.Key}" HorizontalAlignment="Left" Height="23" Margin="12,9.333,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="64" Grid.Row="3" Grid.Column="3" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="endSunday" HorizontalAlignment="Left" Height="23" Margin="7.333,9.333,0,0" TextWrapping="Wrap" Text="{Binding mystuff[0].Value.Value}" VerticalAlignment="Top" Width="64" Grid.Row="3" Grid.Column="4" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="startMonday" HorizontalAlignment="Left" Height="23" Margin="12,9.333,0,0" TextWrapping="Wrap" Text="{Binding Path=mystuff[BE.Days.Mon].first}" VerticalAlignment="Top" Width="64" Grid.Row="4" Grid.Column="3" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="endMonday" HorizontalAlignment="Left" Height="23" Margin="7.333,9.333,0,0" TextWrapping="Wrap" Text="{Binding Path=mystuff[BE.Days.Mon].second}" VerticalAlignment="Top" Width="64" Grid.Row="4" Grid.Column="4" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="startTuesday" HorizontalAlignment="Left" Height="23" Margin="12,9.667,0,0" TextWrapping="Wrap" Text="{Binding Path=mystuff[BE.Days.Tue].first}" VerticalAlignment="Top" Width="64" Grid.Row="5" Grid.Column="3" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="endTuesday" HorizontalAlignment="Left" Height="23" Margin="7.333,9.667,0,0" TextWrapping="Wrap" Text="{Binding Path=mystuff[BE.Days.Tue].second}" VerticalAlignment="Top" Width="64" Grid.Row="5" Grid.Column="4" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="startWednesday" HorizontalAlignment="Left" Height="23" Margin="12,9.333,0,0" TextWrapping="Wrap" Text="{Binding Path=mystuff[BE.Days.Wed].first}" VerticalAlignment="Top" Width="64" Grid.Row="6" Grid.Column="3" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="endWednesday" HorizontalAlignment="Left" Height="23" Margin="7.333,9.333,0,0" TextWrapping="Wrap" Text="{Binding Path=mystuff[BE.Days.Wed].second}" VerticalAlignment="Top" Width="64" Grid.Row="6" Grid.Column="4" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="startThursday" HorizontalAlignment="Left" Height="23" Margin="12,9.333,0,0" TextWrapping="Wrap" Text="{Binding Path=mystuff[BE.Days.Thu].first}" VerticalAlignment="Top" Width="64" Grid.Row="7" Grid.Column="3" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="endThursday" HorizontalAlignment="Left" Height="23" Margin="7.333,9.333,0,0" TextWrapping="Wrap" Text="{Binding Path=mystuff[BE.Days.Thu].second}" VerticalAlignment="Top" Width="64" Grid.Row="7" Grid.Column="4" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button Content="Save Scheduale" HorizontalAlignment="Left" Margin="7,12.333,0,0" VerticalAlignment="Top" Width="249" Click="Button_Click_1" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="4" FontWeight="Bold" Height="20">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="25"/>
+            </Button.Effect>
+        </Button>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.3"/>
+        </Grid.Background>
     </Grid>
 </Window>

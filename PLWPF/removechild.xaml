@@ -5,11 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="removechild" Height="300" Width="300">
+        Title="removechild" Height="272.667" Width="264.667">
     <Grid>
-        <Label Content="Child ID:" HorizontalAlignment="Left" Margin="57,110,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="ID_c" HorizontalAlignment="Left" Margin="136,113,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ID_c_SelectionChanged"/>
-        <Button Content="Remove Child" HorizontalAlignment="Left" Margin="92,182,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click" Height="41"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="165*"/>
+            <ColumnDefinition Width="43*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="47*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Choose Child to Remove" HorizontalAlignment="Left" Margin="4.667,1.333,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Row="1" Grid.Column="1" Height="26" Width="147">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
 
+        <ComboBox x:Name="ID_c" HorizontalAlignment="Left" Margin="4.667,8.333,0,0" VerticalAlignment="Top" Width="148" SelectionChanged="ID_c_SelectionChanged" Grid.Row="3" Grid.Column="1" FontWeight="Bold" Height="22">
+            <ComboBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <Button Content="Remove Child" HorizontalAlignment="Left" Margin="6.667,9.333,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click" Height="29" Grid.Row="5" Grid.Column="1" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.2"  />
+        </Grid.Background>
     </Grid>
 </Window>

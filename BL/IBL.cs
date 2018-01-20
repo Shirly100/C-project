@@ -20,6 +20,7 @@ namespace BL
         List<Child> Children_without_Nanny(List<Child> c);
         void dist(Contract c);
         IEnumerable<IGrouping<float, Contract>> Distance_Nanny_and_Child(bool b = false);
+        IEnumerable<IGrouping<int, Nanny>> Nanny_by_num_children(bool b = false);
         List<BankAccount> getBanksAccountList();
         List<int> getBanksBrancheList(List<BankAccount> a);
         List<string> getBanksNameList(List<BankAccount> a);
@@ -33,6 +34,7 @@ namespace BL
         List<Nanny> getNannyList();
         IEnumerable<IGrouping<KeyValuePair<string, string>, Nanny>> Nannies_by_address(bool b = false);
         IEnumerable<IGrouping<int, Nanny>> Nannies_by_Children_Ages(bool b = false);
+        IEnumerable<IGrouping<int, Contract>> Contracts_by_Children_Ages(bool b = false);
         List<Nanny> Nanny_For_Mother(Mother m);
         List<Nanny> Nanny_In_Range(Mother m);
         int num_of_contract_by_condition(Func<Contract, bool> function = null);

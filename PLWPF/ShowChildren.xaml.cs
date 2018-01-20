@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BE;
+using BL;
 
 namespace PLWPF
 {
@@ -19,9 +21,13 @@ namespace PLWPF
     /// </summary>
     public partial class ShowChildren : Window
     {
+        IBL bl;
         public ShowChildren()
         {
             InitializeComponent();
+            bl = factoryBL.get_bl();
+            this.listView.ItemsSource = bl.getChildListAlone();
+            
         }
     }
 }

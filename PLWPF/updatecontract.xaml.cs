@@ -71,7 +71,7 @@ namespace PLWPF
 
         private void choose_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            temp_con = (Contract)choose.SelectedItem;
+            temp_con.ContractID = ((Contract)choose.SelectedItem).ContractID;
         }
     }
 }

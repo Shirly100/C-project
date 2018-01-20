@@ -37,7 +37,7 @@
                 <DropShadowEffect BlurRadius="30"/>
             </Button.Effect>
         </Button>
-        <Button Content="Grouping" HorizontalAlignment="center" VerticalAlignment="center" Width="254" Height="30" FontSize="14" FontWeight="Bold" Click="Button_Click" Grid.Row="3" Grid.ColumnSpan="2" Margin="148,34">
+        <Button Content="Grouping" HorizontalAlignment="center" VerticalAlignment="center" Width="254" Height="30" FontSize="14" FontWeight="Bold" Click="Button_Click" Grid.Row="3" Grid.ColumnSpan="2" Margin="148,32,148,36">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="30"/>
             </Button.Effect>
