@@ -71,8 +71,29 @@
     <MaxAgeOfChild>0</MaxAgeOfChild>
     <MaxNumOfChildren>5</MaxNumOfChildren>
     <MinAgeOfChild>2</MinAgeOfChild>
-    <numOfChildren>0</numOfChildren>
-    <myChildren />
+    <numOfChildren>2</numOfChildren>
+    <myChildren>
+      <Child>
+        <ID_child>1234</ID_child>
+        <ID_Mother>123</ID_Mother>
+        <FirstName>Leiky</FirstName>
+        <Age>3</Age>
+        <BirthDate>01/08/2017</BirthDate>
+        <SpecialNeeds>true</SpecialNeeds>
+        <Allergies>false</Allergies>
+        <allergies></allergies>
+      </Child>
+      <Child>
+        <ID_child>1234</ID_child>
+        <ID_Mother>123</ID_Mother>
+        <FirstName>Leiky</FirstName>
+        <Age>3</Age>
+        <BirthDate>01/08/2017</BirthDate>
+        <SpecialNeeds>true</SpecialNeeds>
+        <Allergies>false</Allergies>
+        <allergies></allergies>
+      </Child>
+    </myChildren>
     <ID>243</ID>
     <FirstName>rivi2</FirstName>
     <LastName>bar2</LastName>
@@ -114,6 +135,215 @@
     </WorkDays>
     <Ministry_Vocations>false</Ministry_Vocations>
     <Recommendations></Recommendations>
+    <BankAccount>
+      <BankAccount>
+        <AccountNumber>200</AccountNumber>
+        <Balance>10</Balance>
+        <BankName>Leumi</BankName>
+        <BankNumber>22</BankNumber>
+        <BranchAddress>
+          <Address>
+            <Country>Israel</Country>
+            <City>Jerusalem</City>
+            <Floor>1</Floor>
+            <HouseNumber>7</HouseNumber>
+            <ZipCode>zip</ZipCode>
+            <Street>Beit Hadefus</Street>
+          </Address>
+        </BranchAddress>
+        <BranchNumber>65</BranchNumber>
+      </BankAccount>
+    </BankAccount>
+  </Nanny>
+  <Nanny>
+    <MaxAgeOfChild>0</MaxAgeOfChild>
+    <MaxNumOfChildren>5</MaxNumOfChildren>
+    <MinAgeOfChild>2</MinAgeOfChild>
+    <numOfChildren>0</numOfChildren>
+    <myChildren />
+    <ID>247</ID>
+    <FirstName>Can</FirstName>
+    <LastName>Cucomber</LastName>
+    <Telephone />
+    <Pelephone />
+    <Address>
+      <Address>
+        <Country>Israel</Country>
+        <City>Jerusalem</City>
+        <Floor>1</Floor>
+        <HouseNumber>11</HouseNumber>
+        <ZipCode>zip</ZipCode>
+        <Street>Yafo</Street>
+      </Address>
+    </Address>
+    <BirthDate>1995-12-26T00:00:00</BirthDate>
+    <Elevator>true</Elevator>
+    <Age>20</Age>
+    <ExperienceYears>0</ExperienceYears>
+    <HourlyRate>27</HourlyRate>
+    <MonthlyRate>1000</MonthlyRate>
+    <WorkDays>
+      <Day Day="Sun">
+        <Start>9</Start>
+        <End>20</End>
+      </Day>
+      <Day Day="Mon">
+        <Start>9</Start>
+        <End>20</End>
+      </Day>
+      <Day Day="Tue">
+        <Start>9</Start>
+        <End>20</End>
+      </Day>
+      <Day Day="Wed">
+        <Start>9</Start>
+        <End>20</End>
+      </Day>
+    </WorkDays>
+    <Ministry_Vocations>false</Ministry_Vocations>
+    <Recommendations />
+    <BankAccount>
+      <BankAccount>
+        <AccountNumber>200</AccountNumber>
+        <Balance>10</Balance>
+        <BankName>Leumi</BankName>
+        <BankNumber>22</BankNumber>
+        <BranchAddress>
+          <Address>
+            <Country>Israel</Country>
+            <City>Jerusalem</City>
+            <Floor>1</Floor>
+            <HouseNumber>7</HouseNumber>
+            <ZipCode>zip</ZipCode>
+            <Street>Beit Hadefus</Street>
+          </Address>
+        </BranchAddress>
+        <BranchNumber>65</BranchNumber>
+      </BankAccount>
+    </BankAccount>
+  </Nanny>
+  <Nanny>
+    <MaxAgeOfChild>0</MaxAgeOfChild>
+    <MaxNumOfChildren>5</MaxNumOfChildren>
+    <MinAgeOfChild>2</MinAgeOfChild>
+    <numOfChildren>0</numOfChildren>
+    <myChildren />
+    <ID>253</ID>
+    <FirstName>Old</FirstName>
+    <LastName>Young</LastName>
+    <Telephone />
+    <Pelephone />
+    <Address>
+      <Address>
+        <Country>Israel</Country>
+        <City>Tel Aviv</City>
+        <Floor>1</Floor>
+        <HouseNumber>11</HouseNumber>
+        <ZipCode>zip</ZipCode>
+        <Street>Hashalom</Street>
+      </Address>
+    </Address>
+    <BirthDate>1995-12-26T00:00:00</BirthDate>
+    <Elevator>true</Elevator>
+    <Age>20</Age>
+    <ExperienceYears>0</ExperienceYears>
+    <HourlyRate>27</HourlyRate>
+    <MonthlyRate>1000</MonthlyRate>
+    <WorkDays>
+      <Day Day="Sun">
+        <Start>10</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Mon">
+        <Start>10</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Tue">
+        <Start>10</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Wed">
+        <Start>10</Start>
+        <End>14</End>
+      </Day>
+      <Day Day="Thu">
+        <Start>10</Start>
+        <End>14</End>
+      </Day>
+    </WorkDays>
+    <Ministry_Vocations>false</Ministry_Vocations>
+    <Recommendations />
+    <BankAccount>
+      <BankAccount>
+        <AccountNumber>200</AccountNumber>
+        <Balance>10</Balance>
+        <BankName>Leumi</BankName>
+        <BankNumber>22</BankNumber>
+        <BranchAddress>
+          <Address>
+            <Country>Israel</Country>
+            <City>Jerusalem</City>
+            <Floor>1</Floor>
+            <HouseNumber>7</HouseNumber>
+            <ZipCode>zip</ZipCode>
+            <Street>Beit Hadefus</Street>
+          </Address>
+        </BranchAddress>
+        <BranchNumber>65</BranchNumber>
+      </BankAccount>
+    </BankAccount>
+  </Nanny>
+  <Nanny>
+    <MaxAgeOfChild>0</MaxAgeOfChild>
+    <MaxNumOfChildren>5</MaxNumOfChildren>
+    <MinAgeOfChild>2</MinAgeOfChild>
+    <numOfChildren>0</numOfChildren>
+    <myChildren />
+    <ID>293</ID>
+    <FirstName>Golom</FirstName>
+    <LastName>Whatever</LastName>
+    <Telephone />
+    <Pelephone />
+    <Address>
+      <Address>
+        <Country>Israel</Country>
+        <City>Tel Aviv</City>
+        <Floor>1</Floor>
+        <HouseNumber>11</HouseNumber>
+        <ZipCode>zip</ZipCode>
+        <Street>Hashalom</Street>
+      </Address>
+    </Address>
+    <BirthDate>1995-12-26T00:00:00</BirthDate>
+    <Elevator>true</Elevator>
+    <Age>20</Age>
+    <ExperienceYears>0</ExperienceYears>
+    <HourlyRate>27</HourlyRate>
+    <MonthlyRate>1000</MonthlyRate>
+    <WorkDays>
+      <Day Day="Sun">
+        <Start>9</Start>
+        <End>24</End>
+      </Day>
+      <Day Day="Mon">
+        <Start>9</Start>
+        <End>24</End>
+      </Day>
+      <Day Day="Tue">
+        <Start>9</Start>
+        <End>24</End>
+      </Day>
+      <Day Day="Wed">
+        <Start>9</Start>
+        <End>24</End>
+      </Day>
+      <Day Day="Thu">
+        <Start>9</Start>
+        <End>24</End>
+      </Day>
+    </WorkDays>
+    <Ministry_Vocations>false</Ministry_Vocations>
+    <Recommendations />
     <BankAccount>
       <BankAccount>
         <AccountNumber>200</AccountNumber>

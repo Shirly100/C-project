@@ -31,9 +31,9 @@ namespace PLWPF
             m = mom;
             n = new Nanny();
             bl = factoryBL.get_bl();
-            InitializeComponent();
             IsChecked = false;
             DataContext = this;
+            InitializeComponent();
             nannies.ItemsSource = bl.getNannyList();
             nannies.DisplayMemberPath = "str";
         }
@@ -76,9 +76,15 @@ namespace PLWPF
 
         private void find_Click(object sender, RoutedEventArgs e)
         {
-            
-            nannies.ItemsSource = bl.Nanny_For_Mother(m);
-            //finish showing only relevant nannies = needs change in bl also
+            bool? voc = vocations.IsChecked;
+            bool? ran = range.IsChecked;
+            bool ran1 = false;
+            bool voc1 = false;
+            if (voc != false)
+                voc1 = true;
+            if (ran != false)
+                ran1 = true;
+            nannies.ItemsSource = bl.Nanny_For_Mother_all(m, ran1, voc1);
         }
     }
 }

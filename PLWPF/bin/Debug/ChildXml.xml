@@ -3,12 +3,12 @@
   <Child>
     <ID_child>1234</ID_child>
     <ID_Mother>123</ID_Mother>
-    <FirstName>please write nammbe</FirstName>
-    <Age>0</Age>
-    <BirthDate>1/8/2018 12:00:00 AM</BirthDate>
+    <FirstName>Leiky</FirstName>
+    <Age>3</Age>
+    <BirthDate>01/08/2017</BirthDate>
     <SpecialNeeds>true</SpecialNeeds>
     <Allergies>false</Allergies>
-    <allergies></allergies>
+    <allergies />
   </Child>
   <Child>
     <ID_child>1235</ID_child>
@@ -21,13 +21,13 @@
     <allergies />
   </Child>
   <Child>
-    <ID_child>123</ID_child>
-    <ID_Mother>124</ID_Mother>
-    <FirstName>please write name</FirstName>
-    <Age>0</Age>
-    <BirthDate>1/4/2018 12:00:00 AM</BirthDate>
-    <SpecialNeeds>true</SpecialNeeds>
-    <Allergies>true</Allergies>
+    <ID_child>121212</ID_child>
+    <ID_Mother>133</ID_Mother>
+    <FirstName>Yosy</FirstName>
+    <Age>-10</Age>
+    <BirthDate>11/14/2017 12:00:00 AM</BirthDate>
+    <SpecialNeeds>false</SpecialNeeds>
+    <Allergies>false</Allergies>
     <allergies />
   </Child>
 </children>

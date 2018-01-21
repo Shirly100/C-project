@@ -49,7 +49,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <CheckBox x:Name="range" Content="" HorizontalAlignment="center" Margin="130.333,12,0,0" VerticalAlignment="Top" Grid.Row="3" Grid.Column="1" FontWeight="Bold" Height="15" Width="20" >
+        <CheckBox x:Name="range" Content="" HorizontalAlignment="center" Margin="130.333,12,0,0" VerticalAlignment="Top" Grid.Row="3" Grid.Column="1" FontWeight="Bold" Height="15" Width="20"  >
             <CheckBox.Effect>
                 <DropShadowEffect BlurRadius="20"/>
             </CheckBox.Effect>
@@ -72,7 +72,7 @@
                 <DropShadowEffect BlurRadius="20"/>
             </CheckBox.Effect>
         </CheckBox>
-        <Label Content="Vocation by ministry" HorizontalAlignment="Left" Margin="6.333,8,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Grid.Row="4" Grid.Column="1" FontWeight="Bold" Height="26" Width="127">
+        <Label Content="Vocation by ministry"  HorizontalAlignment="Left" Margin="6.333,8,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Grid.Row="4" Grid.Column="1" FontWeight="Bold" Height="26" Width="127">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="20"/>
             </Label.Effect>

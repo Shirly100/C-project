@@ -201,6 +201,40 @@ namespace BL
             if (now < birthday.AddYears(age)) age--;
             return age;
         }
+        /*
+         * firstly - in the same city or not?
+         * working hours
+         * vocations
+          */
+        public List<Nanny> Nanny_For_Mother_all(Mother m,bool range, bool voc)
+        {
+            List<Nanny> n = new List<Nanny>();
+            List<Nanny> hours = Nanny_For_Mother(m);
+            if (voc)
+            {
+                hours = Vocations_by_Ministry_of_Economy_and_Industry(hours);
+            }
+            if (range)
+            {
+                IEnumerable<IGrouping<KeyValuePair<string, string>, Nanny>> nan = Nannies_by_address(true);
+                KeyValuePair<string, string> mom = new KeyValuePair<string, string>(m.Address.City, m.Address.Street);
+                List<Nanny> ad = new List<Nanny>();
+                foreach (var t in nan)
+                {
+                    if (t.Key.Equals(mom))
+                        ad.Union(t.ToList());
+                }
+                foreach (Nanny k in hours)
+                {
+                    if (ad.Contains(k))
+                        n.Add(k);
+                }
+            }
+            else
+                n = hours;
+            return n;
+        }
+
         //return all nannies working in wanted time
         public List<Nanny> Nanny_For_Mother(Mother m)
         {
@@ -227,21 +261,6 @@ namespace BL
                 if (flag)
                     n.Add(item1);
             }
-            /* List<Nanny> temp = Nanny_In_Range(m);
-             List<Nanny> ret = new List<Nanny>(); 
-             foreach (Nanny nn in n)
-             {
-                 if (temp.IndexOf(nn) >= 0) {
-                     ret.Add(nn);
-                 }
-                 else
-                 {
-
-                 }
-             }
-
-             return ret;
-             */
             return n;
         }
         //return all children which doen't has ananny

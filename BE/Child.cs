@@ -25,14 +25,14 @@ namespace BE
             result += string.Format("Age: {0}\n", Age);
             result += string.Format("Date of birth: {0}\n", BirthDate);
             result += string.Format("ID of child: {0}\n", ID_child);
-            result += string.Format("ID of mother: {0}\n", ID_Mother);
+            result += string.Format("ID of parent: {0}\n", ID_Mother);
             if (SpecialNeeds == true)
                 result += "SpecialNeeds: YES\n";
             else
                 result += "SpecialNeeds: No\n";
             if (Allergies == true)
                 result += string.Format("There is allergies: {0}\n", allergies);
-            else
+            else 
                 result += "No allergies.";
             return result;
         }

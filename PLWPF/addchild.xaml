@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="addchild" Height="269.334" Width="364">
+        Title="addchild" Height="312.667" Width="399.333">
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="3.333"/>
-            <RowDefinition Height="25.333"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="29.333"/>
+            <RowDefinition Height="Auto" MinHeight="26"/>
+            <RowDefinition Height="Auto" MinHeight="26"/>
+            <RowDefinition Height="Auto" MinHeight="26"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
@@ -22,22 +22,22 @@
             <ColumnDefinition Width="148*"/>
         </Grid.ColumnDefinitions>
 
-        <ComboBox x:Name="child_combo" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="center"  SelectionChanged="ComboBox_SelectionChanged" FontWeight="Bold" Margin="0.333,5.667,0.333,4.667" Height="15" Grid.Row="1" >
+        <ComboBox x:Name="child_combo" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  SelectionChanged="ComboBox_SelectionChanged" FontWeight="Bold" Margin="0,5.667,0.667,4.667" Grid.Row="1" >
             <ComboBox.Effect>
                 <DropShadowEffect BlurRadius="20" Opacity="0.3"/>
             </ComboBox.Effect>
         </ComboBox>
-        <Label Content="Choose Mother" Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Center" FontWeight="Bold" Grid.RowSpan="2" Height="26" Margin="0,2,0,0.667" Width="97" >
+        <Label Content="Choose Mother" Grid.Row="1" HorizontalAlignment="Left"  VerticalAlignment="Center" FontWeight="Bold" Height="26" Margin="0,0.667,0,2.667" Width="97" >
             <Label.Effect>
                 <DropShadowEffect BlurRadius="20"/>
             </Label.Effect>
         </Label>
-        <Label Content="Id Child" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontWeight="Bold" Grid.ColumnSpan="2" Margin="0,19.667,180.333,5.667" Height="26" Grid.RowSpan="2" >
+        <Label Content="Id Child" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontWeight="Bold" Grid.ColumnSpan="2" Margin="0,21.667,180.667,7.667" Height="26" Grid.RowSpan="2" >
             <Label.Effect>
                 <DropShadowEffect BlurRadius="20"/>
             </Label.Effect>
         </Label>
-        <TextBox x:Name="id" Grid.Row="2" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding Path=ID_child}" VerticalAlignment="Center" Grid.Column="1" FontWeight="Bold" Margin="0.333,3.333,-0.667,4.667" Height="18">
+        <TextBox x:Name="id" Grid.Row="2" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding Path=ID_child}" VerticalAlignment="Center" Grid.Column="1" FontWeight="Bold" Margin="0,3.333,-0.333,4.667" Height="18">
             <TextBox.Effect>
                 <DropShadowEffect BlurRadius="20" Opacity="0.3"/>
             </TextBox.Effect>
@@ -47,7 +47,7 @@
                 <DropShadowEffect BlurRadius="20"/>
             </Label.Effect>
         </Label>
-        <TextBox x:Name="name" Grid.Row="3" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding Path=FirstName}" VerticalAlignment="Center"  Grid.Column="1" FontWeight="Bold" Margin="0.333,3.333,-0.667,4.667" Height="18">
+        <TextBox x:Name="name" Grid.Row="3" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding Path=FirstName}" VerticalAlignment="Center"  Grid.Column="1" FontWeight="Bold" Margin="0,3.333,-0.333,4.667" Height="18">
             <TextBox.Effect>
                 <DropShadowEffect BlurRadius="20" Opacity="0.3"/>
             </TextBox.Effect>
@@ -57,7 +57,7 @@
                 <DropShadowEffect BlurRadius="20"/>
             </Label.Effect>
         </Label>
-        <DatePicker x:Name="started_DateDatePicker" Grid.Row="4" SelectedDateChanged="started_DateDatePicker_SelectedDateChanged"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" FontWeight="Bold" Margin="0.333,0.333,0.333,1.667" Height="24">
+        <DatePicker x:Name="started_DateDatePicker" Grid.Row="4" SelectedDateChanged="started_DateDatePicker_SelectedDateChanged"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" FontWeight="Bold" Margin="0,0.333,0.667,1.667" Height="24">
             <DatePicker.Effect>
                 <DropShadowEffect BlurRadius="20" Opacity="0.3"/>
             </DatePicker.Effect>
@@ -72,17 +72,17 @@
                 <DropShadowEffect BlurRadius="20"/>
             </Label.Effect>
         </Label>
-        <CheckBox Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" FontWeight="Bold" Margin="0.333,4.333,0,5.667" Height="16" Width="16">
+        <CheckBox Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" FontWeight="Bold" Margin="0,4.333,0,5.667" Height="16" Width="16">
             <CheckBox.Effect>
                 <DropShadowEffect BlurRadius="20" Opacity="0.3"/>
             </CheckBox.Effect>
         </CheckBox>
-        <CheckBox  Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Column="1" FontWeight="Bold" Margin="0.333,4.333,0,5.667" Height="16" Width="16">
+        <CheckBox  Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Column="1" FontWeight="Bold" Margin="0,4.333,0,5.667" Height="16" Width="16">
             <CheckBox.Effect>
                 <DropShadowEffect BlurRadius="20" Opacity="0.3"/>
             </CheckBox.Effect>
         </CheckBox>
-        <Button Content="Add Child" Grid.Row="7" HorizontalAlignment="center"  VerticalAlignment="Center" Click="Button_Click" Grid.ColumnSpan="2" FontWeight="Bold" Margin="149,30.333,143.333,31" Height="20" Width="65">
+        <Button Content="Add Child" Grid.Row="7" HorizontalAlignment="center"  VerticalAlignment="Center" Click="Button_Click" Grid.ColumnSpan="2" FontWeight="Bold" Margin="167,50.333,160.667,50.333" Height="20" Width="65">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="20"/>
             </Button.Effect>

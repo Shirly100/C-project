@@ -24,12 +24,12 @@ namespace BE
             string result = "";
             result += LastName + " " + FirstName + '\n';
             result += string.Format("ID: {0}\n", ID);
-            result += string.Format("Telephone: {0}\n", Telephone);
             result += string.Format("Pelephone: {0}\n", Pelephone);
             result += Address.ToString();
+            result += " " + BankAccount;
             return result;
         }
-        public string personStr()
+        private string personStr()
         {
             string res = "";
             res += FirstName + " " + LastName;

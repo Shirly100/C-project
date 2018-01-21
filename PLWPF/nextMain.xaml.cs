@@ -72,7 +72,6 @@ namespace PLWPF
                 {BE.Days.Tue, new KeyValuePair<int, int>(12,14 )},
                 {BE.Days.Wed, new KeyValuePair<int, int>(12,14 )}
              },
-                Range = 50,
                 BankAccount = new BankAccount { AccountNumber = 100, Balance = 10000, BankName = "Leumi", BankNumber = 22, BranchAddress = new Address { City = "Jerusalem", Street = "Beit Hadefus", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" }, BranchNumber = 65 },
 
             };
@@ -91,8 +90,59 @@ namespace PLWPF
                 {BE.Days.Tue, new KeyValuePair<int, int>(12,14 )},
                 {BE.Days.Wed, new KeyValuePair<int, int>(12,14 )}
              },
-                Range = 1000,
                 BankAccount = new BankAccount { AccountNumber = 110, Balance = 10000, BankName = "Leumi", BankNumber = 22, BranchAddress = new Address { City = "Jerusalem", Street = "Beit Hadefus", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" }, BranchNumber = 65 },
+
+            };
+            Mother m1 = new Mother
+            {
+                Address = new Address { City = "Jerusalem", Street = "Yafo", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" },
+                ID = 127,
+                FirstName = "Chany",
+                LastName = "Shpiner",
+                Age = 25,
+                Pelephone = "03454366",
+                WorkDays = new Dictionary<BE.Days, KeyValuePair<int, int>>()
+            {
+                {BE.Days.Sun, new KeyValuePair<int, int>(10,14 )},
+                {BE.Days.Mon, new KeyValuePair<int, int>(09,14 )},
+                {BE.Days.Tue, new KeyValuePair<int, int>(12,14 )}
+             },
+                BankAccount = new BankAccount { AccountNumber = 100, Balance = 10000, BankName = "Leumi", BankNumber = 22, BranchAddress = new Address { City = "Jerusalem", Street = "Beit Hadefus", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" }, BranchNumber = 65 },
+
+            };
+            Mother m2 = new Mother
+            {
+                Address = new Address { City = "Tel Aviv", Street = "Hashalom", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" },
+                ID = 133,
+                FirstName = "Saly",
+                LastName = "Cohen",
+                Age = 25,
+                Pelephone = "03455666",
+                WorkDays = new Dictionary<BE.Days, KeyValuePair<int, int>>()
+            {
+                {BE.Days.Sun, new KeyValuePair<int, int>(10,14 )},
+                {BE.Days.Mon, new KeyValuePair<int, int>(10,14 )},
+                {BE.Days.Wed, new KeyValuePair<int, int>(10,14 )},
+                {BE.Days.Thu, new KeyValuePair<int, int>(10,14 )}
+             },
+                BankAccount = new BankAccount { AccountNumber = 100, Balance = 10000, BankName = "Leumi", BankNumber = 22, BranchAddress = new Address { City = "Jerusalem", Street = "Beit Hadefus", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" }, BranchNumber = 65 },
+
+            }; Mother m3 = new Mother
+            {
+                Address = new Address { City = "Tel Aviv", Street = "Hashalom", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" },
+                ID = 139,
+                FirstName = "Chany",
+                LastName = "Banany",
+                Age = 25,
+                Pelephone = "03477666",
+                WorkDays = new Dictionary<BE.Days, KeyValuePair<int, int>>()
+            {
+                {BE.Days.Mon, new KeyValuePair<int, int>(12,20 )},
+                {BE.Days.Tue, new KeyValuePair<int, int>(12,13 )},
+                {BE.Days.Wed, new KeyValuePair<int, int>(12,19 )}
+             },
+                
+                BankAccount = new BankAccount { AccountNumber = 100, Balance = 10000, BankName = "Leumi", BankNumber = 22, BranchAddress = new Address { City = "Jerusalem", Street = "Beit Hadefus", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" }, BranchNumber = 65 },
 
             };
             Nanny nanny = new Nanny
@@ -141,6 +191,75 @@ namespace PLWPF
                 {BE.Days.Wed, new KeyValuePair<int, int>(13,14 )}
              }
             };
+            Nanny n2 = new Nanny
+            {
+                ID = 247,
+                FirstName = "Can",
+                LastName = "Cucomber",
+                Age = 20,
+                BankAccount = new BankAccount { AccountNumber = 200, Balance = 10, BankName = "Leumi", BankNumber = 22, BranchAddress = new Address { City = "Jerusalem", Street = "Beit Hadefus", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" }, BranchNumber = 65 },
+                Address = new Address { City = "Jerusalem", Street = "Yafo", HouseNumber = 11, Country = "Israel", Floor = 1, ZipCode = "zip" },
+                BirthDate = new DateTime(1995, 12, 26),
+                ExperienceYears = 0,
+                HourlyRate = 27,
+                MaxNumOfChildren = 5,
+                MinAgeOfChild = 2,
+                MonthlyRate = 1000,
+                Elevator = true,
+                WorkDays = new Dictionary<BE.Days, KeyValuePair<int, int>>()
+            {
+                {BE.Days.Sun, new KeyValuePair<int, int>(09,20 )},
+                {BE.Days.Mon, new KeyValuePair<int, int>(09,20 )},
+                {BE.Days.Tue, new KeyValuePair<int, int>(09,20 )},
+                {BE.Days.Wed, new KeyValuePair<int, int>(09,20 )}
+             }
+            }; Nanny n3 = new Nanny
+            {
+                ID = 253,
+                FirstName = "Old",
+                LastName = "Young",
+                Age = 20,
+                BankAccount = new BankAccount { AccountNumber = 200, Balance = 10, BankName = "Leumi", BankNumber = 22, BranchAddress = new Address { City = "Jerusalem", Street = "Beit Hadefus", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" }, BranchNumber = 65 },
+                Address = new Address { City = "Tel Aviv", Street = "Hashalom", HouseNumber = 11, Country = "Israel", Floor = 1, ZipCode = "zip" },
+                BirthDate = new DateTime(1995, 12, 26),
+                ExperienceYears = 0,
+                HourlyRate = 27,
+                MaxNumOfChildren = 5,
+                MinAgeOfChild = 2,
+                MonthlyRate = 1000,
+                Elevator = true,
+                WorkDays = new Dictionary<BE.Days, KeyValuePair<int, int>>()
+            {
+                {BE.Days.Sun, new KeyValuePair<int, int>(10,14 )},
+                {BE.Days.Mon, new KeyValuePair<int, int>(10,14 )},
+                {BE.Days.Tue, new KeyValuePair<int, int>(10,14 )},
+                {BE.Days.Wed, new KeyValuePair<int, int>(10,14 )},
+                { BE.Days.Thu, new KeyValuePair<int, int>(10,14 )}
+             }
+            }; Nanny n4 = new Nanny
+            {
+                ID = 293,
+                FirstName = "Golom",
+                LastName = "Whatever",
+                Age = 20,
+                BankAccount = new BankAccount { AccountNumber = 200, Balance = 10, BankName = "Leumi", BankNumber = 22, BranchAddress = new Address { City = "Jerusalem", Street = "Beit Hadefus", HouseNumber = 7, Country = "Israel", Floor = 1, ZipCode = "zip" }, BranchNumber = 65 },
+                Address = new Address { City = "Tel Aviv", Street = "Hashalom", HouseNumber = 11, Country = "Israel", Floor = 1, ZipCode = "zip" },
+                BirthDate = new DateTime(1995, 12, 26),
+                ExperienceYears = 0,
+                HourlyRate = 27,
+                MaxNumOfChildren = 5,
+                MinAgeOfChild = 2,
+                MonthlyRate = 1000,
+                Elevator = true,
+                WorkDays = new Dictionary<BE.Days, KeyValuePair<int, int>>()
+            {
+                {BE.Days.Sun, new KeyValuePair<int, int>(09,24 )},
+                {BE.Days.Mon, new KeyValuePair<int, int>(09,24 )},
+                {BE.Days.Tue, new KeyValuePair<int, int>(09,24 )},
+                {BE.Days.Wed, new KeyValuePair<int, int>(09,24 )},
+                {BE.Days.Thu, new KeyValuePair<int, int>(09,24 )}
+             }
+            };
             Child ch = new Child
             {
                 Age = 3,
@@ -179,9 +298,15 @@ namespace PLWPF
                 StartDate = "15/10/2017"
             };
             factoryBL.get_bl().addMother(m);
+            factoryBL.get_bl().addMother(m1);
+            factoryBL.get_bl().addMother(m2);
+            factoryBL.get_bl().addMother(m3);
             factoryBL.get_bl().addMother(mmm);
             factoryBL.get_bl().addNanny(nanny);
             factoryBL.get_bl().addNanny(n);
+            factoryBL.get_bl().addNanny(n2);
+            factoryBL.get_bl().addNanny(n3);
+            factoryBL.get_bl().addNanny(n4);
             factoryBL.get_bl().addChild(ch);
             factoryBL.get_bl().addChild(chhh);
             factoryBL.get_bl().addContract(cccc);

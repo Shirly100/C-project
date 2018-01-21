@@ -7,31 +7,138 @@
         mc:Ignorable="d"
         Title="addnanny" Height="602.215" Width="289.125">
     <Grid>
-        <Label Content="First Name" HorizontalAlignment="Left" Margin="32,24,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="firstname" HorizontalAlignment="Left" Height="23" Margin="119,28,0,0" TextWrapping="Wrap" Text="{Binding Path=FirstName}"  VerticalAlignment="Top" Width="120" />
-        <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="32,60,0,0" VerticalAlignment="Top" Width="67"/>
-        <TextBox x:Name="LasrName" HorizontalAlignment="Left" Height="23" Margin="119,63,0,0" TextWrapping="Wrap" Text="{Binding Path=LastName}" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="ID" Content="Id" HorizontalAlignment="Left" Margin="32,94,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="id" HorizontalAlignment="Left" Height="23" Margin="119,97,0,0" TextWrapping="Wrap" Text="{Binding Path=ID}" VerticalAlignment="Top" Width="120" />
-        <Label x:Name="Pelephone" Content="pelephone" HorizontalAlignment="Left" Margin="32,125,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="Telephone" HorizontalAlignment="Left" Height="23" Margin="119,128,0,0" TextWrapping="Wrap" Text="{Binding Path=Pelephone}" VerticalAlignment="Top" Width="120" />
-        <Button x:Name="address" Content="Address" HorizontalAlignment="Left" Margin="32,413,0,0" VerticalAlignment="Top" Width="207" Click="address_Click"/>
-        <Button x:Name="bank" Content="Bank Account" HorizontalAlignment="Left" Margin="32,497,0,0" VerticalAlignment="Top" Width="207" Click="bank_Click"/>
-        <Button x:Name="add" Content="Add Nanny" HorizontalAlignment="Left" Margin="97,538,0,0" VerticalAlignment="Top" Width="75" Click="add_Click"/>
-        <Button x:Name="hours" Content="Create Scheduale" HorizontalAlignment="Left" Margin="32,455,0,0" VerticalAlignment="Top" Width="207" Click="hours_Click"/>
-        <Label Content="Do you have an elevator?" HorizontalAlignment="Left" Margin="32,257,0,0" VerticalAlignment="Top" Width="149"/>
-        <CheckBox x:Name="elevate" HorizontalAlignment="Left" Margin="221,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6.667,1.479" IsChecked="{Binding Path=Elevator}" />
-        <Label x:Name="label" Content="Years of experience:" HorizontalAlignment="Left" Margin="32,192,0,0" VerticalAlignment="Top" Width="119"/>
-        <ComboBox x:Name="exper" HorizontalAlignment="Left" Margin="156,195,0,0" VerticalAlignment="Top" Width="83" SelectedItem="{Binding Path=ExperienceYears}" />
-        <Label Content="Max num of children:" HorizontalAlignment="Left" Margin="32,225,0,0" VerticalAlignment="Top" Width="124"/>
-        <ComboBox x:Name="num_child" HorizontalAlignment="Left" Margin="156,228,0,0" VerticalAlignment="Top" Width="83" SelectedItem="{Binding Path=MaxNumOfChildren}" />
-        <Label Content="Monthly Rate:" HorizontalAlignment="Left" Margin="32,329,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="mrate" HorizontalAlignment="Left" Height="23" Margin="119,333,0,0" TextWrapping="Wrap" Text="{Binding Path=MonthlyRate}" VerticalAlignment="Top" Width="120" />
-        <Label  Content="Hourly Rate:" HorizontalAlignment="Left" Margin="32,365,0,0" VerticalAlignment="Top" Width="81"/>
-        <TextBox x:Name="hrate" HorizontalAlignment="Left" Height="23" Margin="119,368,0,0" TextWrapping="Wrap" Text="{Binding Path=HourlyRate}" VerticalAlignment="Top" Width="120" />
-        <Label Content="Do you take ministry vocations?" HorizontalAlignment="Left" Margin="32,293,0,0" VerticalAlignment="Top" Width="180"/>
-        <CheckBox x:Name="vocations" HorizontalAlignment="Left" Margin="221,301,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6.667,1.479" IsChecked="{Binding Path=Ministry_Vocations}" />
-        <Label x:Name="label1" Content="How old are you?" HorizontalAlignment="Left" Margin="32,160,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="age" HorizontalAlignment="Left" Height="23" Margin="156,163,0,0" TextWrapping="Wrap" Text="{Binding Path=Age}" VerticalAlignment="Top" Width="81" />
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.3"/>
+        </Grid.Background>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="32,24,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="81">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="firstname" HorizontalAlignment="Left" Height="23" Margin="119,28,0,0" TextWrapping="Wrap" Text="{Binding Path=FirstName}"  VerticalAlignment="Top" Width="120" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="32,60,0,0" VerticalAlignment="Top" Width="77" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="LasrName" HorizontalAlignment="Left" Height="23" Margin="119,63,0,0" TextWrapping="Wrap" Text="{Binding Path=LastName}" VerticalAlignment="Top" Width="120" FontWeight="Bold">
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label x:Name="ID" Content="Id" HorizontalAlignment="Left" Margin="32,94,0,0" VerticalAlignment="Top" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="id" HorizontalAlignment="Left" Height="23" Margin="119,97,0,0" TextWrapping="Wrap" Text="{Binding Path=ID}" VerticalAlignment="Top" Width="120" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label x:Name="Pelephone" Content="pelephone" HorizontalAlignment="Left" Margin="32,125,0,0" VerticalAlignment="Top" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="Telephone" HorizontalAlignment="Left" Height="23" Margin="119,128,0,0" TextWrapping="Wrap" Text="{Binding Path=Pelephone}" VerticalAlignment="Top" Width="120" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button x:Name="address" Content="Address" HorizontalAlignment="Left" Margin="32,413,0,0" VerticalAlignment="Top" Width="207" Click="address_Click" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="bank" Content="Bank Account" HorizontalAlignment="Left" Margin="32,497,0,0" VerticalAlignment="Top" Width="207" Click="bank_Click" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="add" Content="Add Nanny" HorizontalAlignment="Left" Margin="97,538,0,0" VerticalAlignment="Top" Width="75" Click="add_Click" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="hours" Content="Create Scheduale" HorizontalAlignment="Left" Margin="32,455,0,0" VerticalAlignment="Top" Width="207" Click="hours_Click" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Button.Effect>
+        </Button>
+        <Label Content="Do you have an elevator?" HorizontalAlignment="Left" Margin="32,257,0,0" VerticalAlignment="Top" Width="161" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <CheckBox x:Name="elevate" HorizontalAlignment="Left" Margin="221,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6.667,1.479" IsChecked="{Binding Path=Elevator}" FontWeight="Bold" >
+            <CheckBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </CheckBox.Effect>
+        </CheckBox>
+        <Label x:Name="label" Content="Years of experience:" HorizontalAlignment="Left" Margin="32,192,0,0" VerticalAlignment="Top" Width="119" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <ComboBox x:Name="exper" HorizontalAlignment="Left" Margin="156,195,0,0" VerticalAlignment="Top" Width="83" SelectedItem="{Binding Path=ExperienceYears}" FontWeight="Bold" >
+            <ComboBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <Label Content="Max num of children:" HorizontalAlignment="Left" Margin="32,225,0,0" VerticalAlignment="Top" Width="133" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <ComboBox x:Name="num_child" HorizontalAlignment="Left" Margin="156,228,0,0" VerticalAlignment="Top" Width="83" SelectedItem="{Binding Path=MaxNumOfChildren}" FontWeight="Bold" >
+            <ComboBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </ComboBox.Effect>
+        </ComboBox>
+        <Label Content="Monthly Rate:" HorizontalAlignment="Left" Margin="32,329,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="108">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="mrate" HorizontalAlignment="Left" Height="23" Margin="130,333,0,0" TextWrapping="Wrap" Text="{Binding Path=MonthlyRate}" VerticalAlignment="Top" Width="109" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label  Content="Hourly Rate:" HorizontalAlignment="Left" Margin="32,365,0,0" VerticalAlignment="Top" Width="81" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="hrate" HorizontalAlignment="Left" Height="23" Margin="130,368,0,0" TextWrapping="Wrap" Text="{Binding Path=HourlyRate}" VerticalAlignment="Top" Width="109" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="Do you take ministry vocations?" HorizontalAlignment="Left" Margin="32,293,0,0" VerticalAlignment="Top" Width="196" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <CheckBox x:Name="vocations" HorizontalAlignment="Left" Margin="221,301,0,0" VerticalAlignment="Top" RenderTransformOrigin="-6.667,1.479" IsChecked="{Binding Path=Ministry_Vocations}" FontWeight="Bold" >
+            <CheckBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </CheckBox.Effect>
+        </CheckBox>
+        <Label x:Name="label1" Content="How old are you?" HorizontalAlignment="Left" Margin="32,160,0,0" VerticalAlignment="Top" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="age" HorizontalAlignment="Left" Height="23" Margin="156,163,0,0" TextWrapping="Wrap" Text="{Binding Path=Age}" VerticalAlignment="Top" Width="81" FontWeight="Bold" >
+            <TextBox.Effect>
+                <DropShadowEffect BlurRadius="20"/>
+            </TextBox.Effect>
+        </TextBox>
     </Grid>
 </Window>

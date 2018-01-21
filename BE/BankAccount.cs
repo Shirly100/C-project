@@ -29,6 +29,7 @@ namespace BE
             Result += "Branch Address:\n" + BranchAddress.ToString();
             Result += "Branch number:\n" + BranchNumber;
             Result += string.Format("Account Number: {0}\n", AccountNumber);
+            Result += "Balance: " + Balance;
             return Result;
 
         }

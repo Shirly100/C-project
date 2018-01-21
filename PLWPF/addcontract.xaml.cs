@@ -77,10 +77,17 @@ namespace PLWPF
 
         private void choosenanny_Click(object sender, RoutedEventArgs e)
         {
-            var nan = new chooseNanny(bl.getMother(temp_con.ID_mother));
-            if (nan.ShowDialog() == false)
+            if (temp_con.ID_child > 0)
             {
-                temp_con.ID_nanny = nan.nID;
+                var nan = new chooseNanny(bl.getMother(temp_con.ID_mother));
+                if (nan.ShowDialog() == false)
+                {
+                    temp_con.ID_nanny = nan.nID;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please choose child first");
             }
         }
 
