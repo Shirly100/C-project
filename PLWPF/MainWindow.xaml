@@ -11,7 +11,7 @@
             <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="C:\Users\Shirly\background_material_red.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Button x:Name="click" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="663" Height="531"  Click="button_Click" Opacity="0" Grid.ColumnSpan="3" Margin="0,0,0,-0.333" />
     </Grid>

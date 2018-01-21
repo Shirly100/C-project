@@ -4,17 +4,26 @@
 winexe
 C#
 .cs
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\
 PLWPF
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\App.xaml
+28-1922025504
+
+32-900150189
+171978399473
+addchild.xaml;addChildMother.xaml;addcontract.xaml;addmother.xaml;addnanny.xaml;chooseNanny.xaml;EditScheduale.xaml;grouping.xaml;MainWindow.xaml;nextMain.xaml;removechild.xaml;removecontract.xaml;removemother.xaml;removenanny.xaml;ShowChildren.xaml;ShowContracts.xaml;ShowMother.xaml;ShowNanny.xaml;updatechild.xaml;updatecontract.xaml;updatemother.xaml;updatenanny.xaml;wchild.xaml;wcontract.xaml;winAddress.xaml;winBank.xaml;wmother.xaml;wnanny.xaml;
+=======
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\App.xaml
 32307462522
 
 36-1412740282
 17-1695885763
 addchild.xaml;addChildMother.xaml;addcontract.xaml;addmother.xaml;addnanny.xaml;chooseNanny.xaml;EditScheduale.xaml;grouping.xaml;MainWindow.xaml;nextMain.xaml;removechild.xaml;removecontract.xaml;removemother.xaml;removenanny.xaml;ShowChildren.xaml;ShowContracts.xaml;ShowMother.xaml;ShowNanny.xaml;updatechild.xaml;updatecontract.xaml;updatemother.xaml;updatenanny.xaml;UserControlContract.xaml;UserControlNanniesAge.xaml;UserControlNanniesNum.xaml;UserControlNannyAddress.xaml;wchild.xaml;wcontract.xaml;winAddress.xaml;winBank.xaml;wmother.xaml;wnanny.xaml;
+>>>>>>> 7058923cd404b33e2ee04c5dcce0f9711a98c4f5
 
 False
 

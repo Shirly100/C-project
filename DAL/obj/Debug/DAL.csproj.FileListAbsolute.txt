@@ -1,35 +1,10 @@
-C:\Users\מרים\Documents\שירלי\c#\Project\NannyForYou\DAL\bin\Debug\DAL.dll
-C:\Users\מרים\Documents\שירלי\c#\Project\NannyForYou\DAL\bin\Debug\DAL.pdb
-C:\Users\מרים\Documents\שירלי\c#\Project\NannyForYou\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-C:\Users\מרים\Documents\שירלי\c#\Project\NannyForYou\DAL\obj\Debug\DAL.dll
-C:\Users\מרים\Documents\שירלי\c#\Project\NannyForYou\DAL\obj\Debug\DAL.pdb
-C:\Users\Chany\Downloads\Project\NannyForYou\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-C:\Users\Chany\Downloads\Project\NannyForYou\DAL\obj\Debug\DAL.dll
-C:\Users\Chany\Downloads\Project\NannyForYou\DAL\obj\Debug\DAL.pdb
-C:\Users\Chany\Downloads\Project\NannyForYou\DAL\bin\Debug\DAL.dll
-C:\Users\Chany\Downloads\Project\NannyForYou\DAL\bin\Debug\DAL.pdb
-C:\Users\Chany\Downloads\Project\NannyForYou\DAL\bin\Debug\BE.dll
-C:\Users\Chany\Downloads\Project\NannyForYou\DAL\bin\Debug\BE.pdb
-C:\Users\מרים\Documents\שירלי\c#\project 3\Project\NannyForYou\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-C:\Users\מרים\Documents\שירלי\c#\project 3\Project\NannyForYou\DAL\obj\Debug\DAL.dll
-C:\Users\מרים\Documents\שירלי\c#\project 3\Project\NannyForYou\DAL\obj\Debug\DAL.pdb
-C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\obj\Debug\DAL.dll
-C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\obj\Debug\DAL.pdb
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\bin\Debug\DAL.dll
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\bin\Debug\DAL.pdb
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\bin\Debug\BE.dll
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\bin\Debug\DS.dll
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\bin\Debug\DS.pdb
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\bin\Debug\BE.pdb
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DAL.dll
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DAL.pdb
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\BE.dll
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DS.dll
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\DS.pdb
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\bin\Debug\BE.pdb
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\obj\Debug\DAL.dll
-C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DAL\obj\Debug\DAL.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\obj\Debug\DAL.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DAL\obj\Debug\DAL.pdb

@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\bin\Debug\BE.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\bin\Debug\BE.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\obj\Debug\BE.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\BE\obj\Debug\BE.pdb
+=======
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\bin\Debug\BE.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\bin\Debug\BE.pdb
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\BE\obj\Debug\BE.pdb
+>>>>>>> 7058923cd404b33e2ee04c5dcce0f9711a98c4f5

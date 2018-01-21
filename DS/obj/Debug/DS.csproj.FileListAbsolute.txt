@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\bin\Debug\DS.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\bin\Debug\DS.pdb
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\bin\Debug\BE.dll
@@ -5,6 +7,7 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\bin\Debug\BE.pdb
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\obj\Debug\DS.csproj.CoreCompileInputs.cache
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\obj\Debug\DS.dll
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\DS\obj\Debug\DS.pdb
+>>>>>>> 7058923cd404b33e2ee04c5dcce0f9711a98c4f5
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DS\bin\Debug\DS.dll
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DS\bin\Debug\DS.pdb
 C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\DS\bin\Debug\BE.dll

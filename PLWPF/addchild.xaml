@@ -88,7 +88,7 @@
             </Button.Effect>
         </Button>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.2"  />
+            <ImageBrush ImageSource="C:\Users\Shirly\background_material_red.jpg" Stretch="UniformToFill" Opacity="0.2"  />
         </Grid.Background>
     </Grid>
 </Window>

@@ -8,7 +8,7 @@
         Title="updatechild" Height="436.667" Width="464.5">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.3"/>
+            <ImageBrush ImageSource="C:\Users\Shirly\background_material_red.jpg" Stretch="UniformToFill" Opacity="0.3"/>
         </Grid.Background>
         <Label Content="Child ID:" HorizontalAlignment="Left" Margin="19,24,0,0" VerticalAlignment="Top" Width="102" Height="45" FontWeight="Bold">
             <Label.Effect>

@@ -21,7 +21,7 @@
             <ColumnDefinition Width="215*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\demo_118_light.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="C:\Users\Shirly\background_material_red.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Label Content="State:" HorizontalAlignment="Left" Margin="31,27,0,0" VerticalAlignment="Top" Height="35" Width="92" FontSize="20">
             <Label.Effect>

@@ -23,7 +23,7 @@
             <ColumnDefinition Width="25*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill" Opacity="0.3"/>
+            <ImageBrush ImageSource="C:\Users\Shirly\background_material_red.jpg" Stretch="UniformToFill" Opacity="0.3"/>
         </Grid.Background>
         <Label Content="First Name" HorizontalAlignment="Left" Margin="23,2.667,0,0" VerticalAlignment="Top" Grid.Row="2"/>
         <TextBox x:Name="firstname" HorizontalAlignment="Left" Height="23" Margin="5,6.667,0,0" TextWrapping="Wrap" Text="{Binding Path=FirstName}" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.Row="2"/>

@@ -45,7 +45,7 @@
 
         <Grid HorizontalAlignment="center" Height="388"  VerticalAlignment="Center" Width="530" Grid.RowSpan="4" Grid.ColumnSpan="2" Margin="10"/>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\90168532.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="C:\Users\Shirly\background_material_red.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
     </Grid>
 </Window>

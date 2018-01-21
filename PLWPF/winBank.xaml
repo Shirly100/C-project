@@ -19,7 +19,7 @@
             <ColumnDefinition Width="241*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\Resources\get-bitcoins.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="C:\Users\Shirly\background_material_red.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Label Content="Bank Name:" HorizontalAlignment="Left" Margin="34,34,0,0" VerticalAlignment="Top" Height="32" Width="118" FontSize="20">
             <Label.Effect>

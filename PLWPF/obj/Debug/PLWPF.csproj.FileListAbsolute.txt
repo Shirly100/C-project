@@ -1,3 +1,84 @@
+<<<<<<< HEAD
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\PLWPF.exe.config
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\PLWPF.exe
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\PLWPF.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\BE.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\BL.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\DAL.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\GoogleMapsApi.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\DS.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\BE.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\BL.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\DAL.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\bin\Debug\DS.pdb
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF.csprojResolveAssemblyReference.cache
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\addchild.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\addChildMother.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\addcontract.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\addmother.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\addnanny.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\chooseNanny.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\EditScheduale.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\grouping.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\nextMain.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\removechild.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\removecontract.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\removemother.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\removenanny.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\ShowChildren.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\ShowContracts.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\ShowMother.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\ShowNanny.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\updatechild.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\updatecontract.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\updatemother.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\updatenanny.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\wchild.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\wcontract.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\winAddress.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\winBank.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\wmother.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\wnanny.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\App.g.cs
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF_MarkupCompile.cache
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF_MarkupCompile.lref
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\addchild.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\addChildMother.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\addcontract.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\addmother.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\addnanny.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\chooseNanny.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\EditScheduale.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\grouping.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\MainWindow.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\nextMain.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\removechild.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\removecontract.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\removemother.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\removenanny.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\ShowChildren.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\ShowContracts.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\ShowMother.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\ShowNanny.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\updatechild.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\updatecontract.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\updatemother.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\updatenanny.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\wchild.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\wcontract.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\winAddress.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\winBank.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\wmother.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\wnanny.baml
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF.g.resources
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF.Properties.Resources.resources
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF.csproj.GenerateResource.Cache
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF.csproj.CoreCompileInputs.cache
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF.exe
+C:\Users\Shirly\Documents\קמפוס טל\שנה ג\c#\פרוייקט\26.10\SuperNanny\PLWPF\obj\Debug\PLWPF.pdb
+=======
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\bin\Debug\PLWPF.exe.config
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\bin\Debug\PLWPF.exe
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\bin\Debug\PLWPF.pdb
@@ -85,3 +166,4 @@ C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\PLWPF.csproj.G
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\PLWPF.csproj.CoreCompileInputs.cache
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\PLWPF.exe
 C:\Users\Chany\Desktop\school\Nanny\SuperManaging\PLWPF\obj\Debug\PLWPF.pdb
+>>>>>>> 7058923cd404b33e2ee04c5dcce0f9711a98c4f5
